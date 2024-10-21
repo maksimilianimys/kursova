@@ -1,0 +1,58 @@
+.header-content-section-left {
+
+  &-schedule {
+    margin-top: 64px;
+
+    display: flex;
+    align-items: center;
+
+    @include laptop{
+      margin-top: 15.714%;
+    }
+
+    &-time {
+      display: flex;
+
+      width: 52px;
+      height: 52px;
+
+      border-radius: 8px;
+      background: rgb(219, 159, 106);
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-info {
+      display: flex;
+
+      margin-left: 24px;
+
+      &-days {
+        color: #DB9F6A;
+        font-family: "Satoshi";
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+
+        padding-right: 12px;
+
+        p:not(:last-child) {
+          padding-bottom: 12px;
+        }
+      }
+
+      &-hours {
+        color: #FFF;
+        font-family: "Satoshi";
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+
+        p:not(:last-child) {
+          padding-bottom: 12px;
+        }
+      }
+    }
+  }
+}

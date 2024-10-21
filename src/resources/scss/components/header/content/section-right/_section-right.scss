@@ -1,0 +1,150 @@
+.header-content-section {
+  &-right {
+    position: relative;
+
+    &-image-container {
+      margin: 59px 0 0 160px;
+
+      position: absolute;
+      z-index: 10;
+
+      width: 100%;
+      max-width: 938px;
+      max-height: 1018px;
+
+      @include small-desktop {
+        height: auto;
+        width: 100%;
+        max-width: 938px;
+        margin: 59px 0 0 0;
+      }
+
+      @include laptop {
+        height: auto;
+        width: 100%;
+        max-width: 938px;
+        margin: 59px 0 0 0;
+      }
+
+      @include small-laptop {
+        height: auto;
+        width: 100%;
+        max-width: 938px;
+        margin: 59px 0 0 0;
+      }
+    }
+
+    &-background-svg {
+      margin: 58px 0 0 154px;
+
+      position: relative;
+      z-index: 1;
+
+      @include small-desktop {
+        width: 100%;
+        height: auto;
+        margin: 58px 0 0 0;
+      }
+
+      @include laptop {
+        width: 100%;
+        height: auto;
+        margin: 58px 0 0 0;
+      }
+
+      @include small-laptop {
+        width: 100%;
+        height: auto;
+        margin: 58px 0 0 0;
+      }
+    }
+
+    &-element {
+      &-circle {
+        position: absolute;
+        z-index: 10;
+
+        left: 72.4%;
+        top: 31.3%;
+
+        width: 8px;
+        height: 8px;
+        background: white;
+        border-radius: 9999px;
+
+        @include small-desktop {
+          left: 61.5%;
+          top: 29.3%;
+        }
+      }
+
+      &-line {
+        position: absolute;
+        z-index: 10;
+
+        top: 31.63%;
+        left: 72.8%;
+
+        width: 14.175%;
+        height: 36.826%;
+
+        border-top: 1px solid white;
+        border-right: 1px solid white;
+
+        @include small-desktop {
+          top: 29.64%;
+          left: 62.4%;
+        }
+      }
+
+      &-text-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: absolute;
+        z-index: 10;
+
+        padding: 0px 32px;
+
+        width: 318px;
+        height: 136px;
+
+        border-radius: 24px;
+        background: #fff4eb;
+
+        left: 71.5%;
+        top: 68.4%;
+
+        @include small-desktop {
+          top: 66.4%;
+          left: 60.5%;
+        }
+
+        &-info {
+          &-title {
+            color: rgba(18, 16, 12, 0.5);
+            font-family: "Satoshi";
+            font-weight: 700;
+            font-size: 18px;
+
+            letter-spacing: 0.06em;
+            padding-bottom: 16px;
+
+            text-transform: uppercase;
+            //text-align: left;
+          }
+
+          &-text {
+            color: #12100c;
+            font-family: "Angel rhapsody";
+            font-weight: 400;
+            font-size: 32px;
+            letter-spacing: 0.06em;
+            //text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

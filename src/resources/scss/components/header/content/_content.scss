@@ -1,0 +1,57 @@
+.header {
+  &-content-section {
+    &-flex {
+      display: flex;
+    }
+
+    &-left {
+      margin-top: 140px;
+      width: 481px;
+
+      word-wrap: break-word;
+
+      @include small-desktop {
+        margin-right: 12%;
+        margin-top: 6%;
+      }
+
+      @include laptop {
+        margin-right: 12%;
+        margin-top: 5%;
+      }
+      @include small-laptop {
+        margin-right: 12%;
+        margin-top: 5%;
+      }
+
+      &-title {
+        font-family: "Angel rhapsody";
+        font-size: 112px;
+        font-weight: 400;
+
+        letter-spacing: -0.02em;
+        line-height: 1;
+
+        text-align: left;
+        margin: 0;
+
+        @include small-desktop {
+          font-size: 6.671vw;
+        }
+        @include laptop {
+          font-size: 6.671vw;
+        }
+        @include small-laptop {
+          font-size: 6.671vw;
+        }
+      }
+
+      @import "section-left/button";
+
+      @import "section-left/schedule";
+    }
+
+    @import "section-right/section-right";
+  }
+}
+

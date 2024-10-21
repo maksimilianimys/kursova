@@ -1,0 +1,63 @@
+.header-content-section-left{
+
+  &-button {
+    margin-top: 64px;
+    height: 80px;
+
+    @include laptop{
+      margin-top: 15.714%;
+    }
+  }
+
+  &-button-marker {
+    margin-bottom: 32px;
+  }
+
+  &-button-form {
+    margin-left: 3px;
+    margin-right: 3px;
+
+    @include laptop{
+      width: 84%;
+    }
+
+    @include small-laptop{
+      width: 84%;
+    }
+  }
+
+  &-button-markers {
+    margin-bottom: 32px;
+  }
+
+  &-button-overlay-text {
+    position: relative;
+    max-width: 188px;
+    max-height: 32px;
+
+    top: -60px;
+    left: 89px;
+
+    color: #12100c;
+    font-family: "Satoshi";
+
+    font-size: 24px;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+  }
+
+  &-button-gradient {
+    position: relative;
+
+    top: -116px;
+    left: 54px;
+  }
+
+  &-button-gradients {
+    position: relative;
+
+    top: -116px;
+    left: 58px; //*добавити 7 пх*/
+  }
+}

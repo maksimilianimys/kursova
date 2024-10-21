@@ -1,0 +1,32 @@
+//$first_font: "Roboto", sans-serif;
+//$second_font: "Raleway", sans-serif;
+
+@mixin desktop {
+  @media screen and (min-width: 1680px) and (max-width: 1920px){
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media screen and (min-width: 1440px) and (max-width: 1679.99px){
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: 1280px) and (max-width: 1439.9px){
+    @content;
+  }
+}
+
+@mixin small-laptop {
+  @media screen and (min-width: 1024px) and (max-width: 1279.99px){
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) and (max-width: 1023.99px){
+    @content;
+  }
+}

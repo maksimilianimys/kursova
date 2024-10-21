@@ -1,0 +1,125 @@
+//html::-webkit-scrollbar{
+//  display: none;
+//}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #DB9F6A;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+body {
+  font-style: normal;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(18,16,11,255);
+}
+
+ul,
+a,
+address {
+  list-style: none;
+  text-decoration: none;
+  font-style: normal;
+  color: inherit;
+}
+
+a,
+ul,
+body,
+h3,
+h2,
+p,
+li,
+svg {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.container {
+  width: 1520px;
+  margin: 0 auto;
+
+  @include desktop {
+    max-width: 100%;
+  }
+
+  @include small-desktop{
+    width: calc(100% - 160px);
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  @include laptop{
+    width: calc(100% - 160px);
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  @include small-laptop{
+    width: calc(100% - 160px);
+    margin: 0 80px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //@include tablet {
+  //  max-width: 100%;
+  //}
+  //@include mobile {
+  //  max-width: 100%;
+  //}
+
+  //@include desktop {
+  //  max-width: 1200px;
+  //}
+  //@include tablet {
+  //  max-width: 768px;
+  //}
+  //@include mobile {
+  //  max-width: 480px;
+  //}
+}
