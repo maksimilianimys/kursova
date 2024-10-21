@@ -3,15 +3,35 @@
 .background {
   position: absolute;
   z-index: -1;
-  background: url("../../../images/background-header.png");
-  background-size: cover;
   width: 100%;
   height: auto;
+  background: url("../../../images/background-header.png");
+  background-size: cover;
 }
 
+//.header {
+//  position: relative;
+  //width: 100%;
+  //padding-top: 0.01px;
+  //height: auto; /* Висота динамічно адаптується під контент */
+  //padding-bottom: 0; /* Відсутність відступів знизу */
+
+  //.background {
+    //position: absolute;
+    //top: 0;
+    //left: 0;
+    //width: 100%;
+    //height: 100%; /* Фон займає всю висоту хедера */
+    //background: url("../../../images/background-header.png") no-repeat center center;
+    //background-size: cover;
+    //z-index: -1; /* Фон позаду контенту */
+  //}
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
 
 .header {
+  position: relative;
+  padding-top: 0.01px;
+
   &-navigation-bar {
     &-container {
       height: 104px;
@@ -19,9 +39,9 @@
       background: rgba(42, 39, 34, 0.50);
       backdrop-filter: blur(5px);
 
-      gap: 10.1%;
-      padding-right: 11%;
-      padding-left: 11%;
+      gap: 120px;
+      padding-right: 11.053%;;
+      padding-left: 11.053%;;
       margin-top: 50px;
 
       display: flex;
@@ -29,6 +49,12 @@
       justify-content: center;
 
       white-space: nowrap;
+
+      @include laptop{
+        gap: 8.333vw;
+        padding-right: 11.667vw;
+        padding-left: 11.667vw;
+      }
     }
 
     &-section-left {
@@ -45,6 +71,11 @@
       letter-spacing: 0.08em;
       text-align: left;
       //text-transform: uppercase;
+
+      @include laptop{
+        gap: 3.611vw;
+        font-size: 1.25vw;
+      }
     }
 
     &-section-center-button {
@@ -74,6 +105,11 @@
       letter-spacing: 0.08em;
       text-align: left;
       //text-transform: uppercase;
+
+      @include laptop{
+        gap: 3.611vw;
+        font-size: 1.25vw;
+      }
     }
   }
 
@@ -81,5 +117,7 @@
 
   @import "content/marquee/marquee";
 }
+
+
 
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/

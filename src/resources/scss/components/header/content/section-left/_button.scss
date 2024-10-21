@@ -4,13 +4,20 @@
     margin-top: 64px;
     height: 80px;
 
+    @include small-desktop{
+      margin-top: 3.81vw;
+    }
     @include laptop{
-      margin-top: 15.714%;
+      margin-top: 3.81vw;
     }
   }
 
   &-button-marker {
     margin-bottom: 32px;
+
+    @include small-desktop{
+      margin-bottom: 31px;
+    }
   }
 
   &-button-form {
@@ -18,11 +25,7 @@
     margin-right: 3px;
 
     @include laptop{
-      width: 84%;
-    }
-
-    @include small-laptop{
-      width: 84%;
+      width: 22.238vw;
     }
   }
 
@@ -45,6 +48,11 @@
     font-weight: 700;
 
     letter-spacing: 0.1em;
+
+    @include laptop{
+      left: 23.5%;
+      font-size: 1.668vw;
+    }
   }
 
   &-button-gradient {
@@ -52,12 +60,20 @@
 
     top: -116px;
     left: 54px;
+
+    @include laptop{
+      left: 15.5%;
+    }
   }
 
   &-button-gradients {
     position: relative;
 
     top: -116px;
-    left: 58px; //*добавити 7 пх*/
+    left: 58px;
+
+    @include laptop{
+      left: 15.5%;
+    }
   }
 }

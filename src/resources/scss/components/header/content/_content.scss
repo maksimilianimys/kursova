@@ -11,17 +11,13 @@
       word-wrap: break-word;
 
       @include small-desktop {
-        margin-right: 12%;
-        margin-top: 6%;
+        margin-right: 9.524vw;
+        margin-top: 8.333vw;
       }
 
       @include laptop {
-        margin-right: 12%;
-        margin-top: 5%;
-      }
-      @include small-laptop {
-        margin-right: 12%;
-        margin-top: 5%;
+        margin-right: 9.524vw;
+        margin-top: 8.333vw;
       }
 
       &-title {
@@ -36,13 +32,10 @@
         margin: 0;
 
         @include small-desktop {
-          font-size: 6.671vw;
+          font-size: 6.667vw;
         }
         @include laptop {
-          font-size: 6.671vw;
-        }
-        @include small-laptop {
-          font-size: 6.671vw;
+          font-size: 6.667vw;
         }
       }
 

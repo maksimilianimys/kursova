@@ -18,7 +18,6 @@
         max-width: 938px;
         margin: 59px 0 0 0;
       }
-
       @include laptop {
         height: auto;
         width: 100%;
@@ -26,12 +25,6 @@
         margin: 59px 0 0 0;
       }
 
-      @include small-laptop {
-        height: auto;
-        width: 100%;
-        max-width: 938px;
-        margin: 59px 0 0 0;
-      }
     }
 
     &-background-svg {
@@ -47,12 +40,6 @@
       }
 
       @include laptop {
-        width: 100%;
-        height: auto;
-        margin: 58px 0 0 0;
-      }
-
-      @include small-laptop {
         width: 100%;
         height: auto;
         margin: 58px 0 0 0;
@@ -73,8 +60,13 @@
         border-radius: 9999px;
 
         @include small-desktop {
-          left: 61.5%;
-          top: 29.3%;
+          top: 16.4vw;
+          left: 31.7vw;
+        }
+
+        @include laptop{
+          left: 61.54%;
+          top: 29.32%;
         }
       }
 
@@ -92,8 +84,13 @@
         border-right: 1px solid white;
 
         @include small-desktop {
-          top: 29.64%;
+          top: 16.6vw;
           left: 62.4%;
+        }
+
+        @include laptop{
+          top: 29.8%;
+          left: 62.44%;
         }
       }
 
@@ -118,10 +115,26 @@
 
         @include small-desktop {
           top: 66.4%;
-          left: 60.5%;
+          left: 58.5%;
+          width: 19vw;
+          height: 8.101vw;
+          padding: 0 1.906vw;
+        }
+
+        @include laptop {
+          left: 59.3%;
+          top: 67.2%;
+          width: 19vw;
+          height: 8.101vw;
+          padding: 0 1.906vw;
         }
 
         &-info {
+
+          &:not(:last-child) {
+            padding-right: 8px;
+          }
+
           &-title {
             color: rgba(18, 16, 12, 0.5);
             font-family: "Satoshi";
@@ -133,6 +146,14 @@
 
             text-transform: uppercase;
             //text-align: left;
+
+            @include small-desktop {
+              font-size: 1.073vw;
+            }
+
+            @include laptop {
+              font-size: 1.073vw;
+            }
           }
 
           &-text {
@@ -142,6 +163,12 @@
             font-size: 32px;
             letter-spacing: 0.06em;
             //text-align: left;
+            @include small-desktop {
+              font-size: 1.906vw;
+            }
+            @include laptop {
+              font-size: 1.906vw;
+            }
           }
         }
       }

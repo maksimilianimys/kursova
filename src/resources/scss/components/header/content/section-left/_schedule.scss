@@ -6,8 +6,11 @@
     display: flex;
     align-items: center;
 
+    @include small-desktop{
+      margin-top: 3.81vw;
+    }
     @include laptop{
-      margin-top: 15.714%;
+      margin-top: 3.81vw;
     }
 
     &-time {

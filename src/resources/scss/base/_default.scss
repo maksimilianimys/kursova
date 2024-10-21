@@ -75,20 +75,21 @@ button {
   }
 
   @include small-desktop{
-    width: calc(100% - 160px);
-    margin-left: 80px;
-    margin-right: 80px;
+    width: calc(100% - 9.524vw);
+    margin-left: 4.762vw;
+    margin-right: 4.762vw;
   }
 
   @include laptop{
-    width: calc(100% - 160px);
-    margin-left: 80px;
-    margin-right: 80px;
+    width: calc(100% - 9.524vw);
+    margin-left: 4.762vw;
+    margin-right: 4.762vw;
   }
 
   @include small-laptop{
-    width: calc(100% - 160px);
-    margin: 0 80px;
+    width: calc(100% - 9.524vw);
+    margin-left: 4.762vw;
+    margin-right: 4.762vw;
   }
 
 
