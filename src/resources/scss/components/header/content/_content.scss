@@ -1,14 +1,17 @@
-.header {
+.main{
+
+
   &-content-section {
-    &-flex {
-      display: flex;
-    }
+    position: relative;
+    padding-top: 294px;
 
     &-left {
-      margin-top: 140px;
       width: 481px;
-
       word-wrap: break-word;
+
+      //@include desktop{
+      //  margin-right: 160px;
+      //}
 
       @include small-desktop {
         margin-right: 9.524vw;
@@ -43,8 +46,9 @@
 
       @import "section-left/schedule";
     }
-
-    @import "section-right/section-right";
   }
-}
+    @import "section-right/section-right";
+
+  }
+
 

@@ -1,8 +1,225 @@
-.photo {
+.main-background {
   position: absolute;
-  z-index: -0;
-  background: url("images/main.png");
-  background-size: cover;
+  z-index: -1;
   width: 100%;
   height: auto;
+  background: url("../../../images/main.png");
+  //padding-top: 1px;
+  background-size: cover;
 }
+
+.main {
+  .main-top {
+    margin-top: 160px;
+    margin-bottom: 160px;
+    display: flex;
+    position: relative;
+  }
+
+  .bg {
+    position: relative;
+    z-index: -1;
+  }
+
+  .main-left {
+    position: absolute;
+
+    .element {
+      width: 485px;
+      height: 221px;
+
+      background: linear-gradient(180.00deg, rgb(30, 28, 23), rgba(30, 28, 23, 0) 100%);
+      position: absolute;
+      z-index: 0;
+
+      top: 269px;
+    }
+
+    .h2 {
+      color: #FFFFFF;
+      font-size: 64px;
+      font-family: "Angel rhapsody";
+      width: 381px;
+      letter-spacing: -2px;
+      position: absolute;
+      z-index: 1;
+      line-height: 1;
+
+      top: 52px;
+      left: 52px;
+      right: 52px;
+    }
+
+    .im {
+      border-color: #FFFFFF;
+      position: absolute;
+      top: 320px;
+      z-index: -1;
+    }
+
+    .tatoo {
+      position: absolute;
+      top: 335px;
+      left: 72px;
+      right: 72px;
+      z-index: 1;
+    }
+  }
+
+  .center-top {
+    left: 517px;
+    right: 517px;
+    position: absolute;
+
+    width: 486px;
+    height: 324px;
+  }
+
+  .cont-biba {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 485px;
+    height: 324px;
+
+    border-radius: 32px;
+    background: #FFF4EB;
+    position: absolute;
+  }
+
+  .dd {
+    color: rgb(18, 16, 12);
+    font-family: Angel rhapsody;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 0px;
+    letter-spacing: 0.06em;
+    text-align: right;
+    position: relative;
+    margin-top: 268px;
+    margin-right: 40px;
+  }
+
+  .dollar {
+    color: rgb(18, 16, 12);
+    font-family: Angel rhapsody;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 0px;
+    letter-spacing: 0.06em;
+    text-align: right;
+  }
+
+
+}
+
+
+.center-botton {
+  margin-left: 517px;
+  margin-top: 432px;
+  position: absolute;
+
+  .cont-snake {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 485px;
+    height: 368px;
+    border-radius: 32px;
+    background: #FFF4EB;
+    position: absolute;
+  }
+
+  .pp {
+    color: rgb(18, 16, 12);
+    font-family: Angel rhapsody;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 0px;
+    letter-spacing: 0.06em;
+    text-align: right;
+    position: relative;
+    margin-top: 312px;
+    margin-left: 338px;
+  }
+
+  .dollar {
+    color: rgb(18, 16, 12);
+    font-family: Angel rhapsody;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 0px;
+    letter-spacing: 0.06em;
+    text-align: right;
+  }
+}
+
+.main-right {
+  position: absolute;
+  display: flex;
+  left: 68%;
+}
+
+.rec {
+  width: 485px;
+  height: 135px;
+  background: linear-gradient(180.00deg, rgb(30, 28, 23) 9.214%,rgba(30, 28, 23, 0) 100%);
+  position: absolute;
+  transform: rotate(-180.00deg);
+  z-index: 0;
+  top: 189px;
+}
+
+.h22 {
+  color: #FFFFFF;
+  font-size: 64px;
+  font-family: "Angel rhapsody";
+  width: 381px;
+  letter-spacing: -2px;
+  position: absolute;
+  z-index: 1;
+  line-height: 1;
+
+  top:376px;
+  left:52px;
+}
+
+.text{
+  width: 381px;
+  color: rgba(255, 255, 255, 0.40);
+  font-family: "Satoshi Variable";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.36px;
+  position: absolute;
+  top:592px;
+  left:52px;
+}
+
+.button{
+  display: inline-flex;
+  padding: 20px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  background: #DB9F6A;
+  position: absolute;
+  top:670px;
+  left:52px;
+  width: 255px;
+  height: 64px;
+
+  color: #483524;
+  font-family: "Satoshi Variable";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.89px;
+ }
+

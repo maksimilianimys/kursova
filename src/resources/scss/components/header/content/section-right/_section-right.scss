@@ -1,50 +1,84 @@
-.header-content-section {
-  &-right {
-    position: relative;
 
-    &-image-container {
-      margin: 59px 0 0 160px;
+  .main-content-section-right {
+    position: absolute;
+    right: 140px;
+    bottom: 140px;
+    width: 940px;
+    height: calc(100% - 360px);
 
-      position: absolute;
-      z-index: 10;
-
+    img {
       width: 100%;
-      max-width: 938px;
-      max-height: 1018px;
-
-      @include small-desktop {
-        height: auto;
-        width: 100%;
-        max-width: 938px;
-        margin: 59px 0 0 0;
-      }
-      @include laptop {
-        height: auto;
-        width: 100%;
-        max-width: 938px;
-        margin: 59px 0 0 0;
-      }
-
+      height: 100%;
+      object-fit: contain;
+      object-position: right bottom;
     }
 
-    &-background-svg {
-      margin: 58px 0 0 154px;
-
-      position: relative;
-      z-index: 1;
-
-      @include small-desktop {
+    .bg{
+      z-index: 10;
         width: 100%;
-        height: auto;
-        margin: 58px 0 0 0;
-      }
-
-      @include laptop {
-        width: 100%;
-        height: auto;
-        margin: 58px 0 0 0;
-      }
+        max-width: 864px;
+        max-height: 887px;
     }
+
+    .div{
+        z-index: 10;
+        width: 100%;
+        max-width: 938px;
+        max-height: 1018px;
+    }
+
+    //&-image-container {
+    //  z-index: 10;
+    //  width: 100%;
+    //  max-width: 938px;
+    //  max-height: 1018px;
+    //
+    //  //@include desktop{
+    //  //  height: auto;
+    //  //  width: 100%;
+    //  //  max-width: 938px;
+    //  //  margin: 59px 0 0 0;
+    //  //}
+    //  //@include small-desktop {
+    //  //  height: auto;
+    //  //  width: 100%;
+    //  //  max-width: 938px;
+    //  //  margin: 59px 0 0 0;
+    //  //}
+    //  //@include laptop {
+    //  //  height: auto;
+    //  //  width: 100%;
+    //  //  max-width: 938px;
+    //  //  margin: 59px 0 0 0;
+    //  //}
+    //
+    //}
+
+    //&-background-svg {
+    //  width: auto;
+    //  height: calc(100% - 213px);
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //  z-index: 1;
+    //
+    //  //@include desktop{
+    //  //  width: 100%;
+    //  //  height: auto;
+    //  //  margin: 58px 0 0 0;
+    //  //}
+    //  @include small-desktop {
+    //    width: 100%;
+    //    height: auto;
+    //    margin: 58px 0 0 0;
+    //  }
+    //
+    //  @include laptop {
+    //    width: 100%;
+    //    height: auto;
+    //    margin: 58px 0 0 0;
+    //  }
+    //}
 
     &-element {
       &-circle {
@@ -174,4 +208,4 @@
       }
     }
   }
-}
+

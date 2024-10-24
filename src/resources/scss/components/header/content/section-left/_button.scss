@@ -1,4 +1,4 @@
-.header-content-section-left{
+.main-content-section-left{
 
   &-button {
     margin-top: 64px;
@@ -10,6 +10,14 @@
     @include laptop{
       margin-top: 3.81vw;
     }
+
+
+    .rr{
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
   }
 
   &-button-marker {
@@ -52,28 +60,6 @@
     @include laptop{
       left: 23.5%;
       font-size: 1.668vw;
-    }
-  }
-
-  &-button-gradient {
-    position: relative;
-
-    top: -116px;
-    left: 54px;
-
-    @include laptop{
-      left: 15.5%;
-    }
-  }
-
-  &-button-gradients {
-    position: relative;
-
-    top: -116px;
-    left: 58px;
-
-    @include laptop{
-      left: 15.5%;
     }
   }
 }

@@ -67,11 +67,21 @@ button {
 }
 
 .container {
-  width: 1520px;
-  margin: 0 auto;
+  //width: 1520px;
+  //margin: 0 auto;
+
+  @include desktop-fhd{
+    //max-width: 100%;
+    width: calc(100% - 10.417vw - 10.417vw);
+    margin-left: 10.417vw;
+    margin-right: 10.417vw;
+  }
 
   @include desktop {
     max-width: 100%;
+    //width: calc(100% - 10.417vw - 10.417vw);
+    //margin-left: 10.417vw;
+    //margin-right: 10.417vw;
   }
 
   @include small-desktop{
