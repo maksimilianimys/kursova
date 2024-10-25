@@ -1,28 +1,130 @@
-.main-background {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: auto;
-  background: url("../../../images/main.png");
-  //padding-top: 1px;
-  background-size: cover;
+.main {
+  &-content-section {
+    position: relative;
+    padding-top: 294px;
+    background: url("../../../images/background-header.png");
+
+    &-left{
+      width: 481px;
+      word-wrap: break-word;
+
+      //@include desktop{
+      //  margin-right: 160px;
+      //}
+
+      @include small-desktop {
+        margin-right: 9.524vw;
+        margin-top: 8.333vw;
+      }
+
+      @include laptop {
+        margin-right: 9.524vw;
+        margin-top: 8.333vw;
+      }
+
+      @import "content/section-left/title";
+
+      @import "content/section-left/button";
+
+      @import "content/section-left/schedule";
+    }
+
+
+
+
+
+
+
+    //@import "content/section-left/title";
+    //
+    //@import "content/section-left/button";
+    //
+    //@import "content/section-left/schedule";
+
+    @import "content/section-right/section-right";
+
+    @import "content/marquee/marquee";
+
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-top {
+  //position: absolute;
+  //z-index: -1;
+  width: 100%;
+  height: auto; /* Автоматична висота, але варто замінити на мінімальну висоту */
+  //min-height: 100vh; /* Висота фону на всю висоту вікна */
+  background: url("../../../images/main.png");
+  //background-size: cover;
+}
+
 
 .main {
   .main-top {
-    margin-top: 160px;
-    margin-bottom: 160px;
-    display: flex;
-    position: relative;
+    //display: flex;
+    //position: absolute;
+    //z-index: -1;
+    width: 100%;
+    height: auto; /* Автоматична висота, але варто замінити на мінімальну висоту */
+    //min-height: 100vh; /* Висота фону на всю висоту вікна */
+    background: url("../../../images/main.png");
+    //background-size: cover;
+
+    .container{
+      position: relative;
+      top: 160px;
+
+    }
   }
 
-  .bg {
-    position: relative;
-    z-index: -1;
-  }
 
   .main-left {
-    position: absolute;
+    //position: absolute;
+    position: relative;
 
     .element {
       width: 485px;
@@ -64,12 +166,15 @@
       right: 72px;
       z-index: 1;
     }
-  }
+  }}
 
   .center-top {
-    left: 517px;
-    right: 517px;
-    position: absolute;
+    //left: 517px;
+    //right: 517px;
+    //position: absolute;
+position: relative;
+    left: 32px;
+    top: 1px;
 
     width: 486px;
     height: 324px;
@@ -112,13 +217,20 @@
   }
 
 
+.center{
+  max-width: 550px;
+  position: relative;
+  top: -16px;
 }
 
 
 .center-botton {
-  margin-left: 517px;
-  margin-top: 432px;
-  position: absolute;
+  //margin-left: 517px;
+  //margin-top: 432px;
+  //position: absolute;
+position: relative;
+  left: 32px;
+  top: -40px;
 
   .cont-snake {
     display: flex;
@@ -157,9 +269,14 @@
 }
 
 .main-right {
-  position: absolute;
+  //position: absolute;
   display: flex;
-  left: 68%;
+  //left: 68%;
+  position: relative;
+
+  img{
+    position: absolute;
+  }
 }
 
 .rec {
@@ -223,3 +340,24 @@
   letter-spacing: 1.89px;
  }
 
+
+.grids {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0fr 0fr 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "main-left center-top main-right"
+    "main-left center main-right"
+    "main-left center-botton main-right";
+}
+
+.main-left { grid-area: main-left; }
+
+.center-top { grid-area: center-top; }
+
+.center { grid-area: center; }
+
+.center-botton { grid-area: center-botton; }
+
+.main-right { grid-area: main-right; }

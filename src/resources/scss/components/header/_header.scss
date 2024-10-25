@@ -2,11 +2,10 @@
 
 .background {
   //position: absolute;
-  //z-index: -1;
+  //  z-index: -1;
   //width: 100%;
   //height: auto;
-  background: url("../../../images/background-header.png");
-  //padding-top: 1px;
+  //background: url("../../../images/background-header.png");
   //background-size: cover;
 }
 
@@ -17,34 +16,34 @@
   top: 50px;
   left: 0;
   right: 0;
+  z-index: 1;
 
-    &-navigation-bar {
-      height: 104px;
-      border-radius: 32px;
-      background: rgba(42, 39, 34, 0.50);
-      backdrop-filter: blur(5px);
+  &-navigation-bar {
+    height: 104px;
+    border-radius: 32px;
+    background: rgba(42, 39, 34, 0.50);
+    backdrop-filter: blur(5px);
 
-      gap: 120px;
-      padding-right: 11.053%;
-      padding-left: 11.053%;
+    gap: 120px;
+    padding-right: 11.053%;
+    padding-left: 11.053%;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-      white-space: nowrap;
+    white-space: nowrap;
 
-      @include laptop{
-        gap: 8.333vw;
-        padding-right: 11.667vw;
-        padding-left: 11.667vw;
-      }
+    //@include laptop {
+    //  gap: 8.333vw;
+    //  padding-right: 11.667vw;
+    //  padding-left: 11.667vw;
+    //}
 
     &-left {
       display: flex;
 
       gap: 52px;
-      padding: 0;
 
       color: rgba(255, 244, 235, 0.8);
       font-family: "Satoshi";
@@ -55,10 +54,10 @@
       text-align: left;
       //text-transform: uppercase;
 
-      @include laptop{
-        gap: 3.611vw;
-        font-size: 1.25vw;
-      }
+      //@include laptop {
+      //  gap: 3.611vw;
+      //  font-size: 1.25vw;
+      //}
     }
 
     &-center-button {
@@ -78,7 +77,6 @@
       display: flex;
 
       gap: 52px;
-      padding: 0px;
 
       color: rgba(255, 244, 235, 0.8);
       font-family: "Satoshi";
@@ -89,14 +87,12 @@
       text-align: left;
       //text-transform: uppercase;
 
-      @include laptop{
-        gap: 3.611vw;
-        font-size: 1.25vw;
-      }
+      //@include laptop {
+      //  gap: 3.611vw;
+      //  font-size: 1.25vw;
+      //}
     }
   }
 }
-
-@import "content/marquee/marquee";
 
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
