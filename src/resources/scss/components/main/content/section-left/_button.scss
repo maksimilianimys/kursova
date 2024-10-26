@@ -1,51 +1,26 @@
 &-button {
-    margin-top: 64px;
-    height: 80px;
+  margin-top: 64px;
+  height: 80px;
 
-    @include small-desktop{
-      margin-top: 3.81vw;
-    }
-    @include laptop{
-      margin-top: 3.81vw;
-    }
-
-
-    .rr{
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-    }
-
+  @include small-desktop {
+    margin-top: 3.81vw;
+  }
+  @include laptop {
+    margin-top: 3.81vw;
   }
 
-  &-button-marker {
-    margin-bottom: 32px;
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 
-    @include small-desktop{
-      margin-bottom: 31px;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  &-button-form {
-    margin-left: 3px;
-    margin-right: 3px;
-
-    @include laptop{
-      width: 22.238vw;
-    }
-  }
-
-  &-button-markers {
-    margin-bottom: 32px;
-  }
-
-  &-button-overlay-text {
-    position: relative;
-    max-width: 188px;
-    max-height: 32px;
-
-    top: -60px;
-    left: 89px;
+  span {
+    position: absolute;
 
     color: #12100c;
     font-family: "Satoshi";
@@ -54,9 +29,5 @@
     font-weight: 700;
 
     letter-spacing: 0.1em;
-
-    @include laptop{
-      left: 23.5%;
-      font-size: 1.668vw;
-    }
   }
+}

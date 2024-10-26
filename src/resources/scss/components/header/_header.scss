@@ -34,11 +34,11 @@
 
     white-space: nowrap;
 
-    //@include laptop {
-    //  gap: 8.333vw;
-    //  padding-right: 11.667vw;
-    //  padding-left: 11.667vw;
-    //}
+    @include laptop {
+      gap: 8.333vw;
+      padding-right: 11.667vw;
+      padding-left: 11.667vw;
+    }
 
     &-left {
       display: flex;
@@ -54,10 +54,10 @@
       text-align: left;
       //text-transform: uppercase;
 
-      //@include laptop {
-      //  gap: 3.611vw;
-      //  font-size: 1.25vw;
-      //}
+      @include laptop {
+        gap: 3.611vw;
+        font-size: 1.25vw;
+      }
     }
 
     &-center-button {
@@ -87,10 +87,10 @@
       text-align: left;
       //text-transform: uppercase;
 
-      //@include laptop {
-      //  gap: 3.611vw;
-      //  font-size: 1.25vw;
-      //}
+      @include laptop {
+        gap: 3.611vw;
+        font-size: 1.25vw;
+      }
     }
   }
 }

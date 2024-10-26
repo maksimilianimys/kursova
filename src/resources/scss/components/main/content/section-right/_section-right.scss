@@ -1,17 +1,4 @@
-
 .main-content-section-right {
-  position: absolute;
-  right: 140px;
-  bottom: 140px;
-  width: 940px;
-  height: calc(100% - 360px);
-
-  //img {
-  //  width: 100%;
-  //  height: 100%;
-  //  object-fit: contain;
-  //  object-position: right bottom;
-  //}
 
   .div {
     position: absolute;
@@ -19,77 +6,27 @@
     width: 100%;
     max-width: 938px;
     max-height: 1018px;
+    left: 841px;
+    top: 213px;
   }
 
   .bg {
     position: absolute;
     z-index: 10;
     width: 100%;
-    max-width: 864px;
+    max-width: 868px;
     max-height: 887px;
+    left: 835px;
+    top: 212px;
   }
-
-
-  //&-image-container {
-  //  z-index: 10;
-  //  width: 100%;
-  //  max-width: 938px;
-  //  max-height: 1018px;
-  //
-  //  //@include desktop{
-  //  //  height: auto;
-  //  //  width: 100%;
-  //  //  max-width: 938px;
-  //  //  margin: 59px 0 0 0;
-  //  //}
-  //  //@include small-desktop {
-  //  //  height: auto;
-  //  //  width: 100%;
-  //  //  max-width: 938px;
-  //  //  margin: 59px 0 0 0;
-  //  //}
-  //  //@include laptop {
-  //  //  height: auto;
-  //  //  width: 100%;
-  //  //  max-width: 938px;
-  //  //  margin: 59px 0 0 0;
-  //  //}
-  //
-  //}
-
-  //&-background-svg {
-  //  width: auto;
-  //  height: calc(100% - 213px);
-  //  position: absolute;
-  //  top: 0;
-  //  left: 0;
-  //  z-index: 1;
-  //
-  //  //@include desktop{
-  //  //  width: 100%;
-  //  //  height: auto;
-  //  //  margin: 58px 0 0 0;
-  //  //}
-  //  @include small-desktop {
-  //    width: 100%;
-  //    height: auto;
-  //    margin: 58px 0 0 0;
-  //  }
-  //
-  //  @include laptop {
-  //    width: 100%;
-  //    height: auto;
-  //    margin: 58px 0 0 0;
-  //  }
-  //}
 
   &-element {
     &-circle {
       position: absolute;
       z-index: 10;
 
-      left: 72.4%;
-      top: 31.3%;
+      left: 74.1%;
+      top: 32.8%;
 
       width: 8px;
       height: 8px;
@@ -111,11 +48,11 @@
       position: absolute;
       z-index: 10;
 
-      top: 31.63%;
-      left: 72.8%;
+      top: 33.07%;
+      left: 74.5%;
 
-      width: 14.175%;
-      height: 36.826%;
+      width: 7.4%;
+      height: 25.6%;
 
       border-top: 1px solid white;
       border-right: 1px solid white;
@@ -147,8 +84,8 @@
       border-radius: 24px;
       background: #fff4eb;
 
-      left: 71.5%;
-      top: 68.4%;
+      left: 73.7%;
+      top: 58.6%;
 
       @include small-desktop {
         top: 66.4%;
@@ -208,6 +145,13 @@
           }
         }
       }
+    }
+
+    &-vector {
+      position: absolute;
+      left: 86.7%;
+      top: 68.5%;
+      z-index: 10;
     }
   }
 }

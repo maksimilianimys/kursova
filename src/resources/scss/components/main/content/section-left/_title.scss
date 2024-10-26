@@ -1,18 +1,20 @@
-h1 {
-  font-family: "Angel rhapsody";
-  font-size: 112px;
-  font-weight: 400;
+&-title {
+  h1 {
+    font-family: "Angel rhapsody";
+    font-size: 112px;
+    font-weight: 400;
 
-  letter-spacing: -0.02em;
-  line-height: 1;
+    letter-spacing: -0.02em;
+    line-height: 1;
 
-  text-align: left;
-  margin: 0;
+    text-align: left;
+    margin: 0;
 
-  @include small-desktop {
-    font-size: 6.667vw;
-  }
-  @include laptop {
-    font-size: 6.667vw;
+    @include small-desktop {
+      font-size: 6.667vw;
+    }
+    @include laptop {
+      font-size: 6.667vw;
+    }
   }
 }

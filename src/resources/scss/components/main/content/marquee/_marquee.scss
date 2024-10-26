@@ -27,8 +27,7 @@
 
 
 .main-content-marquee-section-container-content-item:hover {
-  transform: scale(1.2);
-
+  transform: scale(1.5);
 }
 
 .mq {
@@ -47,37 +46,3 @@
     transform: translateX(calc(-100% - 78px));
   }
 }
-//
-//.scroll {
-//  &:first-child {
-//    animation: scroll-first 30s linear infinite;
-//    animation-delay: -30s;
-//  }
-//
-//  &:last-child {
-//    animation: scroll-second 30s linear infinite;
-//    animation-delay: -15s;
-//  }
-//}
-//
-//@keyframes scroll-first {
-//  from {
-//    transform: translateX(100%);
-//  }
-//  to {
-//    transform: translateX(-100%);
-//  }
-//}
-//
-//@keyframes scroll-second {
-//  from {
-//    transform: translateX(0);
-//  }
-//  to {
-//    transform: translateX(-200%);
-//  }
-//}
-
-
-
-

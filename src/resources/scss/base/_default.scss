@@ -24,6 +24,10 @@
   background: #b30000;
 }
 
+//*, *::before, *::after {
+//  box-sizing: border-box;
+//}
+
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
@@ -66,12 +70,20 @@ button {
   cursor: pointer;
 }
 
+.dollar{
+    color: rgb(18, 16, 12);
+    font-family: "Angel rhapsody";
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-align: right;
+}
+
 .container {
   width: 1520px;
   margin: 0 auto;
 
   @include desktop-fhd{
-    //max-width: 100%;
     width: calc(100% - 10.417vw - 10.417vw);
     margin-left: 10.417vw;
     margin-right: 10.417vw;
@@ -99,35 +111,4 @@ button {
     margin-right: 4.762vw;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //@include tablet {
-  //  max-width: 100%;
-  //}
-  //@include mobile {
-  //  max-width: 100%;
-  //}
-
-  //@include desktop {
-  //  max-width: 1200px;
-  //}
-  //@include tablet {
-  //  max-width: 768px;
-  //}
-  //@include mobile {
-  //  max-width: 480px;
-  //}
 }

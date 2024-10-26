@@ -4,23 +4,9 @@
     padding-top: 294px;
     background: url("../../../images/background-header.png");
 
-    &-left{
+    &-left {
       width: 481px;
       word-wrap: break-word;
-
-      //@include desktop{
-      //  margin-right: 160px;
-      //}
-
-      @include small-desktop {
-        margin-right: 9.524vw;
-        margin-top: 8.333vw;
-      }
-
-      @include laptop {
-        margin-right: 9.524vw;
-        margin-top: 8.333vw;
-      }
 
       @import "content/section-left/title";
 
@@ -28,18 +14,6 @@
 
       @import "content/section-left/schedule";
     }
-
-
-
-
-
-
-
-    //@import "content/section-left/title";
-    //
-    //@import "content/section-left/button";
-    //
-    //@import "content/section-left/schedule";
 
     @import "content/section-right/section-right";
 
@@ -49,47 +23,34 @@
 }
 
 
+.accordion {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+}
 
+.accordion-title {
+  padding: 15px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-weight: bold;
+}
 
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+  background-color: #fafafa;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.accordion-content p {
+  margin: 10px 0;
+}
 
 
 .main-top {
@@ -105,156 +66,128 @@
 
 .main {
   .main-top {
-    //display: flex;
-    //position: absolute;
-    //z-index: -1;
-    width: 100%;
-    height: auto; /* Автоматична висота, але варто замінити на мінімальну висоту */
-    //min-height: 100vh; /* Висота фону на всю висоту вікна */
+    padding-top: 160px;
     background: url("../../../images/main.png");
-    //background-size: cover;
-
-    .container{
-      position: relative;
-      top: 160px;
-
-    }
+    background-size: cover;
   }
 
 
   .main-left {
-    //position: absolute;
     position: relative;
+    padding: 52px 52px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 32px;
+    background-color: #1E1C17;
 
-    .element {
-      width: 485px;
-      height: 221px;
+    &__image {
+      position: relative;
+      width: calc(100% - 40px);
+      z-index: 2;
 
-      background: linear-gradient(180.00deg, rgb(30, 28, 23), rgba(30, 28, 23, 0) 100%);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: bottom;
+      }
+    }
+
+    &__decor {
       position: absolute;
-      z-index: 0;
+      bottom: 0;
+      height: 60%;
+      width: 100%;
+      border-radius: 0 0 32px 32px;
+      background-image: url("../images/dotsackground.png");
+      background-size: cover;
 
-      top: 269px;
+      &::after {
+        position: absolute;
+        content: '';
+        top: -50px;
+        width: 100%;
+        height: 45%;
+        background-image: linear-gradient(180.00deg, rgb(30, 28, 23), rgba(30, 28, 23, 0) 100%);
+      }
     }
 
     .h2 {
+      position: relative;
       color: #FFFFFF;
       font-size: 64px;
       font-family: "Angel rhapsody";
-      width: 381px;
+      font-weight: 400;
       letter-spacing: -2px;
-      position: absolute;
-      z-index: 1;
       line-height: 1;
-
-      top: 52px;
-      left: 52px;
-      right: 52px;
+      //line-height: normal;
+      z-index: 2;
     }
-
-    .im {
-      border-color: #FFFFFF;
-      position: absolute;
-      top: 320px;
-      z-index: -1;
-    }
-
-    .tatoo {
-      position: absolute;
-      top: 335px;
-      left: 72px;
-      right: 72px;
-      z-index: 1;
-    }
-  }}
-
-  .center-top {
-    //left: 517px;
-    //right: 517px;
-    //position: absolute;
-position: relative;
-    left: 32px;
-    top: 1px;
-
-    width: 486px;
-    height: 324px;
   }
+}
 
-  .cont-biba {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.center-top {
 
-    width: 485px;
-    height: 324px;
-
-    border-radius: 32px;
-    background: #FFF4EB;
-    position: absolute;
-  }
-
-  .dd {
-    color: rgb(18, 16, 12);
-    font-family: Angel rhapsody;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 0px;
-    letter-spacing: 0.06em;
-    text-align: right;
-    position: relative;
-    margin-top: 268px;
-    margin-right: 40px;
-  }
-
-  .dollar {
-    color: rgb(18, 16, 12);
-    font-family: Angel rhapsody;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 0px;
-    letter-spacing: 0.06em;
-    text-align: right;
-  }
-
-
-.center{
-  max-width: 550px;
   position: relative;
-  top: -16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  background-color: #FFF4EB;
+}
+
+.dd {
+  color: rgb(18, 16, 12);
+  font-family: Angel rhapsody;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+}
+
+//.dollar {
+//  color: rgb(18, 16, 12);
+//  font-family: Angel rhapsody;
+//  font-size: 24px;
+//  font-weight: 400;
+//  line-height: 0px;
+//  letter-spacing: 0.06em;
+//  text-align: right;
+//}
+
+
+.center {
+
+  position: absolute;
+  top: 307px;
+  left: 485px;
+  z-index: 12;
+  fill: #1E1C17
+
 }
 
 
 .center-botton {
-  //margin-left: 517px;
-  //margin-top: 432px;
-  //position: absolute;
-position: relative;
-  left: 32px;
-  top: -40px;
-
-  .cont-snake {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 485px;
-    height: 368px;
-    border-radius: 32px;
-    background: #FFF4EB;
-    position: absolute;
-  }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  background: #FFF4EB;
 
   .pp {
     color: rgb(18, 16, 12);
     font-family: Angel rhapsody;
     font-size: 32px;
     font-weight: 400;
-    line-height: 0px;
     letter-spacing: 0.06em;
-    text-align: right;
-    position: relative;
-    margin-top: 312px;
-    margin-left: 338px;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
   }
 
   .dollar {
@@ -274,7 +207,7 @@ position: relative;
   //left: 68%;
   position: relative;
 
-  img{
+  img {
     position: absolute;
   }
 }
@@ -282,7 +215,7 @@ position: relative;
 .rec {
   width: 485px;
   height: 135px;
-  background: linear-gradient(180.00deg, rgb(30, 28, 23) 9.214%,rgba(30, 28, 23, 0) 100%);
+  background: linear-gradient(180.00deg, rgb(30, 28, 23) 9.214%, rgba(30, 28, 23, 0) 100%);
   position: absolute;
   transform: rotate(-180.00deg);
   z-index: 0;
@@ -299,11 +232,11 @@ position: relative;
   z-index: 1;
   line-height: 1;
 
-  top:376px;
-  left:52px;
+  top: 376px;
+  left: 52px;
 }
 
-.text{
+.text {
   width: 381px;
   color: rgba(255, 255, 255, 0.40);
   font-family: "Satoshi Variable";
@@ -313,11 +246,11 @@ position: relative;
   line-height: 150%;
   letter-spacing: -0.36px;
   position: absolute;
-  top:592px;
-  left:52px;
+  top: 592px;
+  left: 52px;
 }
 
-.button{
+.button {
   display: inline-flex;
   padding: 20px 32px;
   justify-content: center;
@@ -326,8 +259,8 @@ position: relative;
   border-radius: 12px;
   background: #DB9F6A;
   position: absolute;
-  top:670px;
-  left:52px;
+  top: 670px;
+  left: 52px;
   width: 255px;
   height: 64px;
 
@@ -338,26 +271,35 @@ position: relative;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1.89px;
- }
+}
 
 
-.grids {  display: grid;
+.grids {
+  position: relative;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0fr 0fr 0fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
+  grid-template-rows: 324px 368px;
+  gap: 108px 32px;
+  //grid-auto-flow: row;
   grid-template-areas:
     "main-left center-top main-right"
-    "main-left center main-right"
     "main-left center-botton main-right";
 }
 
-.main-left { grid-area: main-left; }
+.main-left {
+  grid-area: main-left;
+}
 
-.center-top { grid-area: center-top; }
+.center-top {
+  grid-area: center-top;
+}
 
-.center { grid-area: center; }
+//.center { grid-area: center; }
 
-.center-botton { grid-area: center-botton; }
+.center-botton {
+  grid-area: center-botton;
+}
 
-.main-right { grid-area: main-right; }
+.main-right {
+  grid-area: main-right;
+}
