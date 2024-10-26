@@ -1,11 +1,18 @@
 .main {
+
+  .container{
+    display: flex;
+  }
+
   &-content-section {
-    position: relative;
-    padding-top: 294px;
+    //position: relative;
+    //padding-top: 294px;
     background: url("../../../images/background-header.png");
 
     &-left {
-      width: 481px;
+      padding-top: 294px;
+      max-width: 481px;
+      width: 100%;
       word-wrap: break-word;
 
       @import "content/section-left/title";
@@ -13,6 +20,16 @@
       @import "content/section-left/button";
 
       @import "content/section-left/schedule";
+
+      @include small-desktop{
+        width: 28.631vw;
+        min-width: 420px;
+      }
+
+      @include laptop{
+        width: 28.631vw;
+        max-width: 420px;
+      }
     }
 
     @import "content/section-right/section-right";
