@@ -20,5 +20,11 @@
     @include laptop {
       font-size: 6.667vw;
     }
+    @include small-laptop{
+      font-size: clamp(80px, 6.667vw, 90px);
+    }
+    @include tablet{
+      font-size: 80px;
+    }
   }
 }

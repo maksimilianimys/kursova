@@ -34,6 +34,16 @@
       @include laptop{
         max-width: 28.631vw;
       }
+
+      @include small-laptop{
+        padding-top: 22.969vw;
+        max-width: 28.631vw;
+      }
+
+      @include tablet{
+        padding-top: 22.969vw;
+        max-width: clamp(290px, 28.631vw, 300px);
+      }
     }
 
     @import "content/section-right/section-right";

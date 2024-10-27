@@ -54,6 +54,11 @@
       padding: 0 11.667vw;
     }
 
+    @include tablet {
+      gap: 8.333vw;
+      padding: 0 11.667vw;
+    }
+
     &-left {
       display: flex;
 
@@ -82,6 +87,11 @@
         gap: 3.611vw;
         font-size: 1.25vw;
       }
+
+      @include tablet {
+        gap: 3.611vw;
+        font-size: 1.25vw;
+      }
     }
 
     &-center-button {
@@ -103,6 +113,13 @@
         }
       }
       @include small-laptop {
+        img {
+          height: 5.469vw;
+          width: 5.469vw;
+        }
+      }
+
+      @include tablet {
         img {
           height: 5.469vw;
           width: 5.469vw;
@@ -135,6 +152,11 @@
       }
 
       @include small-laptop {
+        gap: 3.611vw;
+        font-size: 1.25vw;
+      }
+
+      @include tablet {
         gap: 3.611vw;
         font-size: 1.25vw;
       }

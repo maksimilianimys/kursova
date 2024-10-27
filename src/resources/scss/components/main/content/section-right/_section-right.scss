@@ -11,6 +11,11 @@
     padding-top: 11.042vw;
   }
 
+  @include tablet{
+    position: relative;
+    padding-top: clamp(180px, 20.703vw, 212px) ;
+  }
+
   .div {
     margin-left: 160px;
 
@@ -38,6 +43,21 @@
       max-height: 60.595vw;
 
       margin-left: 9.524vw;
+    }
+
+    @include  small-laptop{
+      max-width: 55.833vw;
+      max-height: 60.595vw;
+
+      margin-left: clamp(120px, 9.524vw, 125px);
+    }
+
+    @include tablet{
+      margin: 0;
+      left:121px;
+      width: 571.8px;
+      height: 620.4px;
+
     }
   }
 
@@ -68,9 +88,28 @@
 
       margin-left: 9.167vw;
     }
+
+    @include small-laptop {
+      max-width: 51.667vw;
+      max-height: 52.798vw;
+      margin-left: clamp(115px, 9.167vw, 120px);
+    }
+
+    @include tablet {
+      margin: 0;
+      left:116px;
+
+      width: 529px;
+      height: 540.6px;
+    }
   }
 
   &-element {
+
+    @include tablet{
+      display: none;
+    }
+
     &-circle {
       position: absolute;
       z-index: 10;
@@ -96,6 +135,11 @@
       @include laptop {
         left: 44.167vw;
         top: clamp(390px, 28.611vw, 412px);
+      }
+
+      @include small-laptop {
+        left: clamp(472px,44.167vw, 570px);
+        top: clamp(352px, 30.469vw, 390px);
       }
     }
 
@@ -125,6 +169,10 @@
       @include laptop {
         top: clamp(393.5px, 28.819vw, 415px);
         left: 44.375vw;
+      }
+      @include small-laptop {
+        top: clamp(355.5px, 30.742vw, 393.5px);
+        left: clamp(480px, 44.375vw, 570px);
       }
     }
 
@@ -169,6 +217,14 @@
         padding: 0 1.905vw;
       }
 
+      @include small-laptop {
+        top: clamp(535px, 47.857vw, 615px);
+        left: clamp(475px, 43.631vw, 560px);
+        width: 18.929vw;
+        height: 8.095vw;
+        padding: 0 1.905vw;
+      }
+
       &-info {
 
         &:not(:last-child) {
@@ -203,6 +259,10 @@
           @include laptop {
             font-size: 1.073vw;
           }
+
+          @include small-laptop {
+            font-size: 1.073vw;
+          }
         }
 
         &-text {
@@ -220,6 +280,9 @@
             font-size: 1.905vw;
           }
           @include laptop {
+            font-size: 1.906vw;
+          }
+          @include small-laptop {
             font-size: 1.906vw;
           }
         }
@@ -244,6 +307,10 @@
       @include laptop{
         left: 58.512vw;
         top: 55.833vw;
+      }
+      @include small-laptop{
+        left: clamp(620px, 58.512vw, 750px);
+        top: clamp(618px, 55.833vw, 720px);
       }
     }
   }

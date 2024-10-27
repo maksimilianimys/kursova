@@ -111,4 +111,10 @@ button {
     margin-right: 4.762vw;
   }
 
+  @include tablet{
+    width: calc(100% - 9.524vw);
+    margin-left: 4.762vw;
+    margin-right: 4.762vw;
+  }
+
 }

@@ -14,9 +14,25 @@
     margin-top: 3.81vw;
   }
 
+  @include small-laptop{
+    margin-top: 3.81vw;
+  }
+
+  @include tablet{
+    margin-top: 3.81vw;
+  }
+
   img{
     @include desktop-fhd{
       height: 4.167vw;
+    }
+
+    @include small-laptop{
+      height: 6.25vw;
+    }
+
+    @include tablet{
+      height: 6.25vw;
     }
   }
 
@@ -43,6 +59,12 @@
 
     @include desktop-fhd{
       font-size: 1.25vw;
+    }
+    @include small-laptop{
+      font-size: 1.875vw;
+    }
+    @include tablet{
+      font-size: 1.875vw;
     }
   }
 }

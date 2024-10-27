@@ -9,6 +9,10 @@
   @include desktop-fhd{
     height: 7.292vw;
   }
+
+  @include tablet{
+    display: none;
+  }
 }
 
 .main-content-marquee-section-container {
@@ -70,4 +74,20 @@
       transform: translateX(calc(-100% - 4.063vw));
     }
   }
+}
+
+
+.mm{
+  display: none;
+  height: 140px;
+  background: rgba(42, 39, 34, 0.50);
+  backdrop-filter: blur(5px);
+
+  @include tablet{
+    display: flex;
+  }
+}
+
+.mm-cc{
+
 }
