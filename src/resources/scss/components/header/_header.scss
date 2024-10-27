@@ -18,8 +18,8 @@
   right: 0;
   z-index: 1;
 
-  @include desktop-fhd{
-    top:2.604vw;
+  @include desktop-fhd {
+    top: 2.604vw;
   }
 
   &-navigation-bar {
@@ -46,8 +46,12 @@
 
     @include laptop {
       gap: 8.333vw;
-      padding-right: 11.667vw;
-      padding-left: 11.667vw;
+      padding: 0 11.667vw;
+    }
+
+    @include small-laptop {
+      gap: 8.333vw;
+      padding: 0 11.667vw;
     }
 
     &-left {
@@ -73,6 +77,11 @@
         gap: 3.611vw;
         font-size: 1.25vw;
       }
+
+      @include small-laptop {
+        gap: 3.611vw;
+        font-size: 1.25vw;
+      }
     }
 
     &-center-button {
@@ -91,6 +100,12 @@
         img {
           height: 3.646vw;
           width: 3.646vw;
+        }
+      }
+      @include small-laptop {
+        img {
+          height: 5.469vw;
+          width: 5.469vw;
         }
       }
     }
@@ -115,6 +130,11 @@
       }
 
       @include laptop {
+        gap: 3.611vw;
+        font-size: 1.25vw;
+      }
+
+      @include small-laptop {
         gap: 3.611vw;
         font-size: 1.25vw;
       }

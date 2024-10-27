@@ -1,6 +1,3 @@
-//$first_font: "Roboto", sans-serif;
-//$second_font: "Raleway", sans-serif;
-
 @mixin desktop-fhd{
   @media screen and (min-width: 1920.01px){
     @content;

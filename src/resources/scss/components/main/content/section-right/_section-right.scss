@@ -32,6 +32,13 @@
 
       margin-left: 9.524vw;
     }
+
+    @include  laptop{
+      max-width: 55.833vw;
+      max-height: 60.595vw;
+
+      margin-left: 9.524vw;
+    }
   }
 
   .bg {
@@ -50,6 +57,12 @@
     }
 
     @include small-desktop {
+      max-width: 51.667vw;
+      max-height: 52.798vw;
+
+      margin-left: 9.167vw;
+    }
+    @include laptop {
       max-width: 51.667vw;
       max-height: 52.798vw;
 
@@ -81,8 +94,8 @@
       }
 
       @include laptop {
-        left: 61.54%;
-        top: 29.32%;
+        left: 44.167vw;
+        top: clamp(390px, 28.611vw, 412px);
       }
     }
 
@@ -110,8 +123,8 @@
       }
 
       @include laptop {
-        top: 29.8%;
-        left: 62.44%;
+        top: clamp(393.5px, 28.819vw, 415px);
+        left: 44.375vw;
       }
     }
 
@@ -149,11 +162,11 @@
       }
 
       @include laptop {
-        left: 59.3%;
-        top: 67.2%;
-        width: 19vw;
-        height: 8.101vw;
-        padding: 0 1.906vw;
+        top: 47.857vw;
+        left: 43.631vw;
+        width: 18.929vw;
+        height: 8.095vw;
+        padding: 0 1.905vw;
       }
 
       &-info {
@@ -225,6 +238,10 @@
       }
 
       @include small-desktop{
+        left: 58.512vw;
+        top: 55.833vw;
+      }
+      @include laptop{
         left: 58.512vw;
         top: 55.833vw;
       }

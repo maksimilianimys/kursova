@@ -24,10 +24,6 @@
   background: #b30000;
 }
 
-//*, *::before, *::after {
-//  box-sizing: border-box;
-//}
-
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
@@ -37,7 +33,7 @@ body {
   line-height: normal;
   margin: 0;
   padding: 0;
-  background-color: rgba(18,16,11,255);
+  background-color: rgba(18, 16, 11, 255);
 }
 
 ul,
@@ -70,15 +66,15 @@ button {
   cursor: pointer;
 }
 
-.dollar{
-    color: rgb(18, 16, 12);
-    font-family: "Angel rhapsody";
-    font-size: 24px;
-    font-weight: 400;
-    letter-spacing: 0.08em;
-    text-align: right;
+.dollar {
+  color: rgb(18, 16, 12);
+  font-family: "Angel rhapsody";
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-align: right;
 
-  @include desktop-fhd{
+  @include desktop-fhd {
     font-size: 1.25vw;
   }
 }
@@ -87,7 +83,7 @@ button {
   width: 1520px;
   margin: 0 auto;
 
-  @include desktop-fhd{
+  @include desktop-fhd {
     width: calc(100% - 10.417vw - 10.417vw);
     margin-left: 10.417vw;
     margin-right: 10.417vw;
@@ -97,19 +93,19 @@ button {
     max-width: 100%;
   }
 
-  @include small-desktop{
+  @include small-desktop {
     width: calc(100% - 9.524vw);
     margin-left: 4.762vw;
     margin-right: 4.762vw;
   }
 
-  @include laptop{
+  @include laptop {
     width: calc(100% - 9.524vw);
     margin-left: 4.762vw;
     margin-right: 4.762vw;
   }
 
-  @include small-laptop{
+  @include small-laptop {
     width: calc(100% - 9.524vw);
     margin-left: 4.762vw;
     margin-right: 4.762vw;

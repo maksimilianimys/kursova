@@ -12,7 +12,6 @@
     &-left {
       padding-top: 294px;
       max-width: 481px;
-      width: 100%;
       word-wrap: break-word;
 
       @import "content/section-left/title";
@@ -28,13 +27,12 @@
 
       @include small-desktop{
         max-width: 28.631vw;
-        width: 100%;
+
         //min-width: 420px;
       }
 
       @include laptop{
-        width: 28.631vw;
-        max-width: 370px;
+        max-width: 28.631vw;
       }
     }
 
