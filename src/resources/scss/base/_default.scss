@@ -77,6 +77,10 @@ button {
     font-weight: 400;
     letter-spacing: 0.08em;
     text-align: right;
+
+  @include desktop-fhd{
+    font-size: 1.25vw;
+  }
 }
 
 .container {

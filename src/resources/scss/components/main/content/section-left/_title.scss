@@ -10,6 +10,10 @@
     text-align: left;
     margin: 0;
 
+    @include desktop-fhd{
+      font-size: 5.833vw;
+    }
+
     @include small-desktop {
       font-size: 6.667vw;
     }

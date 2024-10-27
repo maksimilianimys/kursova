@@ -18,6 +18,10 @@
   right: 0;
   z-index: 1;
 
+  @include desktop-fhd{
+    top:2.604vw;
+  }
+
   &-navigation-bar {
     height: 104px;
     border-radius: 32px;
@@ -25,14 +29,20 @@
     backdrop-filter: blur(5px);
 
     gap: 120px;
-    padding-right: 11.053%;
-    padding-left: 11.053%;
+    padding: 0 11.053%;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     white-space: nowrap;
+
+    @include desktop-fhd {
+      gap: 6.25vw;
+      padding: 0 8.75vw;
+      height: 5.417vw;
+      border-radius: 1.667vw;
+    }
 
     @include laptop {
       gap: 8.333vw;
@@ -54,6 +64,11 @@
       text-align: left;
       //text-transform: uppercase;
 
+      @include desktop-fhd {
+        font-size: 0.938vw;
+        gap: 2.708vw;
+      }
+
       @include laptop {
         gap: 3.611vw;
         font-size: 1.25vw;
@@ -71,6 +86,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @include desktop-fhd {
+        img {
+          height: 3.646vw;
+          width: 3.646vw;
+        }
+      }
     }
 
     &-right {
@@ -86,6 +108,11 @@
       letter-spacing: 0.08em;
       text-align: left;
       //text-transform: uppercase;
+
+      @include desktop-fhd {
+        font-size: 0.938vw;
+        gap: 2.708vw;
+      }
 
       @include laptop {
         gap: 3.611vw;

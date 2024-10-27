@@ -21,14 +21,20 @@
 
       @import "content/section-left/schedule";
 
+      @include desktop-fhd{
+        padding-top: 15.313vw;
+        max-width: 25.052vw;
+      }
+
       @include small-desktop{
-        width: 28.631vw;
-        min-width: 420px;
+        max-width: 28.631vw;
+        width: 100%;
+        //min-width: 420px;
       }
 
       @include laptop{
         width: 28.631vw;
-        max-width: 420px;
+        max-width: 370px;
       }
     }
 

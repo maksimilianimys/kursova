@@ -6,6 +6,9 @@
   backdrop-filter: blur(5px);
   overflow: hidden;
 
+  @include desktop-fhd{
+    height: 7.292vw;
+  }
 }
 
 .main-content-marquee-section-container {
@@ -14,6 +17,13 @@
   user-select: none;
 
   gap: 78px;
+
+  @include desktop-fhd{
+    img{
+      height: 2.5vw;
+    }
+    gap:4.063vw;
+  }
 }
 
 .main-content-marquee-section-container-content {
@@ -23,11 +33,15 @@
   gap: 78px;
   justify-content: space-around;
   min-width: 100%;
+
+  @include desktop-fhd{
+    gap:4.063vw;
+  }
 }
 
 
 .main-content-marquee-section-container-content-item:hover {
-  transform: scale(1.5);
+  transform: scale(1.25);
 }
 
 .mq {
@@ -44,5 +58,16 @@
   }
   to {
     transform: translateX(calc(-100% - 78px));
+  }
+}
+
+@include desktop-fhd{
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 4.063vw));
+    }
   }
 }

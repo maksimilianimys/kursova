@@ -2,11 +2,22 @@
   margin-top: 64px;
   height: 80px;
 
+  @include desktop-fhd{
+    margin-top: 3.333vw;
+    height: 4.167vw;
+  }
+
   @include small-desktop {
     margin-top: 3.81vw;
   }
   @include laptop {
     margin-top: 3.81vw;
+  }
+
+  img{
+    @include desktop-fhd{
+      height: 4.167vw;
+    }
   }
 
   button {
@@ -29,5 +40,9 @@
     font-weight: 700;
 
     letter-spacing: 0.1em;
+
+    @include desktop-fhd{
+      font-size: 1.25vw;
+    }
   }
 }

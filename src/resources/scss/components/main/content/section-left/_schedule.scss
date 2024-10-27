@@ -4,12 +4,23 @@
     display: flex;
     align-items: center;
 
+  @include desktop-fhd{
+    margin-top: 3.333vw;
+  }
+
     @include small-desktop{
       margin-top: 3.81vw;
     }
     @include laptop{
       margin-top: 3.81vw;
     }
+
+  img{
+    @include desktop-fhd{
+      width: 1.25vw;
+      height: 1.25vw;
+    }
+  }
 
     &-time {
       display: flex;
@@ -22,12 +33,22 @@
 
       justify-content: center;
       align-items: center;
+
+      @include desktop-fhd{
+        height: 2.708vw;
+        width: 2.708vw;
+        border-radius: 0.417vw;
+      }
     }
 
     &-info {
       display: flex;
 
       margin-left: 24px;
+
+      @include desktop-fhd{
+        margin-left: 1.25vw;
+      }
 
       &-days {
         color: #DB9F6A;
@@ -41,6 +62,11 @@
         p:not(:last-child) {
           padding-bottom: 12px;
         }
+
+        @include desktop-fhd{
+          font-size: 0.938vw;
+          padding-right: 0.625vw;
+        }
       }
 
       &-hours {
@@ -49,6 +75,10 @@
         font-size: 18px;
         font-weight: 500;
         letter-spacing: -0.02em;
+
+        @include desktop-fhd{
+          font-size: 0.938vw;
+        }
 
         p:not(:last-child) {
           padding-bottom: 12px;

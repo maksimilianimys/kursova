@@ -3,9 +3,13 @@
   position: relative;
   height: 100%;
   width: auto;
-  //margin-left: 160px;
 
   padding-top: 212px;
+
+  @include desktop-fhd{
+    flex: 1;
+    padding-top: 11.042vw;
+  }
 
   .div {
     margin-left: 160px;
@@ -15,6 +19,19 @@
     width: 100%;
     max-width: 938px;
     max-height: 1018px;
+
+    @include desktop-fhd{
+      margin-left: 8.333vw;
+      max-width: 48.854vw;
+      max-height: 53.021vw;
+    }
+
+    @include small-desktop {
+      max-width: 55.833vw;
+      max-height: 60.595vw;
+
+      margin-left: 9.524vw;
+    }
   }
 
   .bg {
@@ -25,6 +42,19 @@
     width: 100%;
     max-width: 868px;
     max-height: 887px;
+
+    @include desktop-fhd{
+      margin-left: 8.021vw;
+      max-width: 45.208vw;
+      max-height: 46.198vw;
+    }
+
+    @include small-desktop {
+      max-width: 51.667vw;
+      max-height: 52.798vw;
+
+      margin-left: 9.167vw;
+    }
   }
 
   &-element {
@@ -32,17 +62,22 @@
       position: absolute;
       z-index: 10;
 
-      left: 71.3%;
-      top: 36.6%;
+      left: 71.415%;
+      top: 36.577%;
 
       width: 8px;
       height: 8px;
       background: white;
       border-radius: 9999px;
 
+      @include desktop-fhd{
+        width: 0.417vw;
+        height: 0.417vw;
+      }
+
       @include small-desktop {
-        top: 16.4vw;
-        left: 31.7vw;
+        top: clamp(412px, 26.756vw, 449px);
+        left: 44.167vw;
       }
 
       @include laptop {
@@ -55,18 +90,23 @@
       position: absolute;
       z-index: 10;
 
-      top: 36.87%;
-      left: 71.7%;
+      top: 36.863%;
+      left: 71.8%;
 
       width: 13.956%;
-      height: 28.318%;
+      height: 28.644%;
 
       border-top: 1px solid white;
       border-right: 1px solid white;
 
+      @include desktop-fhd{
+        border-top: 0.052vw solid white;
+        border-right: 0.052vw solid white;
+      }
+
       @include small-desktop {
-        top: 16.6vw;
-        left: 62.4%;
+        top: clamp(415px, 26.964vw, 453px);
+        left: 44.405vw;
       }
 
       @include laptop {
@@ -83,7 +123,7 @@
       position: absolute;
       z-index: 10;
 
-      padding: 0px 32px;
+      padding: 0 32px;
 
       width: 318px;
       height: 136px;
@@ -91,15 +131,21 @@
       border-radius: 24px;
       background: #fff4eb;
 
-      left: 70.6%;
-      top: 65.4%;
+      left: 70.55%;
+      top: 65.424%;
+
+      @include desktop-fhd{
+        width: 16.563vw;
+        height: 7.083vw;
+        padding: 0 1.667vw;
+      }
 
       @include small-desktop {
-        top: 66.4%;
-        left: 58.5%;
-        width: 19vw;
-        height: 8.101vw;
-        padding: 0 1.906vw;
+        top: 47.857vw;
+        left: 43.631vw;
+        width: 18.929vw;
+        height: 8.095vw;
+        padding: 0 1.905vw;
       }
 
       @include laptop {
@@ -114,6 +160,10 @@
 
         &:not(:last-child) {
           padding-right: 8px;
+
+          @include desktop-fhd{
+            padding-right: 0.417vw;
+          }
         }
 
         &-title {
@@ -128,8 +178,13 @@
           text-transform: uppercase;
           //text-align: left;
 
+          @include desktop-fhd{
+            font-size: 0.938vw;
+            padding-bottom: 0.833vw;
+          }
+
           @include small-desktop {
-            font-size: 1.073vw;
+            font-size: 1.071vw;
           }
 
           @include laptop {
@@ -144,8 +199,12 @@
           font-size: 32px;
           letter-spacing: 0.06em;
           //text-align: left;
+
+          @include desktop-fhd{
+            font-size: 1.667vw;
+          }
           @include small-desktop {
-            font-size: 1.906vw;
+            font-size: 1.905vw;
           }
           @include laptop {
             font-size: 1.906vw;
@@ -156,9 +215,19 @@
 
     &-vector {
       position: absolute;
-      left: 94.6%;
-      top: 76.4%;
+      left: 94.611%;
+      top: 76.328%;
       z-index: 10;
+
+      @include desktop-fhd{
+          width: 1.042vw;
+          height: 1.198vw;
+      }
+
+      @include small-desktop{
+        left: 58.512vw;
+        top: 55.833vw;
+      }
     }
   }
 }
