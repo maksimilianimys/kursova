@@ -1,9 +1,12 @@
 .main-content-marquee {
   height: 140px;
+
   background: rgba(42, 39, 34, 0.5);
+  backdrop-filter: blur(5px);
+
   display: flex;
   align-items: center;
-  backdrop-filter: blur(5px);
+
   overflow: hidden;
 
   @include desktop-fhd {
@@ -21,8 +24,10 @@
 
 .main-content-marquee-section-container {
   display: flex;
-  width: 100%;
+
   user-select: none;
+
+  width: 100%;
 
   gap: 78px;
 
@@ -36,10 +41,12 @@
 
 .main-content-marquee-section-container-content {
   display: flex;
+  justify-content: space-around;
 
   flex-shrink: 0;
+
   gap: 78px;
-  justify-content: space-around;
+
   min-width: 100%;
 
   @include desktop-fhd {
@@ -47,16 +54,15 @@
   }
 }
 
-
 .main-content-marquee-section-container-content-item:hover {
   transform: scale(1.25);
 }
 
-.mq {
+.marq {
   animation: scroll 20s linear infinite;
 }
 
-.main-content-marquee-section-container:hover .mq {
+.main-content-marquee-section-container:hover .marq {
   animation-play-state: paused;
 }
 
@@ -80,17 +86,18 @@
   }
 }
 
-
-.mm {
+.marquee-block {
   display: none;
+  flex-wrap: wrap;
+
   height: 140px;
   background: rgba(42, 39, 34, 0.50);
   backdrop-filter: blur(5px);
-  flex-wrap: wrap;
-  position: relative;
-  z-index: 15;
-  margin-top: 60px;
 
+  position: relative;
+  z-index: 1;
+
+  margin-top: 60px;
 
   @include tablet {
     display: flex;
@@ -105,10 +112,11 @@
   }
 }
 
-.mm-cc {
+.marquee-block-element {
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 33%;
 
   @include mobile {

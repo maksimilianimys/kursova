@@ -22,7 +22,8 @@
   @include desktop-fhd {
     top: 2.604vw;
   }
-  @include mobile{
+
+  @include mobile {
     top: clamp(24px, 6.51vw, 50px);
   }
 
@@ -62,7 +63,7 @@
       padding: 0 11.667vw;
     }
 
-    @include mobile{
+    @include mobile {
       padding: 0 clamp(24px, 6.117vw, 85px);
       height: clamp(72px, 13.542vw, 104px);
       border-radius: clamp(24px, 4.167vw, 32px);
@@ -103,7 +104,7 @@
         font-size: clamp(10px, 1.25vw, 15px);
       }
 
-      @include mobile{
+      @include mobile {
         display: none;
       }
     }
@@ -180,12 +181,12 @@
         font-size: clamp(10px, 1.25vw, 15px);
       }
 
-      @include mobile{
+      @include mobile {
         display: none;
       }
     }
 
-    &-menu{
+    &-menu {
       display: none;
 
       background-color: transparent;
@@ -206,7 +207,7 @@
           width: clamp(40px, 5.469vw, 45px);
         }
 
-        .line{
+        .line {
           height: clamp(32px, 5.469vw, 42px);
           width: clamp(32px, 5.469vw, 42px);
         }

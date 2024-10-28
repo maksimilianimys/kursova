@@ -11,16 +11,20 @@
   @include small-desktop {
     margin-top: 3.81vw;
   }
+
   @include laptop {
     margin-top: 3.81vw;
   }
-  @include small-laptop{
+
+  @include small-laptop {
     margin-top: clamp(40px, 3.81vw, 64px);
   }
-  @include tablet{
+
+  @include tablet {
     margin-top: 40px;
   }
-  @include mobile{
+
+  @include mobile {
     margin-top: 40px;
   }
 
@@ -44,8 +48,8 @@
     align-items: center;
 
     @include desktop-fhd {
-      height: 2.708vw;
       width: 2.708vw;
+      height: 2.708vw;
       border-radius: 0.417vw;
     }
   }
@@ -61,7 +65,7 @@
 
     &-days {
       color: #DB9F6A;
-      font-family: "Satoshi";
+      font-family: $Satoshi-font;
       font-size: 18px;
       font-weight: 500;
       letter-spacing: -0.02em;
@@ -70,6 +74,10 @@
 
       p:not(:last-child) {
         padding-bottom: 12px;
+
+        @include desktop-fhd {
+          padding-bottom: 0.625vw;
+        }
       }
 
       @include desktop-fhd {
@@ -80,7 +88,7 @@
 
     &-hours {
       color: #FFF;
-      font-family: "Satoshi";
+      font-family: $Satoshi-font;
       font-size: 18px;
       font-weight: 500;
       letter-spacing: -0.02em;
@@ -91,6 +99,10 @@
 
       p:not(:last-child) {
         padding-bottom: 12px;
+
+        @include desktop-fhd {
+          padding-bottom: 0.625vw;
+        }
       }
     }
   }

@@ -2,13 +2,11 @@
 
   overflow: hidden;
 
-  .container{
+  .container {
     display: flex;
   }
 
   &-content-section {
-    //position: relative;
-    //padding-top: 294px;
     background: url("../../../images/background-header.png");
 
     &-left {
@@ -22,34 +20,32 @@
 
       @import "content/section-left/schedule";
 
-      @include desktop-fhd{
+      @include desktop-fhd {
         padding-top: 15.313vw;
         max-width: 25.052vw;
       }
 
-      @include small-desktop{
-        max-width: 28.631vw;
-
-        //min-width: 420px;
-      }
-
-      @include laptop{
+      @include small-desktop {
         max-width: 28.631vw;
       }
 
-      @include small-laptop{
+      @include laptop {
+        max-width: 28.631vw;
+      }
+
+      @include small-laptop {
         padding-top: 22.969vw;
-        max-width: clamp(320px, 28.631vw, 370px) ;
+        max-width: clamp(320px, 28.631vw, 370px);
       }
 
-      @include tablet{
-        padding-top: clamp(200px, 22.969vw, 240px) ;
+      @include tablet {
+        padding-top: clamp(200px, 22.969vw, 240px);
         max-width: 320px;
       }
 
-      @include mobile{
-        padding-top: clamp(136px, 28.646vw, 220px) ;
-        max-width: clamp(290px, 28.631vw, 300px);
+      @include mobile {
+        padding-top: clamp(136px, 28.646vw, 220px);
+        max-width: 320px;
       }
     }
 

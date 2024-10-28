@@ -2,7 +2,7 @@
   margin-top: 64px;
   height: 80px;
 
-  @include desktop-fhd{
+  @include desktop-fhd {
     margin-top: 3.333vw;
     height: 4.167vw;
   }
@@ -10,36 +10,37 @@
   @include small-desktop {
     margin-top: 3.81vw;
   }
+
   @include laptop {
     margin-top: 3.81vw;
   }
 
-  @include small-laptop{
+  @include small-laptop {
     margin-top: clamp(40px, 3.81vw, 64px);
   }
 
-  @include tablet{
+  @include tablet {
     margin-top: 40px;
   }
 
-  @include mobile{
+  @include mobile {
     margin-top: 40px;
   }
 
-  img{
-    @include desktop-fhd{
+  img {
+    @include desktop-fhd {
       height: 4.167vw;
     }
 
-    @include small-laptop{
+    @include small-laptop {
       height: clamp(72px, 6.25vw, 80px);
     }
 
-    @include tablet{
+    @include tablet {
       height: 72px;
     }
 
-    @include mobile{
+    @include mobile {
       height: 72px;
     }
   }
@@ -58,23 +59,26 @@
     position: absolute;
 
     color: #12100c;
-    font-family: "Satoshi";
+    font-family: $Satoshi-font;
 
     font-size: 24px;
     font-weight: 700;
 
     letter-spacing: 0.1em;
 
-    @include desktop-fhd{
+    @include desktop-fhd {
       font-size: 1.25vw;
     }
-    @include small-laptop{
+
+    @include small-laptop {
       font-size: 1.875vw;
     }
-    @include tablet{
+
+    @include tablet {
       font-size: clamp(18px, 1.875vw, 20px);
     }
-    @include mobile{
+
+    @include mobile {
       font-size: 18px;
     }
   }

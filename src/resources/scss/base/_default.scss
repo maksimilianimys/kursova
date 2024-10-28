@@ -68,7 +68,7 @@ button {
 
 .dollar {
   color: rgb(18, 16, 12);
-  font-family: "Angel rhapsody";
+  font-family: $Angel-font;
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.08em;
@@ -81,12 +81,15 @@ button {
   @include small-desktop {
     font-size: 1.429vw;
   }
+
   @include laptop {
     font-size: 1.429vw;
   }
+
   @include small-laptop {
     font-size: 1.429vw;
   }
+
   @include tablet {
     font-size: 1.429vw;
   }

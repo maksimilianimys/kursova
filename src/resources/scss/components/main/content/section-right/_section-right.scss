@@ -6,32 +6,34 @@
 
   padding-top: 212px;
 
-  @include desktop-fhd{
+  @include desktop-fhd {
     flex: 1;
     padding-top: 11.042vw;
   }
 
-  @include tablet{
-    padding-top: clamp(180px, 20.703vw, 212px) ;
+  @include tablet {
+    padding-top: clamp(180px, 20.703vw, 212px);
   }
 
-  @include mobile{
-    padding-top: clamp(180px, 20.703vw, 212px) ;
+  @include mobile {
+    padding-top: clamp(180px, 20.703vw, 212px);
   }
 
-  .div {
+  &-girl {
     margin-left: 160px;
 
     position: relative;
-    z-index: 10;
+    z-index: 2;
+
     width: 100%;
     max-width: 938px;
     max-height: 1018px;
 
-    @include desktop-fhd{
-      margin-left: 8.333vw;
+    @include desktop-fhd {
       max-width: 48.854vw;
       max-height: 53.021vw;
+
+      margin-left: 8.333vw;
     }
 
     @include small-desktop {
@@ -41,50 +43,58 @@
       margin-left: 9.524vw;
     }
 
-    @include  laptop{
+    @include laptop {
       max-width: 55.833vw;
       max-height: 60.595vw;
 
       margin-left: 9.524vw;
     }
 
-    @include  small-laptop{
+    @include small-laptop {
       max-width: 55.833vw;
       max-height: 60.595vw;
 
       margin-left: clamp(120px, 9.524vw, 125px);
     }
 
-    @include tablet{
+    @include tablet {
       position: absolute;
+
       margin: 0;
-      left:121px;
+
+      left: 121px;
+
       width: 571.8px;
       height: 620.4px;
     }
 
-    @include mobile{
+    @include mobile {
       position: absolute;
+
       margin: 0;
-      left:121px;
+
+      left: 121px;
+
       width: 571.8px;
       height: 620.4px;
     }
   }
 
-  .bg {
+  &-background {
     margin-left: 154px;
 
     position: absolute;
-    z-index: 10;
+    z-index: 1;
+
     width: 100%;
     max-width: 868px;
     max-height: 887px;
 
-    @include desktop-fhd{
-      margin-left: 8.021vw;
+    @include desktop-fhd {
       max-width: 45.208vw;
       max-height: 46.198vw;
+
+      margin-left: 8.021vw;
     }
 
     @include small-desktop {
@@ -93,6 +103,7 @@
 
       margin-left: 9.167vw;
     }
+
     @include laptop {
       max-width: 51.667vw;
       max-height: 52.798vw;
@@ -103,12 +114,14 @@
     @include small-laptop {
       max-width: 51.667vw;
       max-height: 52.798vw;
+
       margin-left: clamp(115px, 9.167vw, 120px);
     }
 
     @include tablet {
       margin: 0;
-      left:116px;
+
+      left: 116px;
 
       width: 529px;
       height: 540.6px;
@@ -116,7 +129,8 @@
 
     @include mobile {
       margin: 0;
-      left:116px;
+
+      left: 116px;
 
       width: 529px;
       height: 540.6px;
@@ -125,30 +139,31 @@
 
   &-element {
 
-    @include mobile{
+    @include mobile {
       display: none;
     }
 
     &-circle {
       position: absolute;
-      z-index: 10;
+      z-index: 3;
 
       left: 71.415%;
       top: 36.577%;
 
       width: 8px;
       height: 8px;
+
       background: white;
       border-radius: 9999px;
 
-      @include desktop-fhd{
+      @include desktop-fhd {
         width: 0.417vw;
         height: 0.417vw;
       }
 
       @include small-desktop {
-        top: clamp(412px, 26.756vw, 449px);
         left: 44.167vw;
+        top: clamp(412px, 26.756vw, 449px);
       }
 
       @include laptop {
@@ -157,7 +172,7 @@
       }
 
       @include small-laptop {
-        left: clamp(472px,44.167vw, 570px);
+        left: clamp(472px, 44.167vw, 570px);
         top: clamp(352px, 30.469vw, 390px);
       }
 
@@ -169,7 +184,7 @@
 
     &-line {
       position: absolute;
-      z-index: 10;
+      z-index: 3;
 
       top: 36.863%;
       left: 71.8%;
@@ -180,7 +195,7 @@
       border-top: 1px solid white;
       border-right: 1px solid white;
 
-      @include desktop-fhd{
+      @include desktop-fhd {
         border-top: 0.052vw solid white;
         border-right: 0.052vw solid white;
       }
@@ -194,10 +209,12 @@
         top: clamp(393.5px, 28.819vw, 415px);
         left: 44.375vw;
       }
+
       @include small-laptop {
         top: clamp(355.5px, 30.742vw, 393.5px);
         left: clamp(480px, 44.375vw, 570px);
       }
+
       @include tablet {
         width: 88px;
         height: 238px;
@@ -213,7 +230,7 @@
       align-items: center;
 
       position: absolute;
-      z-index: 10;
+      z-index: 3;
 
       padding: 0 32px;
 
@@ -226,41 +243,50 @@
       left: 70.55%;
       top: 65.424%;
 
-      @include desktop-fhd{
+      @include desktop-fhd {
         width: 16.563vw;
         height: 7.083vw;
+
         padding: 0 1.667vw;
       }
 
       @include small-desktop {
         top: 47.857vw;
         left: 43.631vw;
+
         width: 18.929vw;
         height: 8.095vw;
+
         padding: 0 1.905vw;
       }
 
       @include laptop {
         top: 47.857vw;
         left: 43.631vw;
+
         width: 18.929vw;
         height: 8.095vw;
+
         padding: 0 1.905vw;
       }
 
       @include small-laptop {
         top: clamp(535px, 47.857vw, 615px);
         left: clamp(475px, 43.631vw, 560px);
+
         width: 18.929vw;
         height: 8.095vw;
+
         padding: 0 1.905vw;
       }
 
       @include tablet {
         top: clamp(535px, 47.857vw, 615px);
         left: clamp(475px, 43.631vw, 560px);
+
         width: 18.929vw;
         height: 8.095vw;
+
         padding: 0 1.905vw;
       }
 
@@ -269,14 +295,14 @@
         &:not(:last-child) {
           padding-right: 8px;
 
-          @include desktop-fhd{
+          @include desktop-fhd {
             padding-right: 0.417vw;
           }
         }
 
         &-title {
           color: rgba(18, 16, 12, 0.5);
-          font-family: "Satoshi";
+          font-family: $Satoshi-font;
           font-weight: 700;
           font-size: 18px;
 
@@ -286,8 +312,9 @@
           text-transform: uppercase;
           //text-align: left;
 
-          @include desktop-fhd{
+          @include desktop-fhd {
             font-size: 0.938vw;
+
             padding-bottom: 0.833vw;
           }
 
@@ -302,32 +329,38 @@
           @include small-laptop {
             font-size: 1.073vw;
           }
+
           @include tablet {
             font-size: 1.073vw;
+
             padding-bottom: 1.563vw;
           }
         }
 
         &-text {
           color: #12100c;
-          font-family: "Angel rhapsody";
+          font-family: $Angel-font;
           font-weight: 400;
           font-size: 32px;
           letter-spacing: 0.06em;
           //text-align: left;
 
-          @include desktop-fhd{
+          @include desktop-fhd {
             font-size: 1.667vw;
           }
+
           @include small-desktop {
             font-size: 1.905vw;
           }
+
           @include laptop {
             font-size: 1.906vw;
           }
+
           @include small-laptop {
             font-size: 1.906vw;
           }
+
           @include tablet {
             font-size: 1.906vw;
           }
@@ -337,32 +370,35 @@
 
     &-vector {
       position: absolute;
+      z-index: 3;
+
       left: 94.611%;
       top: 76.328%;
-      z-index: 10;
 
-      @include desktop-fhd{
-          width: 1.042vw;
-          height: 1.198vw;
+      @include desktop-fhd {
+        width: 1.042vw;
+        height: 1.198vw;
       }
 
-      @include small-desktop{
+      @include small-desktop {
         left: 58.512vw;
         top: 55.833vw;
       }
-      @include laptop{
+
+      @include laptop {
         left: 58.512vw;
         top: 55.833vw;
       }
-      @include small-laptop{
+
+      @include small-laptop {
         left: clamp(620px, 58.512vw, 750px);
         top: clamp(618px, 55.833vw, 720px);
       }
-      @include tablet{
+
+      @include tablet {
         left: clamp(620px, 58.512vw, 750px);
         top: clamp(613px, 60.352vw, 618px);
       }
     }
   }
 }
-
