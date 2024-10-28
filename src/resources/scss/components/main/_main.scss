@@ -1,5 +1,7 @@
 .main {
 
+  overflow: hidden;
+
   .container{
     display: flex;
   }
@@ -37,11 +39,16 @@
 
       @include small-laptop{
         padding-top: 22.969vw;
-        max-width: 28.631vw;
+        max-width: clamp(320px, 28.631vw, 370px) ;
       }
 
       @include tablet{
-        padding-top: 22.969vw;
+        padding-top: clamp(200px, 22.969vw, 240px) ;
+        max-width: 320px;
+      }
+
+      @include mobile{
+        padding-top: clamp(136px, 28.646vw, 220px) ;
         max-width: clamp(290px, 28.631vw, 300px);
       }
     }

@@ -12,7 +12,10 @@
   }
 
   @include tablet{
-    position: relative;
+    padding-top: clamp(180px, 20.703vw, 212px) ;
+  }
+
+  @include mobile{
     padding-top: clamp(180px, 20.703vw, 212px) ;
   }
 
@@ -53,11 +56,19 @@
     }
 
     @include tablet{
+      position: absolute;
       margin: 0;
       left:121px;
       width: 571.8px;
       height: 620.4px;
+    }
 
+    @include mobile{
+      position: absolute;
+      margin: 0;
+      left:121px;
+      width: 571.8px;
+      height: 620.4px;
     }
   }
 
@@ -102,11 +113,19 @@
       width: 529px;
       height: 540.6px;
     }
+
+    @include mobile {
+      margin: 0;
+      left:116px;
+
+      width: 529px;
+      height: 540.6px;
+    }
   }
 
   &-element {
 
-    @include tablet{
+    @include mobile{
       display: none;
     }
 
@@ -141,6 +160,11 @@
         left: clamp(472px,44.167vw, 570px);
         top: clamp(352px, 30.469vw, 390px);
       }
+
+      @include tablet {
+        left: 472px;
+        top: clamp(322px, 34.375vw, 352px);
+      }
     }
 
     &-line {
@@ -172,6 +196,13 @@
       }
       @include small-laptop {
         top: clamp(355.5px, 30.742vw, 393.5px);
+        left: clamp(480px, 44.375vw, 570px);
+      }
+      @include tablet {
+        width: 88px;
+        height: 238px;
+
+        top: clamp(325.5px, 34.668vw, 355.5px);
         left: clamp(480px, 44.375vw, 570px);
       }
     }
@@ -225,6 +256,14 @@
         padding: 0 1.905vw;
       }
 
+      @include tablet {
+        top: clamp(535px, 47.857vw, 615px);
+        left: clamp(475px, 43.631vw, 560px);
+        width: 18.929vw;
+        height: 8.095vw;
+        padding: 0 1.905vw;
+      }
+
       &-info {
 
         &:not(:last-child) {
@@ -263,6 +302,10 @@
           @include small-laptop {
             font-size: 1.073vw;
           }
+          @include tablet {
+            font-size: 1.073vw;
+            padding-bottom: 1.563vw;
+          }
         }
 
         &-text {
@@ -283,6 +326,9 @@
             font-size: 1.906vw;
           }
           @include small-laptop {
+            font-size: 1.906vw;
+          }
+          @include tablet {
             font-size: 1.906vw;
           }
         }
@@ -311,6 +357,10 @@
       @include small-laptop{
         left: clamp(620px, 58.512vw, 750px);
         top: clamp(618px, 55.833vw, 720px);
+      }
+      @include tablet{
+        left: clamp(620px, 58.512vw, 750px);
+        top: clamp(613px, 60.352vw, 618px);
       }
     }
   }

@@ -1,3 +1,6 @@
+$Angel-font: "Angel rhapsody";
+$Satoshi-font: "Satoshi";
+
 @mixin desktop-fhd{
   @media screen and (min-width: 1920.01px){
     @content;
@@ -30,6 +33,12 @@
 
 @mixin tablet {
   @media screen and (min-width: 768px) and (max-width: 1023.99px){
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (min-width: 700px) and (max-width: 767.99px){
     @content;
   }
 }

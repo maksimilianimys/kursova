@@ -14,11 +14,14 @@
   @include laptop {
     margin-top: 3.81vw;
   }
-  @include small-laptop {
-    margin-top: 3.81vw;
+  @include small-laptop{
+    margin-top: clamp(40px, 3.81vw, 64px);
   }
   @include tablet{
-    margin-top: 3.81vw;
+    margin-top: 40px;
+  }
+  @include mobile{
+    margin-top: 40px;
   }
 
   img {

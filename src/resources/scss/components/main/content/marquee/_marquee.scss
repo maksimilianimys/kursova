@@ -6,11 +6,15 @@
   backdrop-filter: blur(5px);
   overflow: hidden;
 
-  @include desktop-fhd{
+  @include desktop-fhd {
     height: 7.292vw;
   }
 
-  @include tablet{
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
     display: none;
   }
 }
@@ -22,11 +26,11 @@
 
   gap: 78px;
 
-  @include desktop-fhd{
-    img{
+  @include desktop-fhd {
+    img {
       height: 2.5vw;
     }
-    gap:4.063vw;
+    gap: 4.063vw;
   }
 }
 
@@ -38,8 +42,8 @@
   justify-content: space-around;
   min-width: 100%;
 
-  @include desktop-fhd{
-    gap:4.063vw;
+  @include desktop-fhd {
+    gap: 4.063vw;
   }
 }
 
@@ -65,7 +69,7 @@
   }
 }
 
-@include desktop-fhd{
+@include desktop-fhd {
   @keyframes scroll {
     from {
       transform: translateX(0);
@@ -77,17 +81,38 @@
 }
 
 
-.mm{
+.mm {
   display: none;
   height: 140px;
   background: rgba(42, 39, 34, 0.50);
   backdrop-filter: blur(5px);
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 15;
+  margin-top: 60px;
 
-  @include tablet{
+
+  @include tablet {
     display: flex;
+  }
+
+  @include mobile {
+    display: flex;
+    height: 223px;
+    img {
+      height: clamp(32px, 6.25vw, 50px);
+    }
   }
 }
 
-.mm-cc{
+.mm-cc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
 
+  @include mobile {
+    width: 50%;
+    transition: width 0.3s ease;
+  }
 }

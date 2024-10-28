@@ -77,6 +77,19 @@ button {
   @include desktop-fhd {
     font-size: 1.25vw;
   }
+
+  @include small-desktop {
+    font-size: 1.429vw;
+  }
+  @include laptop {
+    font-size: 1.429vw;
+  }
+  @include small-laptop {
+    font-size: 1.429vw;
+  }
+  @include tablet {
+    font-size: 1.429vw;
+  }
 }
 
 .container {
@@ -111,10 +124,16 @@ button {
     margin-right: 4.762vw;
   }
 
-  @include tablet{
+  @include tablet {
     width: calc(100% - 9.524vw);
     margin-left: 4.762vw;
     margin-right: 4.762vw;
   }
 
+  @include mobile {
+    @include mobile {
+      width: calc(100% - clamp(48px, 9.536%, 92px));
+      margin: 0 clamp(24px, 4.768%, 46px);
+    }
+  }
 }
