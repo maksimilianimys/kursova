@@ -291,7 +291,7 @@
     font-size: 80px;
 
   @include mobile{
-    font-size: clamp(65px, 10.417vw, 80px);
+    font-size: clamp(60px, 9.766vw, 75px);
   }
 
   }
