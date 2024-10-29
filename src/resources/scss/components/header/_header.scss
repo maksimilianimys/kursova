@@ -258,8 +258,8 @@
 
     button{
       position: absolute;
-      top: 4.736%;
-      left: 86.964%;
+      top: 3.5%;
+      left: 84.5%;
     }
   }
 
@@ -269,6 +269,7 @@
     transform: translateX(0); /* Повертаємо на місце */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Плавний перехід */
   }
+
 
   .header-navigation-bar-mobile-menu {
     //list-style: none;
@@ -302,6 +303,8 @@
     cursor: pointer;
     height: 40px;
   }
+
+
 }
 
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/

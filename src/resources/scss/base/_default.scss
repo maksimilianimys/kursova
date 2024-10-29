@@ -36,6 +36,10 @@ body {
   background-color: rgba(18, 16, 11, 255);
 }
 
+.no-scroll {
+  overflow: hidden; /* Блокує прокрутку */
+}
+
 ul,
 a,
 address {
