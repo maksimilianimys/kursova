@@ -1,61 +1,64 @@
 $Angel-font: "Angel rhapsody";
 $Satoshi-font: "Satoshi";
 
-$background-color: rgba(18, 16, 11, 255);
-$background-color-element: rgba(42, 39, 34, 0.50);
 $background-time: rgb(219, 159, 106);
+$background-color: rgba(18, 16, 11, 255);
 $background-white-color: #FFF4EB;
+$background-color-element: rgba(42, 39, 34, 0.50);
+$background-color-element-main: #1E1C17;
 
 $font-dark: rgb(18, 16, 12);
-$font-light-dark: rgba(18, 16, 12, 0.5);
+$font-brown: #483524;
 $font-white: rgba(255, 244, 235, 0.8);
+$font-light-dark: rgba(18, 16, 12, 0.5);
+$font-p-description-text: rgba(255, 255, 255, 0.40);
 
 $span-dark: #12100c;
 
 $brown-color: #DB9F6A;
 $dark-brown-color: #8E623C;
 
-$red-color: #b30000;
+$red-color: #590101;
 $white: #FFF;
 
-@mixin desktop-fhd{
-  @media screen and (min-width: 1920.01px){
+@mixin desktop-fhd {
+  @media screen and (min-width: 1920.01px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media screen and (min-width: 1680px) and (max-width: 1920px){
+  @media screen and (min-width: 1680px) and (max-width: 1920px) {
     @content;
   }
 }
 
 @mixin small-desktop {
-  @media screen and (min-width: 1440px) and (max-width: 1679.99px){
+  @media screen and (min-width: 1440px) and (max-width: 1679.99px) {
     @content;
   }
 }
 
 @mixin laptop {
-  @media screen and (min-width: 1280px) and (max-width: 1439.9px){
+  @media screen and (min-width: 1280px) and (max-width: 1439.9px) {
     @content;
   }
 }
 
 @mixin small-laptop {
-  @media screen and (min-width: 1024px) and (max-width: 1279.99px){
+  @media screen and (min-width: 1024px) and (max-width: 1279.99px) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media screen and (min-width: 768px) and (max-width: 1023.99px){
+  @media screen and (min-width: 768px) and (max-width: 1023.99px) {
     @content;
   }
 }
 
 @mixin mobile {
-  @media screen and (min-width: 375px) and (max-width: 767.99px){
+  @media screen and (min-width: 375px) and (max-width: 767.99px) {
     @content;
   }
 }
