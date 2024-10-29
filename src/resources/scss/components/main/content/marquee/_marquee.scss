@@ -105,7 +105,9 @@
 
   @include mobile {
     display: flex;
+
     height: 223px;
+
     img {
       height: clamp(32px, 6.25vw, 50px);
     }
@@ -121,6 +123,7 @@
 
   @include mobile {
     width: 50%;
+
     transition: width 0.3s ease;
   }
 }

@@ -13,7 +13,7 @@
 
 .header {
   position: absolute;
-  z-index: 1;
+  z-index: 5;
 
   top: 50px;
   left: 0;
@@ -67,7 +67,7 @@
       padding: 0 clamp(24px, 6.117vw, 85px);
       height: clamp(72px, 13.542vw, 104px);
       border-radius: clamp(24px, 4.167vw, 32px);
-      justify-content: normal;
+      justify-content: space-between;
     }
 
     &-left {
@@ -83,6 +83,11 @@
       letter-spacing: 0.08em;
       text-align: left;
       //text-transform: uppercase;
+
+      a:hover, a:focus{
+        color: #DB9F6A;
+        transition: color 0.3s ease;
+      }
 
       @include desktop-fhd {
         gap: 2.708vw;
@@ -112,6 +117,7 @@
     &-center-button {
       background-color: transparent;
       border: none;
+      outline: none;
       cursor: pointer;
 
       padding: 0;
@@ -120,6 +126,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      &:hover .svg-path-center-button,
+      &:focus .svg-path-center-button {
+        fill: #8E623C; /* Новий колір для SVG */
+        transition: fill 0.3s ease; /* Додаємо плавний перехід */
+      }
 
       @include desktop-fhd {
         img {
@@ -143,7 +155,41 @@
       }
 
       @include mobile {
-        display: none;
+        svg {
+          height: clamp(40px, 5.469vw, 45px);
+          width: clamp(40px, 5.469vw, 45px);
+        }
+      }
+    }
+
+    &-mobile-open-button {
+      display: none;
+
+      @include mobile {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover, &:focus{
+          .svg-path{
+            fill: #DB9F6A;
+          }
+        }
+
+        &-svg {
+          height: clamp(32px, 5.469vw, 45px);
+          width: clamp(32px, 5.469vw, 45px);
+
+
+        }
       }
     }
 
@@ -160,6 +206,11 @@
       letter-spacing: 0.08em;
       text-align: left;
       //text-transform: uppercase;
+
+      a:hover, a:focus{
+        color: #DB9F6A;
+        transition: color 0.3s ease;
+      }
 
       @include desktop-fhd {
         gap: 2.708vw;
@@ -185,34 +236,71 @@
         display: none;
       }
     }
+  }
 
-    &-menu {
-      display: none;
+  .header-navigation-bar-mobile-burger {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 16, 11, 255);
+    z-index: 9999;
+    padding: 60px;
+    opacity: 0; /* Початкова прозорість */
+    visibility: hidden; /* Приховано елемент */
+    transform: translateX(100%); /* Зміщення для анімації */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s; /* Плавні переходи */
 
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
 
-      padding: 0;
-      margin: 0;
-
-      @include mobile {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-
-        &-star {
-          height: clamp(40px, 5.469vw, 45px);
-          width: clamp(40px, 5.469vw, 45px);
-        }
-
-        .line {
-          height: clamp(32px, 5.469vw, 42px);
-          width: clamp(32px, 5.469vw, 42px);
-        }
-      }
+    button{
+      position: absolute;
+      top: 4.736%;
+      left: 86.964%;
     }
+  }
+
+  .header-navigation-bar-mobile-burger.is-open {
+    opacity: 1; /* Видимість при відкритті */
+    visibility: visible; /* Робимо видимим елемент */
+    transform: translateX(0); /* Повертаємо на місце */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Плавний перехід */
+  }
+
+  .header-navigation-bar-mobile-menu {
+    //list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+    font-family: $Angel-font;
+    font-weight: 200;
+
+  }
+
+  .header-navigation-bar-mobile-menu li {
+    padding: 25px 0;
+  }
+
+  .header-navigation-bar-mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 80px;
+
+  @include mobile{
+    font-size: clamp(65px, 10.417vw, 80px);
+  }
+
+  }
+
+  .header-navigation-bar-mobile-close-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 40px;
   }
 }
 

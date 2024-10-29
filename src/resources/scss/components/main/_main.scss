@@ -45,7 +45,7 @@
 
       @include mobile {
         padding-top: clamp(136px, 28.646vw, 220px);
-        max-width: 320px;
+        max-width: clamp(320px, 78.125vw, 600px);
       }
     }
 

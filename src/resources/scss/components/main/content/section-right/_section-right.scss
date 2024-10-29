@@ -16,7 +16,7 @@
   }
 
   @include mobile {
-    padding-top: clamp(180px, 20.703vw, 212px);
+    display: none;
   }
 
   &-girl {
@@ -58,17 +58,6 @@
     }
 
     @include tablet {
-      position: absolute;
-
-      margin: 0;
-
-      left: 121px;
-
-      width: 571.8px;
-      height: 620.4px;
-    }
-
-    @include mobile {
       position: absolute;
 
       margin: 0;
@@ -126,22 +115,9 @@
       width: 529px;
       height: 540.6px;
     }
-
-    @include mobile {
-      margin: 0;
-
-      left: 116px;
-
-      width: 529px;
-      height: 540.6px;
-    }
   }
 
   &-element {
-
-    @include mobile {
-      display: none;
-    }
 
     &-circle {
       position: absolute;
