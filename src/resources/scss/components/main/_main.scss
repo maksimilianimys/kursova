@@ -14,11 +14,11 @@
       max-width: 481px;
       word-wrap: break-word;
 
-      @import "content/section-left/title";
+      @import "content/section-first/section-left/title";
 
-      @import "content/section-left/button";
+      @import "content/section-first/section-left/button";
 
-      @import "content/section-left/schedule";
+      @import "content/section-first/section-left/schedule";
 
       @include desktop-fhd {
         padding-top: 15.313vw;
@@ -49,41 +49,11 @@
       }
     }
 
-    @import "content/section-right/section-right";
+    @import "content/section-first/section-right/section-right";
 
-    @import "content/marquee/marquee";
+    @import "content/section-first/marquee/marquee";
 
   }
-}
-
-
-.accordion {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.accordion-item {
-  border-bottom: 1px solid #ccc;
-}
-
-.accordion-title {
-  padding: 15px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  padding: 0 15px;
-  background-color: #fafafa;
-}
-
-.accordion-content p {
-  margin: 10px 0;
 }
 
 

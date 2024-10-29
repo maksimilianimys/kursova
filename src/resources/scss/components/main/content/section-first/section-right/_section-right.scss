@@ -129,7 +129,7 @@
       width: 8px;
       height: 8px;
 
-      background: white;
+      background: $white;
       border-radius: 9999px;
 
       @include desktop-fhd {
@@ -214,7 +214,7 @@
       height: 136px;
 
       border-radius: 24px;
-      background: #fff4eb;
+      background: $background-white-color;
 
       left: 70.55%;
       top: 65.424%;
@@ -277,7 +277,7 @@
         }
 
         &-title {
-          color: rgba(18, 16, 12, 0.5);
+          color: $font-light-dark;
           font-family: $Satoshi-font;
           font-weight: 700;
           font-size: 18px;
@@ -314,7 +314,7 @@
         }
 
         &-text {
-          color: #12100c;
+          color: $span-dark;
           font-family: $Angel-font;
           font-weight: 400;
           font-size: 32px;

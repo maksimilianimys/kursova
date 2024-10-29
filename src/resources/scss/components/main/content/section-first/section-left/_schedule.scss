@@ -42,7 +42,7 @@
     height: 52px;
 
     border-radius: 8px;
-    background: rgb(219, 159, 106);
+    background: $background-time;
 
     justify-content: center;
     align-items: center;
@@ -64,7 +64,7 @@
     }
 
     &-days {
-      color: #DB9F6A;
+      color: $brown-color;
       font-family: $Satoshi-font;
       font-size: 18px;
       font-weight: 500;
@@ -87,7 +87,7 @@
     }
 
     &-hours {
-      color: #FFF;
+      color: $white;
       font-family: $Satoshi-font;
       font-size: 18px;
       font-weight: 500;

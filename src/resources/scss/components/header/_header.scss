@@ -13,7 +13,7 @@
 
 .header {
   position: absolute;
-  z-index: 5;
+  z-index: 2;
 
   top: 50px;
   left: 0;
@@ -30,7 +30,7 @@
   &-navigation-bar {
     height: 104px;
     border-radius: 32px;
-    background: rgba(42, 39, 34, 0.50);
+    background: $background-color-element;
     backdrop-filter: blur(5px);
 
     gap: 120px;
@@ -75,7 +75,7 @@
 
       gap: 52px;
 
-      color: rgba(255, 244, 235, 0.8);
+      color: $font-white;
       font-family: $Satoshi-font;
       font-weight: 700;
       font-size: 18px;
@@ -84,9 +84,10 @@
       text-align: left;
       //text-transform: uppercase;
 
-      a:hover, a:focus{
-        color: #DB9F6A;
-        transition: color 0.3s ease;
+      transition: color 0.3s ease;
+
+      a:hover, a:focus {
+        color: $brown-color;
       }
 
       @include desktop-fhd {
@@ -127,28 +128,29 @@
       align-items: center;
       justify-content: center;
 
+      transition: fill 0.3s ease;
+
       &:hover .svg-path-center-button,
       &:focus .svg-path-center-button {
-        fill: #8E623C; /* Новий колір для SVG */
-        transition: fill 0.3s ease; /* Додаємо плавний перехід */
+        fill: $dark-brown-color;
       }
 
       @include desktop-fhd {
-        img {
+        svg {
           height: 3.646vw;
           width: 3.646vw;
         }
       }
 
       @include small-laptop {
-        img {
+        svg {
           height: 5.469vw;
           width: 5.469vw;
         }
       }
 
       @include tablet {
-        img {
+        svg {
           height: 5.469vw;
           width: 5.469vw;
         }
@@ -178,17 +180,15 @@
         align-items: center;
         justify-content: center;
 
-        &:hover, &:focus{
-          .svg-path{
-            fill: #DB9F6A;
+        &:hover, &:focus {
+          .svg-path {
+            fill: $brown-color;
           }
         }
 
         &-svg {
           height: clamp(32px, 5.469vw, 45px);
           width: clamp(32px, 5.469vw, 45px);
-
-
         }
       }
     }
@@ -198,18 +198,20 @@
 
       gap: 52px;
 
-      color: rgba(255, 244, 235, 0.8);
+      color: $font-white;
       font-family: $Satoshi-font;
       font-weight: 700;
       font-size: 18px;
       line-height: 1.33;
       letter-spacing: 0.08em;
       text-align: left;
+
       //text-transform: uppercase;
 
-      a:hover, a:focus{
-        color: #DB9F6A;
-        transition: color 0.3s ease;
+      transition: color 0.3s ease;
+
+      a:hover, a:focus {
+        color: $brown-color;
       }
 
       @include desktop-fhd {
@@ -238,73 +240,7 @@
     }
   }
 
-  .header-navigation-bar-mobile-burger {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(18, 16, 11, 255);
-    z-index: 9999;
-    padding: 60px;
-    opacity: 0; /* Початкова прозорість */
-    visibility: hidden; /* Приховано елемент */
-    transform: translateX(100%); /* Зміщення для анімації */
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s; /* Плавні переходи */
-
-
-    button{
-      position: absolute;
-      top: 3.5%;
-      left: 84.5%;
-    }
-  }
-
-  .header-navigation-bar-mobile-burger.is-open {
-    opacity: 1; /* Видимість при відкритті */
-    visibility: visible; /* Робимо видимим елемент */
-    transform: translateX(0); /* Повертаємо на місце */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Плавний перехід */
-  }
-
-
-  .header-navigation-bar-mobile-menu {
-    //list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-
-    font-family: $Angel-font;
-    font-weight: 200;
-
-  }
-
-  .header-navigation-bar-mobile-menu li {
-    padding: 25px 0;
-  }
-
-  .header-navigation-bar-mobile-menu a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 80px;
-
-  @include mobile{
-    font-size: clamp(60px, 9.766vw, 75px);
-  }
-
-  }
-
-  .header-navigation-bar-mobile-close-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    height: 40px;
-  }
-
-
+  @import "burger";
 }
 
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/

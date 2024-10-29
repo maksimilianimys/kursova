@@ -15,13 +15,13 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #DB9F6A;
+  background: $brown-color;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
+  background: $red-color;
 }
 
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
@@ -33,11 +33,11 @@ body {
   line-height: normal;
   margin: 0;
   padding: 0;
-  background-color: rgba(18, 16, 11, 255);
+  background-color: $background-color;
 }
 
 .no-scroll {
-  overflow: hidden; /* Блокує прокрутку */
+  overflow: hidden;
 }
 
 ul,
@@ -71,7 +71,7 @@ button {
 }
 
 .dollar {
-  color: rgb(18, 16, 12);
+  color: $font-dark;
   font-family: $Angel-font;
   font-size: 24px;
   font-weight: 400;

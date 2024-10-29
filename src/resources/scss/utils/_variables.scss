@@ -1,6 +1,23 @@
 $Angel-font: "Angel rhapsody";
 $Satoshi-font: "Satoshi";
 
+$background-color: rgba(18, 16, 11, 255);
+$background-color-element: rgba(42, 39, 34, 0.50);
+$background-time: rgb(219, 159, 106);
+$background-white-color: #FFF4EB;
+
+$font-dark: rgb(18, 16, 12);
+$font-light-dark: rgba(18, 16, 12, 0.5);
+$font-white: rgba(255, 244, 235, 0.8);
+
+$span-dark: #12100c;
+
+$brown-color: #DB9F6A;
+$dark-brown-color: #8E623C;
+
+$red-color: #b30000;
+$white: #FFF;
+
 @mixin desktop-fhd{
   @media screen and (min-width: 1920.01px){
     @content;
