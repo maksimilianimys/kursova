@@ -201,7 +201,10 @@
   }
 
   @include laptop {
+    //padding: 0;
     h2 {
+      //padding-right: 52px;
+      //padding-left: 52px;
       padding-bottom: 52px;
     }
   }
@@ -243,8 +246,8 @@
     }
 
     @include laptop {
+      width: calc(100% - 40px);
       height: 100%;
-      width: auto;
     }
 
     @include small-laptop {
