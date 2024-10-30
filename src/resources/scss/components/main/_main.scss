@@ -113,7 +113,7 @@
       }
 
       @include tablet {
-        font-size: clamp(50px, 5vw, 64px);
+        font-size: clamp(50px, 5.762vw, 64px);
       }
 
       @include mobile {
