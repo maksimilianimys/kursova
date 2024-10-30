@@ -10,6 +10,18 @@
   grid-template-areas:
     "main-content-section-tattoo-club-left main-content-section-tattoo-club-top main-content-section-tattoo-club-right"
     "main-content-section-tattoo-club-left main-content-section-tattoo-club-bottom main-content-section-tattoo-club-right";
+
+  @include desktop-fhd {
+    grid-template-rows: 16.875vw 19.167vw;
+
+    gap: 5.625vw 1.667vw;
+  }
+
+  @include small-desktop{
+    grid-template-rows: 19.286vw 21.905vw;
+
+    gap: 6.429vw 1.905vw;
+  }
 }
 
 .main-content-section-tattoo-club-left {
@@ -28,6 +40,109 @@
   grid-area: main-content-section-tattoo-club-right;
 }
 
+
+@include laptop{
+  &-grid {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 50px 50px;
+    grid-template-areas:
+    "main-content-section-tattoo-club-left main-content-section-tattoo-club-bottom"
+    "main-content-section-tattoo-club-left main-content-section-tattoo-club-right"
+    "main-content-section-tattoo-club-top main-content-section-tattoo-club-right";
+
+    @include laptop{
+      gap: 3.472vw 3.472vw;
+    }
+
+  }
+
+  .main-content-section-tattoo-club-left { grid-area: main-content-section-tattoo-club-left; }
+
+  .main-content-section-tattoo-club-right { grid-area: main-content-section-tattoo-club-right; }
+
+  .main-content-section-tattoo-club-top { grid-area: main-content-section-tattoo-club-top; }
+
+  .main-content-section-tattoo-club-bottom { grid-area: main-content-section-tattoo-club-bottom; }
+
+}
+
+@include small-laptop{
+  &-grid {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 50px 50px;
+    grid-template-areas:
+    "main-content-section-tattoo-club-left main-content-section-tattoo-club-bottom"
+    "main-content-section-tattoo-club-left main-content-section-tattoo-club-right"
+    "main-content-section-tattoo-club-top main-content-section-tattoo-club-right";
+
+    @include small-laptop{
+    gap: 3.472vw 3.472vw;
+  }
+
+  }
+  .main-content-section-tattoo-club-left { grid-area: main-content-section-tattoo-club-left; }
+
+  .main-content-section-tattoo-club-right { grid-area: main-content-section-tattoo-club-right; }
+
+  .main-content-section-tattoo-club-top { grid-area: main-content-section-tattoo-club-top; }
+
+  .main-content-section-tattoo-club-bottom { grid-area: main-content-section-tattoo-club-bottom; }
+
+}
+
+@include tablet{
+  &-grid {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 50px 50px;
+    grid-template-areas:
+    "main-content-section-tattoo-club-left main-content-section-tattoo-club-bottom"
+    "main-content-section-tattoo-club-left main-content-section-tattoo-club-right"
+    "main-content-section-tattoo-club-top main-content-section-tattoo-club-right";
+
+    @include tablet{
+      gap: clamp(32px, 3.472vw, 50px);
+    }
+
+  }
+
+  .main-content-section-tattoo-club-left { grid-area: main-content-section-tattoo-club-left; }
+
+  .main-content-section-tattoo-club-right { grid-area: main-content-section-tattoo-club-right; }
+
+  .main-content-section-tattoo-club-top { grid-area: main-content-section-tattoo-club-top; }
+
+  .main-content-section-tattoo-club-bottom { grid-area: main-content-section-tattoo-club-bottom; }
+
+}
+
+@include mobile{
+  &-grid {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 2fr 1fr;
+    gap: 32px;
+    grid-template-areas:
+    "main-content-section-tattoo-club-left"
+    "main-content-section-tattoo-club-top"
+    "main-content-section-tattoo-club-right"
+    "main-content-section-tattoo-club-bottom";
+
+    @include mobile{grid-template-rows: clamp(553px, 105.339vw, 809px) clamp(353px, 52.604vw, 404px)  clamp(553px, 105.339vw, 809px) clamp(353px, 52.604vw, 404px);}
+  }
+
+  .main-content-section-tattoo-club-left { grid-area: main-content-section-tattoo-club-left; }
+
+  .main-content-section-tattoo-club-top { grid-area: main-content-section-tattoo-club-top; }
+
+  .main-content-section-tattoo-club-right { grid-area: main-content-section-tattoo-club-right; }
+
+  .main-content-section-tattoo-club-bottom { grid-area: main-content-section-tattoo-club-bottom; }
+
+}
+
+
 &-left {
   position: relative;
 
@@ -41,15 +156,81 @@
   border-radius: 32px;
   background-color: $background-color-element-main;
 
+  @include desktop-fhd {
+    padding: 2.708vw 2.708vw 0;
+    border-radius: 1.667vw;
+  }
+
+  @include small-desktop{
+    padding: 0;
+
+    h2{
+      padding: 3.095vw 3.095vw 0;
+    }
+  }
+
+  @include laptop{
+    h2{
+      padding-bottom: 52px;
+    }
+  }
+
+  @include small-laptop{
+    h2{
+      padding-bottom: clamp(31px, 4.063vw, 52px);
+    }
+  }
+
+  @include tablet{
+    padding: 5.078vw 5.078vw 0;
+    h2{
+      padding-bottom: clamp(31px, 4.063vw, 52px);
+    }
+  }
+
+  @include mobile{
+    padding: clamp(32px, 6.771vw, 52px) clamp(32px, 6.771vw, 52px) 0;
+  }
+
   &-image {
     position: relative;
     z-index: 1;
 
-    width: calc(100% - 40px);
-    height: 100%;
+    //width: calc(100% - 40px);
+    //height: 100%;
 
     object-fit: contain;
     object-position: bottom;
+
+    @include desktop-fhd {
+      height: 100%;
+      width: calc(100% - 40px);
+    }
+
+    @include small-desktop {
+      min-height: 420px;
+      width: auto;
+    }
+
+    @include laptop {
+      height: 100%;
+      width: auto;
+    }
+
+    @include small-laptop {
+      height: 100%;
+      width: auto;
+    }
+
+    @include tablet{
+      width: 33.398vw;
+      height: 45.41vw;
+    }
+
+    @include mobile{
+      width: clamp(243px, 33.398vw, 260px);
+      height: clamp(330px, 45.41vw, 360px);
+    }
   }
 
   &-decor {
@@ -58,8 +239,6 @@
     bottom: 0;
     height: 60%;
     width: 100%;
-
-    border-radius: 0 0 32px 32px;
 
     background-image: url("../images/tattoo-club/dots.png");
     background-size: cover;
@@ -88,7 +267,19 @@
   border-radius: 32px;
   background-color: $background-white-color;
 
+  @include desktop-fhd {
+    border-radius: 1.667vw;
+    img {
+      width: auto;
+      height: 12.448vw;
+    }
+  }
+
   p {
+    .dollar{
+      font-size: 24px;
+    }
+
     position: absolute;
     right: 40px;
     bottom: 35px;
@@ -99,6 +290,14 @@
     font-size: 32px;
     font-weight: 400;
     letter-spacing: 0.06em;
+
+    @include desktop-fhd {
+      font-size: 1.667vw;
+    }
+
+    @include small-desktop {
+      right: 1vw;
+    }
   }
 }
 
@@ -110,6 +309,41 @@
   left: 484.5px;
 
   fill: $background-color-element-main;
+
+  @include desktop-fhd {
+    top: 16.094vw;
+    left: 25.234vw;
+    svg {
+      width: 28.646vw;
+      height: auto;
+    }
+  }
+
+  @include small-desktop {
+    top: 18.393vw;
+    left: 28.839vw;
+
+    svg {
+      width: 32.738vw;
+      height: auto;
+    }
+  }
+
+  @include laptop{
+    display: none;
+  }
+
+  @include small-laptop{
+    display: none;
+  }
+
+  @include tablet{
+    display: none;
+  }
+
+  @include mobile{
+    display: none;
+  }
 }
 
 &-bottom {
@@ -122,7 +356,20 @@
   border-radius: 32px;
   background: $background-white-color;
 
+  @include desktop-fhd {
+    border-radius: 1.667vw;
+    img {
+      width: auto;
+      height: 15.938vw;
+    }
+  }
+
   p {
+
+    .dollar{
+      font-size: 24px;
+    }
+
     position: absolute;
     right: 40px;
     bottom: 34px;
@@ -133,6 +380,14 @@
     font-size: 32px;
     font-weight: 400;
     letter-spacing: 0.06em;
+
+    @include desktop-fhd {
+      font-size: 1.667vw;
+    }
+
+    @include small-desktop {
+      right: 2.381vw;
+    }
   }
 }
 
@@ -153,7 +408,6 @@
 
     img {
       width: 100%;
-      height: 100%;
       object-fit: contain;
       object-position: bottom;
     }
@@ -170,11 +424,41 @@
 
       background: linear-gradient(180.00deg, rgb(30, 28, 23) 9.214%, rgba(30, 28, 23, 0) 100%);
       transform: rotate(-180.00deg);
+
+      @include desktop-fhd{
+        top: 9.323vw;
+      }
+
+      @include laptop{
+        top: 15.972vw;
+        left: 0.33px
+      }
+
+      @include small-laptop{
+        top: 16.1vw;
+        left: 0.33px
+      }
     }
   }
 
   &-elements {
     padding: 52px 52px 66px;
+
+    @include desktop-fhd{
+      padding: 2.708vw 2.708vw 3.438vw;
+    }
+
+    @include small-desktop{
+      padding: clamp(40px, 3.095vw, 52px) 52px 0;
+    }
+
+    @include tablet{
+      padding: 52px clamp(39px, 5.078vw, 52px) clamp(52px, 6.445vw, 66px);
+    }
+
+    @include mobile{
+      padding: clamp(32px, 6.771vw, 52px) clamp(32px, 6.771vw, 52px) 0;
+    }
 
     p {
       position: relative;
@@ -187,6 +471,15 @@
       font-weight: 500;
       line-height: 1.5;
       letter-spacing: -0.02em;
+
+      @include desktop-fhd{
+        padding-top: 1.25vw;
+        font-size: 0.938vw;
+      }
+
+      @include small-desktop{
+        padding-top: clamp(20px, 1.429vw, 24px);
+      }
     }
 
     button {
@@ -214,6 +507,24 @@
       font-size: 18px;
       font-weight: 700;
       letter-spacing: 0.1em;
+
+      @include desktop-fhd{
+        margin-top: 1.25vw;
+        padding: 1.042vw 1.667vw;
+
+        width: 13.281vw;
+        height: 3.333vw;
+
+        border-radius: 0.625vw;
+
+        font-size: 0.938vw
+      }
+
+      @include small-desktop{
+        margin-top: clamp(20px, 1.429vw, 24px);
+
+        height: clamp(60px, 3.81vw, 64px);
+      }
     }
   }
 }

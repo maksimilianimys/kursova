@@ -14,11 +14,11 @@
       max-width: 481px;
       word-wrap: break-word;
 
-      @import "content/section/section-left/title";
+      @import "content/section/-left/title";
 
-      @import "content/section/section-left/button";
+      @import "content/section/-left/button";
 
-      @import "content/section/section-left/schedule";
+      @import "content/section/-left/schedule";
 
       @include desktop-fhd {
         padding-top: 15.313vw;
@@ -49,9 +49,9 @@
       }
     }
 
-    @import "content/section/section-right/section-right";
+    @import "content/section/-right/section-right";
 
-    @import "content/section/marquee/marquee";
+    @import "content/section/-marquee/marquee";
 
   }
 
@@ -60,6 +60,30 @@
 
     background: url("../images/background-main.png");
     background-size: cover;
+
+    @include desktop-fhd {
+      padding-top: 8.333vw;
+    }
+
+    @include small-desktop {
+      padding-top: clamp(140px, 9.524vw, 160px);
+    }
+
+    @include laptop {
+      padding-top: clamp(120px, 9.524vw, 140px);
+    }
+
+    @include small-laptop {
+      padding-top: clamp(100px, 9.524vw, 120px);
+    }
+
+    @include tablet {
+      padding-top: clamp(80px, 9.524vw, 100px);
+    }
+
+    @include mobile {
+      padding-top: 80px;
+    }
 
     h2 {
       position: relative;
@@ -71,6 +95,30 @@
       font-weight: 400;
       letter-spacing: -2px;
       line-height: 1;
+
+      @include desktop-fhd {
+        font-size: clamp(64px, 3.333vw, 125px);
+      }
+
+      @include small-desktop {
+        font-size: clamp(54px, 3.81vw, 64px);
+      }
+
+      @include laptop {
+        font-size: 64px;
+      }
+
+      @include small-laptop {
+        font-size: clamp(59px, 5vw, 64px);
+      }
+
+      @include tablet {
+        font-size: clamp(50px, 5vw, 64px);
+      }
+
+      @include mobile {
+        font-size: clamp(40px, 8.333vw, 64px);
+      }
     }
 
     @import "content/section-tattoo-club/tattoo-club";
