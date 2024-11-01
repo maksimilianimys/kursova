@@ -1,1 +1,0 @@
-const isWindows=/Windows/i.test(navigator.userAgent);isWindows?document.documentElement.style.setProperty("--angel-font",'"Angel wish"'):document.documentElement.style.setProperty("--angel-font",'"Angel rhapsody"');
