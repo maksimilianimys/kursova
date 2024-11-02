@@ -1,5 +1,6 @@
 .main {
-
+  background: url("../images/bb.png");
+  background-size: cover;
   overflow: hidden;
 
   .container {
@@ -7,7 +8,6 @@
   }
 
   &-content-section {
-    background: url("../images/background-header.png");
 
     &-left {
       padding-top: 294px;
@@ -58,8 +58,8 @@
   &-content-section-tattoo-club {
     padding-top: 160px;
 
-    background: url("../images/background-main.png");
-    background-size: cover;
+    //background: url("../images/background-main.png");
+    //background-size: cover;
 
     @include desktop-fhd {
       padding-top: 8.333vw;
@@ -124,4 +124,221 @@
     @import "content/section-tattoo-club/tattoo-club";
 
   }
+
+  @import "content/swiperr";
+
+  .main-content-section-tattoo-club-acordion {
+    padding-top: 160px;
+    padding-bottom: 334px;
+
+    h2 {
+      color: var(--Style, #FFF4EB);
+      text-align: center;
+      font-family: "Angel rhapsody";
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -1.28px;
+      padding-bottom: 50px;
+    }
+
+    h3 {
+      color: #FFF;
+      font-family: "Satoshi Variable";
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+      cursor: pointer; /* Додаємо курсор для заголовків */
+    }
+
+    p {
+      width: 943px;
+      color: #FFF;
+      font-family: "Satoshi Variable";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      letter-spacing: -0.4px;
+    }
+
+    .element {
+      display: flex;
+      flex-direction: column; /* Змінюємо на колонку для акордеону */
+      align-items: center; /* Центруємо елементи */
+    }
+
+    .answer {
+      display: none; /* Сховати відповіді за замовчуванням */
+      padding: 10px 0; /* Додаємо відступи для відповіді */
+    }
+
+    .question.active .answer {
+      display: block; /* Показати відповідь, якщо питання активне */
+    }
+  }
+
+
 }
+
+.footer{
+  height: 556px;
+  background: #1E1C17;
+
+  .back-form{
+    position: relative;
+
+    .form{
+      position: absolute;
+      right: 185px;
+      z-index: 10;
+      top: -182px;
+    }
+
+    .list{
+      position: absolute;
+      top: -114px;
+      z-index: 20;
+      left: 335px;
+    }
+
+    .text{
+      position: absolute;
+z-index: 20;
+      top: -151px;
+      left: 751px;
+      h2{
+        width: 344px;
+        color: #12100C;
+        font-family: "Angel rhapsody";
+        font-size: 64px;
+      }
+
+      .inputform{
+        display: flex;
+      }
+input{
+  width: 345px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 20px 32px;
+  background: #F2E4DA;
+  border-radius: 12px;
+}
+    button{
+
+      width: 179px;
+      height: 64px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 32px;
+      background: #DB9F6A;
+      border-radius: 12px;
+      left: -58px;
+      position: relative;
+    }
+
+    }
+  }
+
+
+  .elements{
+    padding-top: 244px;
+    display: flex;
+    align-items: center;
+
+
+    svg{
+      margin-right: 300px;
+    }
+  }
+
+
+  .links{
+    color: rgba(255, 244, 235, 0.8);
+    font-family: "Satoshi Variable";
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-right: 471px;
+    display: flex;
+    gap:130px;
+
+    li{
+      padding-bottom: 34px;
+    }
+
+    li:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .links-1,
+  .links-2 {
+    position: relative;
+    padding-left: 52px;
+  }
+
+  .links-1::before,
+  .links-2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(255, 244, 235, 0.8); /* або інший колір */
+  }
+
+
+
+  .social-links{
+    display: flex;
+    gap: 32px;
+     img{
+       width: 32px;
+       height: 32px;
+     }
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 96px;
+    position: relative; // Додаємо позиціонування
+
+    ul {
+      color: rgba(255, 244, 235, 0.8);
+      font-family: "Satoshi Variable";
+      font-weight: 700;
+      font-size: 18px;
+      text-transform: uppercase;
+      display: flex;
+    }
+
+    p {
+      color: rgba(255, 244, 235, 0.4);
+      font-family: "Satoshi Variable";
+      font-weight: 700;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    &::before { // Використовуємо & для звернення до батьківського елемента
+      content: ""; /* Псевдоелемент без тексту */
+      position: absolute; /* Абсолютне позиціонування */
+      top: 64px; /* Встановлюємо на верх */
+      left: 0; /* Встановлюємо зліва */
+      right: 0; /* Розтягуємо на всю ширину */
+      height: 2px; /* Висота полоски */
+      background-color: #FFF; /* Колір полоски (чорний) */
+    }
+  }
+}
+
+

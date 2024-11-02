@@ -10,9 +10,13 @@
     <link rel="stylesheet" href="css/main.min.css">
 
     <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
-        <link href="https://fonts.cdnfonts.com/css/angel-rhapsody" rel="stylesheet">
-<!--    <link href="https://fonts.cdnfonts.com/css/angel-wish" rel="stylesheet">-->
-<!--    <link href="https://fonts.cdnfonts.com/css/wilson-wells" rel="stylesheet">-->
+    <link href="https://fonts.cdnfonts.com/css/angel-rhapsody" rel="stylesheet">
+    <!--    <link href="https://fonts.cdnfonts.com/css/angel-wish" rel="stylesheet">-->
+    <!--    <link href="https://fonts.cdnfonts.com/css/wilson-wells" rel="stylesheet">-->
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
 
 </head>
 
@@ -208,7 +212,6 @@
     </section>
 
     <!--    /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/-->
-
     <section class="main-content-section-tattoo-club">
         <div class="container">
             <div class="main-content-section-tattoo-club-grid">
@@ -255,20 +258,162 @@
         </div>
     </section>
 
-<!--    <section class="main-content-section-tattoo-club">-->
+        <section class="main-content-section-swipe">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="images/swiper/1.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/swiper/2.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/swiper/3.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/swiper/4.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/swiper/5.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/swiper/5.png">
+                    </div>
+                </div>
 
-<!--    </section>-->
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+        </section>
 
 
+        <section class="main-content-section-tattoo-club-acordion">
+            <h2>F.A.Q.</h2>
+            <div class="element">
+                <div class="question" onclick="toggleAccordion(this)">
+                    <h3>What is the process?</h3>
+                    <div class="answer">
+                        <p>Size: Tattoo prices are often based on the size of the tattoo. Larger tattoos generally cost more than smaller ones. Some salons may charge per square inch or have set prices for different size categories. Complexity: The complexity of the design plays a significant role in pricing. More intricate and detailed designs typically require more time and skill, leading to a higher cost. Color: Tattoos with color typically cost more than black and gray tattoos. Vibrant colors can require more work and skill to achieve the desired result.</p>
+                    </div>
+                </div>
 
+                <div class="question" onclick="toggleAccordion(this)">
+                    <h3>How should I prepare?</h3>
+                    <div class="answer">
+                        <p>Ensure that you are well-rested, hydrated, and avoid alcohol 24 hours before your tattoo appointment. Wear comfortable clothing and be prepared to sit for a while.</p>
+                    </div>
+                </div>
 
+                <div class="question" onclick="toggleAccordion(this)">
+                    <h3>Does it hurt?</h3>
+                    <div class="answer">
+                        <p>The level of pain varies depending on the tattoo's location and each individual's pain tolerance. Some areas are more sensitive than others, but most people find it manageable.</p>
+                    </div>
+                </div>
+
+                <div class="question" onclick="toggleAccordion(this)">
+                    <h3>How do I care for my tattoo?</h3>
+                    <div class="answer">
+                        <p>Follow the aftercare instructions provided by your tattoo artist, which usually include keeping the area clean, applying a healing ointment, and avoiding sun exposure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 </main>
 
 
-<footer>
+<footer class="footer">
+    <div class="container">
+        <div class="back-form">
+            <img class="form" src="images/footer.png">
+
+            <img class="list" src="images/list.png">
+
+            <div class="text">
+                <h2>Subscribe to our Newsletter</h2>
+                <div class="inputform">
+                    <input type="text" placeholder="enter email">
+                    <button>Subscribe</button>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="elements">
+            <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="svg-path-center-button"
+                      d="M35 0L47.6219 22.3781L70 35L47.6219 47.6219L35 70L22.3781 47.6219L0 35L22.3781 22.3781L35 0Z"
+                      fill="#DB9F6A"/>
+            </svg>
+
+            <div class="links">
+                <ul class="links-1">
+                    <li><a href="#">HOME PAGE</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                </ul>
+
+                <ul class="links-2">
+                    <li><a href="#">INQUIRIES</a></li>
+                    <li><a href="#">PRICINGS</a></li>
+                    <li><a href="#">CHALLENGES</a></li>
+                </ul>
+            </div>
+
+            <div class="social-links">
+                <img src="images/yt.svg">
+                <img src="images/tw.svg">
+                <img src="images/in.svg">
+            </div>
+        </div>
+
+        <div class="info">
+            <ul>
+                <li>Terms & conditions</li>
+                <li>privacy policy</li>
+            </ul>
+
+            <p>
+                © 2023 fIGHTING STAR. All rights reserved.
+            </p>
+        </div>
+    </div>
 </footer>
 
+
+<script>
+    function toggleAccordion(element) {
+        // Знайдемо всі питання
+        const questions = document.querySelectorAll('.question');
+
+        // Закриваємо всі питання
+        questions.forEach((question) => {
+            if (question !== element) {
+                question.classList.remove('active');
+                question.querySelector('.answer').style.display = 'none';
+            }
+        });
+
+        // Перемикаємо активність для натиснутого питання
+        element.classList.toggle('active');
+        const answer = element.querySelector('.answer');
+        if (element.classList.contains('active')) {
+            answer.style.display = 'block';
+        } else {
+            answer.style.display = 'none';
+        }
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/swiper.js"></script>
 <script src="js/detect-os.js"></script>
 <script src="js/burger.js"></script>
 

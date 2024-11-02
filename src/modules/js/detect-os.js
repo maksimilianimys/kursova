@@ -6,7 +6,6 @@
 //     document.documentElement.style.setProperty('--angel-font', '"Angel rhapsody"');
 // }
 
-
 // const isAndroid = /Android/i.test(navigator.userAgent);
 //
 // if (isAndroid) {
