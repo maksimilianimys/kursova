@@ -1,16 +1,13 @@
 $Angel-font: "Angel rhapsody";
-////$Angel-font: "Angel wish";
-////$Angel-font: "Wilson wells";
-//
+
 $Satoshi-font: "Satoshi";
 
-//:root {
-//  --angel-font: "Angel rhapsody"; // CSS змінна
-//}
-
-
-
-
+@font-face {
+  font-family: 'Angel rhapsody';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Angel rhapsody'), url('../Angel-rhapsody.ttf') format('truetype');
+}
 
 $background-time: rgb(219, 159, 106);
 $background-color: rgba(18, 16, 11, 255);

@@ -72,9 +72,9 @@
       letter-spacing: 0.08em;
       text-align: left;
       //text-transform: uppercase;
-
-      transition: color 0.3s ease;
-
+a {
+  transition: color 0.3s ease;
+}
       a:hover, a:focus {
         color: $brown-color;
       }

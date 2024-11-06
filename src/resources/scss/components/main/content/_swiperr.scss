@@ -1,44 +1,65 @@
 .main-content-section-swipe {
-  padding: 120px 327px 0;
+padding-top: 160px;
 
-  .swiper {
-    height: 300px;
+  .container{
+    display: block;
   }
 
-  .swiper-wrapper {
+  h2{
+    color: #FFF4EB;
+    font-family: "Angel rhapsody";
+    font-size: 64px;
     display: flex;
-    justify-content: center; /* Центруємо елементи по горизонталі */
+    justify-content: center;
   }
 
-  .swiper-slide {
-    width: 132px; /* Ширина слайда */
-    height: 132px; /* Висота слайда */
-    transition: transform 0.3s ease; /* Додаємо анімацію для зміни розміру */
+  .images {
+padding-top: 105px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
   }
 
-  .swiper-slide-active {
-    z-index: 1; /* Піднімаємо активний слайд над іншими */
+  .slide-image {
+    width: 132px; /* Розмір зображень за замовчуванням */
+    height: 132px;
+    transition: transform 0.5s ease, margin 0.5s ease;
   }
 
-  /* Змінюємо розміри зображення для активного слайда */
-  .swiper-slide-active img {
-    width: 222px; /* Збільшуємо ширину зображення */
-    height: 222px; /* Збільшуємо висоту зображення */
+  .slide-image.active {
+    transform: scale(1.68);
+    margin: 0 48px;
+
+
+    max-width: 222px;
+    max-height: 222px;
   }
 
-  .swiper-slide:first-child {
-    margin-left: 130px; /* Відступ для першого слайда */
-  }
 
-  .swiper-slide:last-child {
-    margin-right: 130px; /* Відступ для останнього слайда */
-  }
 
-  img {
-    width: 132px; /* Ширина зображення */
-    height: 132px; /* Висота зображення */
-    transition: transform 0.3s ease; /* Додаємо анімацію для зміни розміру зображення */
+  p{
+    font-size: 32px;
+    color: white;
+    padding: 52px;
+
+    width: 1002px;
+    height: 228px;
+    background: #1E1C17;
+    border-radius: 32px;
   }
+}
+
+.mySwiper{
+padding-top: 77px;
+}
+
+.swiper-slide{
+  display: flex;
+
+  justify-content: center;
+}
 
   .swiper-button-next,
   .swiper-button-prev {
@@ -48,5 +69,6 @@
     color: bisque;
     border-radius: 50px;
     background: white;
+
+    top:26px;
   }
-}

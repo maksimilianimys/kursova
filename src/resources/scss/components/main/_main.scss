@@ -1,6 +1,6 @@
 .main {
   background: url("../images/bb.png");
-  background-size: cover;
+  //background-size: cover;
   overflow: hidden;
 
   .container {
@@ -127,93 +127,55 @@
 
   @import "content/swiperr";
 
-  .main-content-section-tattoo-club-acordion {
-    padding-top: 160px;
-    padding-bottom: 334px;
+@import "content/accordion";
 
-    h2 {
-      color: var(--Style, #FFF4EB);
-      text-align: center;
-      font-family: "Angel rhapsody";
-      font-size: 64px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      letter-spacing: -1.28px;
-      padding-bottom: 50px;
     }
 
-    h3 {
-      color: #FFF;
-      font-family: "Satoshi Variable";
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      text-transform: uppercase;
-      cursor: pointer; /* Додаємо курсор для заголовків */
-    }
-
-    p {
-      width: 943px;
-      color: #FFF;
-      font-family: "Satoshi Variable";
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 150%;
-      letter-spacing: -0.4px;
-    }
-
-    .element {
-      display: flex;
-      flex-direction: column; /* Змінюємо на колонку для акордеону */
-      align-items: center; /* Центруємо елементи */
-    }
-
-    .answer {
-      display: none; /* Сховати відповіді за замовчуванням */
-      padding: 10px 0; /* Додаємо відступи для відповіді */
-    }
-
-    .question.active .answer {
-      display: block; /* Показати відповідь, якщо питання активне */
-    }
-  }
 
 
-}
 
 .footer{
   height: 556px;
   background: #1E1C17;
+  position: relative;
 
   .back-form{
-    position: relative;
 
-    .form{
+
+    .back{
       position: absolute;
-      right: 185px;
+      left: 385px;
       z-index: 10;
       top: -182px;
     }
 
-    .list{
+    .form{
       position: absolute;
+      top: -110px;
+      left: 700px;
+      z-index: 50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .list{
+      //position: absolute;
       top: -114px;
       z-index: 20;
       left: 335px;
+
     }
 
     .text{
-      position: absolute;
+      //position: absolute;
 z-index: 20;
       top: -151px;
       left: 751px;
       h2{
         width: 344px;
         color: #12100C;
-        font-family: "Angel rhapsody";
+        font-family: $Angel-font;
         font-size: 64px;
       }
 

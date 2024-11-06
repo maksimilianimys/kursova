@@ -1,14 +1,51 @@
 const swiper = new Swiper('.swiper', {
-    slidesPerView: 5,
-    centeredSlides: true,
     loop: true,
     speed: 300,
-    spaceBetween: 24,
-    slideToClickedSlide: true, // Дозволяє клікати на слайди для переміщення
-    loopedSlides: 5, // Кількість слайдів для зациклення
-    watchSlidesProgress: true, // Слідкуємо за прогресом слайдів
+    initialSlide: 2, // Встановлюємо третій слайд (індекс 2) як активний за замовчуванням
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    on: {
+        init: function () {
+            // Додаємо клас "active" до відповідного зображення при ініціалізації
+            const images = document.querySelectorAll('.slide-image');
+            images[this.realIndex].classList.add('active');
+
+            // Додаємо події "click" для зображень після ініціалізації
+            document.querySelectorAll('.slide-image').forEach((img, index) => {
+                img.addEventListener('click', () => {
+                    // Перемикаємося на відповідний слайд за індексом
+                    swiper.slideToLoop(index, 300); // 300 - це швидкість анімації
+                });
+            });
+        },
+        slideChangeTransitionEnd: function () {
+            // Оновлюємо активне зображення після завершення переходу
+
+            // Видаляємо клас "active" з усіх зображень
+            document.querySelectorAll('.slide-image').forEach((img) => {
+                img.classList.remove('active');
+            });
+
+            // Отримуємо індекс активного слайда
+            const activeIndex = this.realIndex; // Використовуємо realIndex
+
+            // Додаємо клас "active" до відповідного зображення
+            const images = document.querySelectorAll('.slide-image');
+            if (images[activeIndex]) {
+                images[activeIndex].classList.add('active');
+            }
+        },
+    },
+});
+
+
+
+// Додаємо події "click" для зображень
+document.querySelectorAll('.slide-image').forEach((img, index) => {
+    img.addEventListener('click', () => {
+        // Перемикаємося на відповідний слайд за індексом
+        swiper.slideToLoop(index, 300); // 300 - це швидкість анімації
+    })
 });
