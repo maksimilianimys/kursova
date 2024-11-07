@@ -1,3 +1,14 @@
+const emailJSScript = document.createElement('script');
+emailJSScript.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
+document.head.appendChild(emailJSScript);
+
+// Ініціалізація EmailJS
+emailJSScript.onload = function() {
+    emailjs.init({
+        publicKey: "jRJMh1CnjIQRXJPWu",
+    });
+};
+
 function sendEmail() {
     const email = document.getElementById('email').value;
     const errorMessage = document.getElementById('error-message');
