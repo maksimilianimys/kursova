@@ -1,3 +1,4 @@
+// Функція для автоматичного прокручування до активного елементу
 const swiper = new Swiper('.swiper', {
     loop: true,
     speed: 300,
@@ -8,24 +9,28 @@ const swiper = new Swiper('.swiper', {
     },
     on: {
         init: function () {
-            // Додаємо клас "active" до відповідного зображення при ініціалізації
             const images = document.querySelectorAll('.slide-image');
             images[this.realIndex].classList.add('active');
+            images[this.realIndex].scrollIntoView({
+                behavior: 'smooth',
+                block: 'center', // Центрування по вертикалі
+                inline: 'center', // Центрування по горизонталі
+            });
         },
         slideChangeTransitionEnd: function () {
-            // Оновлюємо активне зображення після завершення переходу
-            // Видаляємо клас "active" з усіх зображень
             document.querySelectorAll('.slide-image').forEach((img) => {
                 img.classList.remove('active');
             });
 
-            // Отримуємо індекс активного слайда
             const activeIndex = this.realIndex;
-
-            // Додаємо клас "active" до відповідного зображення
             const images = document.querySelectorAll('.slide-image');
             if (images[activeIndex]) {
                 images[activeIndex].classList.add('active');
+                images[activeIndex].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center', // Центрування по вертикалі
+                    inline: 'center', // Центрування по горизонталі
+                });
             }
         },
     },
@@ -34,7 +39,6 @@ const swiper = new Swiper('.swiper', {
 // Додаємо події "click" для зображень
 document.querySelectorAll('.slide-image').forEach((img, index) => {
     img.addEventListener('click', () => {
-        // Перемикаємося на відповідний слайд за індексом
         swiper.slideToLoop(index, 300); // 300 - це швидкість анімації
 
         // Видаляємо клас "active" з усіх зображень
@@ -44,5 +48,12 @@ document.querySelectorAll('.slide-image').forEach((img, index) => {
 
         // Додаємо клас "active" до натиснутого зображення
         img.classList.add('active');
+
+        // Прокручуємо до активного елемента плавно
+        img.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center', // Центрування по вертикалі
+            inline: 'center', // Центрування по горизонталі
+        });
     });
 });

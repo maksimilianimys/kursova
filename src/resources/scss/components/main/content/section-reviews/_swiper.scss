@@ -23,40 +23,28 @@ h2 {
 
 .images {
   padding-top: 117px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   gap: 24px;
 
-  @include laptop {
-    padding-top: 8.125vw;
-  }
-  @include small-laptop {
-    padding-top: 8.125vw;
-  }
-  @include tablet {
-    padding-top: 8.125vw;
-  }
+
   @include mobile {
     padding-top: clamp(32px, 8.125vw, 117px);
     gap: clamp(12px, 3.125vw, 24px);
-
-    overflow-x: auto;
+    justify-content: flex-start;  // Вирівнювання елементів зліва
+    overflow-x: auto; // Прокрутка по горизонталі
     height: 173px;
+    width: 100%;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;  // Плавне прокручування
     border-bottom: 1px solid rgba(25, 24, 24, 0.35);
-    scrollbar-width: none; /* приховує смугу прокрутки в Firefox */
-    -ms-overflow-style: none; /* приховує смугу прокрутки в Internet Explorer */
-
-    /* Для Chrome, Safari та інших WebKit-браузерів */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     &::-webkit-scrollbar {
       display: none;
     }
-
   }
 }
 
@@ -85,9 +73,7 @@ h2 {
 
 .slide-image.active {
   transform: scale(1.68);
-
   margin: 0 48px;
-
   max-width: 222px;
   max-height: 222px;
 
@@ -108,7 +94,6 @@ h2 {
     margin: 0 24px;
   }
 }
-
 
 .swipe-info {
   width: 1002px;
