@@ -122,31 +122,37 @@
 
   }
 
-  @import "content/swiperr";
+  .main-content-section-reviews{
+    padding-top: 160px;
 
-@import "content/accordion";
-
-    }
-
-
+    @import "content/section-reviews/swiper";
+  }
 
 
-.footer{
+
+
+
+  @import "content/accordion";
+
+}
+
+
+.footer {
   height: 556px;
   background: #1E1C17;
   position: relative;
 
-  .back-form{
+  .back-form {
 
 
-    .back{
+    .back {
       position: absolute;
       left: 385px;
       z-index: 10;
       top: -182px;
     }
 
-    .form{
+    .form {
       position: absolute;
       top: -110px;
       left: 700px;
@@ -156,7 +162,7 @@
       align-items: center;
     }
 
-    .list{
+    .list {
       //position: absolute;
       top: -114px;
       z-index: 20;
@@ -164,61 +170,64 @@
 
     }
 
-    .text{
+    .text {
       //position: absolute;
-z-index: 20;
+      z-index: 20;
       top: -151px;
       left: 751px;
-      h2{
+
+      h2 {
         width: 344px;
         color: #12100C;
         font-family: $Angel-font;
         font-size: 64px;
       }
 
-      .inputform{
+      .inputform {
         display: flex;
       }
-input{
-  width: 345px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  padding: 20px 32px;
-  background: #F2E4DA;
-  border-radius: 12px;
-}
-    button{
 
-      width: 179px;
-      height: 64px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px 32px;
-      background: #DB9F6A;
-      border-radius: 12px;
-      left: -58px;
-      position: relative;
-    }
+      input {
+        width: 345px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        padding: 20px 32px;
+        background: #F2E4DA;
+        border-radius: 12px;
+      }
+
+      button {
+
+        width: 179px;
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 32px;
+        background: #DB9F6A;
+        border-radius: 12px;
+        left: -58px;
+        position: relative;
+      }
 
     }
   }
 
 
-  .elements{
+  .elements {
     padding-top: 244px;
     display: flex;
     align-items: center;
 
 
-    svg{
+    svg {
       margin-right: 300px;
     }
   }
 
 
-  .links{
+  .links {
     color: rgba(255, 244, 235, 0.8);
     font-family: "Satoshi Variable";
     font-weight: 700;
@@ -226,9 +235,9 @@ input{
     text-transform: uppercase;
     margin-right: 471px;
     display: flex;
-    gap:130px;
+    gap: 130px;
 
-    li{
+    li {
       padding-bottom: 34px;
     }
 
@@ -255,14 +264,14 @@ input{
   }
 
 
-
-  .social-links{
+  .social-links {
     display: flex;
     gap: 32px;
-     img{
-       width: 32px;
-       height: 32px;
-     }
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   .info {
