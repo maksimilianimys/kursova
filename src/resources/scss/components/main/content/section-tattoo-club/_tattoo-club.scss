@@ -445,7 +445,7 @@
     &::after {
       position: absolute;
 
-      top: 33.333vw;
+      top: 179px;
 
       content: '';
 
@@ -472,6 +472,10 @@
       @include tablet {
         top: 16.1vw;
         left: 0.33px
+      }
+
+      @include mobile {
+        top: 33.333vw;
       }
     }
   }
@@ -505,7 +509,7 @@
       font-size: 18px;
       font-weight: 500;
       line-height: 1.5;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.01em;
 
       @include desktop-fhd {
         padding-top: 1.25vw;
@@ -514,6 +518,7 @@
 
       @include small-desktop {
         padding-top: clamp(20px, 1.429vw, 24px);
+        margin-top: 0;
       }
     }
 
@@ -528,7 +533,7 @@
       outline: none;
       cursor: pointer;
 
-      margin-top: 18px;
+      margin-top: 24px;
       padding: 20px 32px;
 
       width: 255px;
@@ -560,6 +565,12 @@
 
         height: clamp(60px, 3.81vw, 64px);
       }
+
+      @include mobile {
+        margin-top: 18px;
+      }
     }
   }
 }
+
+@import "modal-window";

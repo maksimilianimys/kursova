@@ -30,7 +30,7 @@ $red-color: #590101;
 $white: #FFF;
 
 @mixin desktop-fhd {
-  @media screen and (min-width: 1920.01px) {
+  @media screen and (min-width: 1920.1px) {
     @content;
   }
 }

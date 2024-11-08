@@ -1,0 +1,171 @@
+.footer {
+  height: 556px;
+  background: #1E1C17;
+  position: relative;
+
+  .back-form {
+
+
+    .back {
+      position: absolute;
+      left: 385px;
+      z-index: 10;
+      top: -182px;
+    }
+
+    .form {
+      position: absolute;
+      top: -110px;
+      left: 700px;
+      z-index: 50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .list {
+      //position: absolute;
+      top: -114px;
+      z-index: 20;
+      left: 335px;
+
+    }
+
+    .text {
+      //position: absolute;
+      z-index: 20;
+      top: -151px;
+      left: 751px;
+
+      h2 {
+        width: 344px;
+        color: #12100C;
+        font-family: $Angel-font;
+        font-size: 64px;
+      }
+
+      .inputform {
+        display: flex;
+      }
+
+      input {
+        width: 345px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        padding: 20px 32px;
+        background: #F2E4DA;
+        border-radius: 12px;
+      }
+
+      button {
+
+        width: 179px;
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 32px;
+        background: #DB9F6A;
+        border-radius: 12px;
+        left: -58px;
+        position: relative;
+      }
+
+    }
+  }
+
+
+  .elements {
+    padding-top: 244px;
+    display: flex;
+    align-items: center;
+
+
+    svg {
+      margin-right: 300px;
+    }
+  }
+
+
+  .links {
+    color: rgba(255, 244, 235, 0.8);
+    font-family: "Satoshi Variable";
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-right: 471px;
+    display: flex;
+    gap: 130px;
+
+    li {
+      padding-bottom: 34px;
+    }
+
+    li:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .links-1,
+  .links-2 {
+    position: relative;
+    padding-left: 52px;
+  }
+
+  .links-1::before,
+  .links-2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(255, 244, 235, 0.8); /* або інший колір */
+  }
+
+
+  .social-links {
+    display: flex;
+    gap: 32px;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 96px;
+    position: relative; // Додаємо позиціонування
+
+    ul {
+      color: rgba(255, 244, 235, 0.8);
+      font-family: "Satoshi Variable";
+      font-weight: 700;
+      font-size: 18px;
+      text-transform: uppercase;
+      display: flex;
+    }
+
+    p {
+      color: rgba(255, 244, 235, 0.4);
+      font-family: "Satoshi Variable";
+      font-weight: 700;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    &::before { // Використовуємо & для звернення до батьківського елемента
+      content: ""; /* Псевдоелемент без тексту */
+      position: absolute; /* Абсолютне позиціонування */
+      top: 64px; /* Встановлюємо на верх */
+      left: 0; /* Встановлюємо зліва */
+      right: 0; /* Розтягуємо на всю ширину */
+      height: 2px; /* Висота полоски */
+      background-color: #FFF; /* Колір полоски (чорний) */
+    }
+  }
+}

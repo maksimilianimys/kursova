@@ -1,4 +1,3 @@
-
 .container {
   display: block;
 }
@@ -7,48 +6,94 @@ h2 {
   color: #FFF4EB;
   font-family: "Angel rhapsody";
   font-size: 64px;
+  font-weight: 400;
   display: flex;
   justify-content: center;
+  letter-spacing: -2px;
+  height: 64px;
 }
 
 .images {
-  padding-top: 105px;
+  padding-top: 117px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
   gap: 24px;
+
+  @include laptop{
+    padding-top: 8.125vw;
+  }
+  @include small-laptop{
+    padding-top: 8.125vw;
+  }
 }
 
 .slide-image {
-  width: 132px; /* Розмір зображень за замовчуванням */
+  width: 132px;
   height: 132px;
   transition: transform 0.5s ease, margin 0.5s ease;
+
+  @include laptop{
+    width: 9.167vw;
+    height: 9.167vw;
+  }
+  @include small-laptop{
+    width: 9.167vw;
+    height: 9.167vw;
+  }
 }
 
 .slide-image.active {
   transform: scale(1.68);
-  margin: 0 48px;
 
+  margin: 0 48px;
 
   max-width: 222px;
   max-height: 222px;
+
+  @include laptop{
+    transform: scale(1.48);
+    margin: 0 32px;
+  }
+  @include small-laptop{
+    transform: scale(1.48);
+    margin: 0 32px;
+  }
 }
 
 
-.nnn {
+.swipe-info {
   width: 1002px;
   height: 228px;
+
   background: #1E1C17;
   border-radius: 32px;
   padding: 52px;
 
+  @include small-desktop{
+    width: 59.643vw;
+    padding: clamp(40px, 3.095vw, 52px);
+  }
+
+  @include laptop{
+    width: 59vw;
+    padding: 40px;
+  }
+  @include small-laptop{
+    width: 59vw;
+    padding: clamp(32px, 3.125vw, 40px);
+  }
 }
 
 h3 {
-  color: #FFF4EB;
+  color: #fff4eb;
   font-family: "Angel rhapsody";
   font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 400;
 }
 
 p {
@@ -59,11 +104,26 @@ p {
   line-height: 1.5;
   letter-spacing: -0.7px;
   padding-top: 32px;
+
+  @include small-desktop{
+    padding-top: clamp(20px, 1.905vw, 32px);
+  }
+
+  @include small-laptop{
+    font-size: clamp(18px, 1.563vw, 20px);
+  }
 }
 
 
 .mySwiper {
   padding-top: 77px;
+
+  @include laptop{
+    padding-top: 5.347vw;
+  }
+  @include small-laptop{
+    padding-top: 5.347vw;
+  }
 }
 
 .swiper-slide {
@@ -81,11 +141,24 @@ p {
   border-radius: 50px;
   background: #DB9F6A;
   top: 44px;
+
+  @include small-desktop{
+    height: clamp(70px, 4.762vw, 80px);
+    width: clamp(70px, 4.762vw, 80px);
+  }
+  @include laptop{
+    height: clamp(60px, 4.762vw, 80px);
+    width: clamp(60px, 4.762vw, 80px);
+  }
+  @include small-laptop{
+    height: clamp(50px, 4.762vw, 80px);
+    width: clamp(50px, 4.762vw, 80px);
+  }
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  background-size: 32px 32px; /* Задайте розмір SVG */
+  background-size: 32px 32px;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -94,11 +167,19 @@ p {
 .swiper-button-next {
   right: 129px;
   background-image: url('data:image/svg+xml;utf8,<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M15.9999 5.33325L14.1199 7.21325L21.5599 14.6666H5.33325V17.3333H21.5599L14.1199 24.7866L15.9999 26.6666L26.6666 15.9999L15.9999 5.33325Z" fill="%231E1C17"/></svg>');
+
+  @include small-laptop{
+    right: clamp(90px, 10.078vw, 129px);
+  }
 }
 
 .swiper-button-prev {
   left: 129px;
   background-image: url('data:image/svg+xml;utf8,<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 26.6667L17.88 24.7867L10.44 17.3333H26.6667V14.6667H10.44L17.88 7.21334L16 5.33334L5.33334 16L16 26.6667Z" fill="%231E1C17"/></svg>');
+
+  @include small-laptop{
+    left: clamp(90px, 10.078vw, 129px);
+  }
 }
 
 .swiper-button-next::after,
