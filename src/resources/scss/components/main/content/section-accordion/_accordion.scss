@@ -9,6 +9,27 @@
 .accordion {
   color: white;
   padding: 0 259px;
+
+  @include small-desktop{
+    width: 1002px;
+    padding: 0;
+  }
+  @include laptop{
+    width: 1002px;
+    padding: 0;
+  }
+  @include small-laptop{
+    width: 78.281vw;
+    padding: 0;
+  }
+  @include tablet{
+    width: 78.281vw;
+    padding: 0;
+  }
+  @include mobile{
+    width: clamp(327px, 78.281vw, 1002px);
+    padding: 0;
+  }
 }
 
 h2 {
@@ -20,7 +41,7 @@ h2 {
   font-weight: 400;
   line-height: normal;
   letter-spacing: -1.28px;
-  padding-bottom: 32px; /* Відступ від заголовка до полоски */
+  padding-bottom: 28px; /* Відступ від заголовка до полоски */
 }
 
 .accordion .container-accordion {
@@ -38,6 +59,11 @@ h2 {
   text-transform: uppercase;
   cursor: pointer;
   padding: 32px 24px;
+
+  @include mobile{
+    padding: clamp(24px, 4.167vw, 32px) 0;
+    font-size: clamp(18px, 3.125vw, 24px);
+  }
 }
 
 .accordion .label::before {

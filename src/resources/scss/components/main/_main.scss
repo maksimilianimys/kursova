@@ -157,6 +157,30 @@
     padding-top: 160px;
     //padding-bottom: 334px;
 
+    @include desktop-fhd {
+      padding-top: 8.333vw;
+    }
+
+    @include small-desktop {
+      padding-top: clamp(140px, 9.524vw, 160px);
+    }
+
+    @include laptop {
+      padding-top: clamp(120px, 9.524vw, 140px);
+    }
+
+    @include small-laptop {
+      padding-top: 120px;
+    }
+
+    @include tablet {
+      padding-top: clamp(100px, 9.524vw, 120px);
+    }
+
+    @include mobile {
+      padding-top: clamp(80px, 9.524vw, 100px);
+    }
+
     @import "content/section-accordion/accordion";
 
   }
