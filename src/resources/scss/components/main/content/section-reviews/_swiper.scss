@@ -28,11 +28,10 @@ h2 {
   align-items: center;
   gap: 24px;
 
-
   @include mobile {
     padding-top: clamp(32px, 8.125vw, 117px);
     gap: clamp(12px, 3.125vw, 24px);
-    justify-content: flex-start;  // Вирівнювання елементів зліва
+    justify-content: flex-start;
     overflow-x: auto; // Прокрутка по горизонталі
     height: 173px;
     width: 100%;
