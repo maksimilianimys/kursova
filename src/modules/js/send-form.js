@@ -3,7 +3,7 @@ emailJSScript.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.
 document.head.appendChild(emailJSScript);
 
 // Ініціалізація EmailJS
-emailJSScript.onload = function() {
+emailJSScript.onload = function () {
     emailjs.init({
         publicKey: "jRJMh1CnjIQRXJPWu",
     });

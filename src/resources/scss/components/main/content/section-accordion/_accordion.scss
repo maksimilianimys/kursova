@@ -1,117 +1,111 @@
-.main-content-section-tattoo-club-acordion {
-  padding-top: 160px;
-  padding-bottom: 334px;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
 
-  .container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+.accordion {
+  color: white;
+  padding: 0 259px;
+}
 
-  }
+h2 {
+  color: var(--Style, #FFF4EB);
+  text-align: center;
+  font-family: $Angel-font;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.28px;
+  padding-bottom: 32px; /* Відступ від заголовка до полоски */
+}
 
-  .accordion {
-    color: white;
-    padding: 0 259px;
-  }
+.accordion .container-accordion {
+  position: relative;
+}
 
-  h2 {
-    color: var(--Style, #FFF4EB);
-    text-align: center;
-    font-family: $Angel-font;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -1.28px;
-    padding-bottom: 32px; /* Відступ від заголовка до полоски */
-  }
+.accordion .label {
+  position: relative;
+  color: #FFF;
+  font-family: "Satoshi Variable";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 32px 24px;
+}
 
-  .accordion .container-a {
-    position: relative;
-  }
+.accordion .label::before {
+  content: '+';
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  font-size: 32px;
+  transform: translateY(-50%);
+}
 
-  .accordion .label {
-    position: relative;
-    color: #FFF;
-    font-family: "Satoshi Variable";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 32px 24px;
-  }
+.accordion .content {
+  position: relative;
+  max-height: 0;
+  color: #FFF;
+  font-family: "Satoshi Variable";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.4px;
+  text-align: justify;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
 
-  .accordion .label::before {
-    content: '+';
-    color: white;
-    position: absolute;
-    top: 50%;
-    right: 24px;
-    font-size: 32px;
-    transform: translateY(-50%);
-  }
+.accordion .content p {
+  padding: 0 24px 32px;
+}
 
-  .accordion .content {
-    position: relative;
-    max-height: 0;
-    color: #FFF;
-    font-family: "Satoshi Variable";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%;
-    letter-spacing: -0.4px;
-    text-align: justify;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-  }
+/* Стилі для полоски */
+.accordion .container-accordion::after {
+  content: '';
+  display: block;
+  height: 4px; /* Висота полоски */
+  background-color: grey; /* Колір полоски */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0; /* Залишається внизу контейнера */
+  transition: height 0.5s; /* Анімація висоти */
+}
 
-  .accordion .content p {
-    padding: 0 24px 32px;
-  }
+.accordion .container-accordion.active .content {
+  height: auto; /* Висота контенту, коли активний */
+}
 
-    /* Стилі для полоски */
-  .accordion .container-a::after {
-    content: '';
-    display: block;
-    height: 4px; /* Висота полоски */
-    background-color: grey; /* Колір полоски */
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0; /* Залишається внизу контейнера */
-    transition: height 0.5s; /* Анімація висоти */
-  }
+/* Анімація для полоски при активному стані */
+.accordion .container-accordion.active::after {
+  height: 4px; /* Можна змінити, якщо потрібно, під час активації */
+}
 
-  .accordion .container-a.active .content {
-    height: auto; /* Висота контенту, коли активний */
-  }
+/* Зміна з плюса на мінус, коли активний */
+.accordion .container-accordion.active .label::before {
+  content: '-';
+  font-size: 30px;
+}
 
-  /* Анімація для полоски при активному стані */
-  .accordion .container-a.active::after {
-    height: 4px; /* Можна змінити, якщо потрібно, під час активації */
-  }
-
-  /* Зміна з плюса на мінус, коли активний */
-  .accordion .container-a.active .label::before {
-    content: '-';
-    font-size: 30px;
-  }
-
-  .overlay {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 18px;
-  }
+.overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
 }

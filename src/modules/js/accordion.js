@@ -1,7 +1,7 @@
-const accordionItems = document.querySelectorAll('.container-a');
+const accordionItems = document.querySelectorAll('.container-accordion');
 
 accordionItems.forEach(item => {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function () {
         // Закриваємо всі інші елементи
         accordionItems.forEach(otherItem => {
             if (otherItem !== item) {

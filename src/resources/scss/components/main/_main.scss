@@ -122,7 +122,7 @@
 
   }
 
-  .main-content-section-reviews{
+  &-content-section-reviews {
     padding-top: 160px;
 
     @include desktop-fhd {
@@ -153,6 +153,12 @@
 
   }
 
-  @import "content/section-accordion/accordion";
+  &-content-section-tattoo-club-accordion {
+    padding-top: 160px;
+    //padding-bottom: 334px;
+
+    @import "content/section-accordion/accordion";
+
+  }
 
 }
