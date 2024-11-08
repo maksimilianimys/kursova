@@ -194,17 +194,14 @@
 
   @include small-desktop {
     padding: 0;
-/*дивна фігня з спитати*/
+
     h2 {
       padding: 3.095vw 3.095vw 0;
     }
   }
 
   @include laptop {
-    //padding: 0;
     h2 {
-      //padding-right: 52px;
-      //padding-left: 52px;
       padding-bottom: 52px;
     }
   }
@@ -226,10 +223,6 @@
   &-image {
     position: relative;
     z-index: 1;
-
-    //width: calc(100% - 40px);
-    //height: 100%;
-    /*дивна фігня з спитати*/
 
     object-fit: contain;
     object-position: bottom;
