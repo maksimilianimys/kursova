@@ -45,7 +45,9 @@
   font-family: $Angel-font;
   font-weight: 200;
 
-  transition: color 0.3s ease;
+  a {
+    transition: color 0.3s ease;
+  }
 
   a:hover, a:focus {
     color: $brown-color;
@@ -83,6 +85,7 @@
   &:hover, &:focus {
     .svg-path {
       fill: $brown-color;
+      transition: fill 0.3s ease;
     }
   }
 }

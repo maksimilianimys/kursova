@@ -2,9 +2,6 @@
   margin-top: 64px;
   height: 80px;
 
-  &:hover, &:focus {
-  }
-
   @include desktop-fhd {
     margin-top: 3.333vw;
     height: 4.167vw;
