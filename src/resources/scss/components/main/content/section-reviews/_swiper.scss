@@ -11,6 +11,14 @@ h2 {
   justify-content: center;
   letter-spacing: -2px;
   height: 64px;
+
+  @include tablet {
+    font-size: clamp(48px, 6.25vw, 64px);
+  }
+  @include mobile {
+    font-size: clamp(40px, 6.25vw, 48px);
+    height: clamp(40px, 6.25vw, 64px);
+  }
 }
 
 .images {
@@ -28,6 +36,28 @@ h2 {
   @include small-laptop {
     padding-top: 8.125vw;
   }
+  @include tablet {
+    padding-top: 8.125vw;
+  }
+  @include mobile {
+    padding-top: clamp(32px, 8.125vw, 117px);
+    gap: clamp(12px, 3.125vw, 24px);
+
+    overflow-x: auto;
+    height: 173px;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-bottom: 1px solid rgba(25, 24, 24, 0.35);
+    scrollbar-width: none; /* приховує смугу прокрутки в Firefox */
+    -ms-overflow-style: none; /* приховує смугу прокрутки в Internet Explorer */
+
+    /* Для Chrome, Safari та інших WebKit-браузерів */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+  }
 }
 
 .slide-image {
@@ -42,6 +72,14 @@ h2 {
   @include small-laptop {
     width: 9.167vw;
     height: 9.167vw;
+  }
+  @include tablet {
+    width: clamp(90px, 9.167vw, 132px);
+    height: clamp(90px, 9.167vw, 132px);
+  }
+  @include mobile {
+    width: clamp(80px, 9.167vw, 132px);
+    height: clamp(80px, 9.167vw, 132px);
   }
 }
 
@@ -60,6 +98,14 @@ h2 {
   @include small-laptop {
     transform: scale(1.48);
     margin: 0 32px;
+  }
+  @include tablet {
+    transform: scale(1.48);
+    margin: 0 24px;
+  }
+  @include mobile {
+    transform: scale(1.48);
+    margin: 0 24px;
   }
 }
 
@@ -85,6 +131,12 @@ h2 {
     width: 59vw;
     padding: 42px;
   }
+  @include tablet {
+    padding: clamp(40px, 4.102vw, 42px);
+  }
+  @include mobile {
+    padding: clamp(32px, 4.102vw, 40px) clamp(24px, 4.102vw, 40px);
+  }
 }
 
 h3 {
@@ -94,6 +146,11 @@ h3 {
   line-height: 1;
   letter-spacing: -0.02em;
   font-weight: 400;
+
+  @include mobile {
+    font-size: clamp(24px, 4.167vw, 32px);
+  }
+;
 }
 
 p {
@@ -112,6 +169,17 @@ p {
   @include small-laptop {
     font-size: clamp(18px, 1.563vw, 20px);
   }
+
+  @include tablet {
+    font-size: clamp(18px, 1.563vw, 20px);
+  }
+
+  @include mobile {
+    padding-top: clamp(20px, 4.167vw, 32px);
+    font-size: clamp(16px, 1.563vw, 20px);
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+  }
 }
 
 
@@ -123,6 +191,12 @@ p {
   }
   @include small-laptop {
     padding-top: 5.347vw;
+  }
+  @include tablet {
+    padding-top: 5.347vw;
+  }
+  @include mobile {
+    padding-top: clamp(16px, 5.347vw, 77px);
   }
 }
 
@@ -161,6 +235,13 @@ p {
   background-size: 32px 32px;
   background-repeat: no-repeat;
   background-position: center;
+
+  @include tablet {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
 }
 
 
