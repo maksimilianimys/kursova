@@ -1,7 +1,10 @@
+// Перевіряємо ширину екрана і встановлюємо індекс початкового слайду
+const initialSlideIndex = window.innerWidth <= 768 ? 0 : 2;
+
 const swiper = new Swiper('.swiper', {
     loop: true,
     speed: 300,
-    initialSlide: 2, // Встановлюємо третій слайд (індекс 2) як активний за замовчуванням
+    initialSlide: initialSlideIndex, // Встановлюємо слайд за замовчуванням
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
