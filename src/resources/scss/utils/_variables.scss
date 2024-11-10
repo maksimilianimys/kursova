@@ -29,6 +29,8 @@ $dark-brown-color: #8E623C;
 $red-color: #590101;
 $white: #FFF;
 
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
 @mixin desktop-fhd {
   @media screen and (min-width: 1920.1px) {
     @content;

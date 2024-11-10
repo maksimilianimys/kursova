@@ -87,6 +87,7 @@
       z-index: 1;
 
       color: $background-white-color;
+
       font-size: 64px;
       font-family: $Angel-font;
       font-weight: 400;
@@ -155,7 +156,7 @@
 
   &-content-section-tattoo-club-accordion {
     padding-top: 160px;
-    //padding-bottom: 334px;
+    margin-bottom: 344px;
 
     @include desktop-fhd {
       padding-top: 8.333vw;
@@ -175,10 +176,12 @@
 
     @include tablet {
       padding-top: clamp(100px, 9.524vw, 120px);
+      margin-bottom: clamp(300px, 33.594vw, 344px);
     }
 
     @include mobile {
       padding-top: clamp(80px, 9.524vw, 100px);
+       margin-bottom: 663px;
     }
 
     @import "content/section-accordion/accordion";

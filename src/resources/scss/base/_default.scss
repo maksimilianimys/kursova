@@ -2,15 +2,6 @@
 //  display: none;
 //}
 
-//.background {
-//position: absolute;
-//  z-index: -1;
-//width: 100%;
-//height: auto;
-//background: url("../../../images/background-header.png");
-//background-size: cover;
-//}
-
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -30,14 +21,18 @@
 }
 
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
-/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
-/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-style: normal;
   line-height: normal;
+
   margin: 0;
   padding: 0;
+
   background-color: $background-color;
 }
 
@@ -77,10 +72,12 @@ button {
 
 .dollar {
   color: $font-dark;
+
   font-family: $Angel-font;
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.06em;
+
   text-align: right;
 
   @include desktop-fhd {

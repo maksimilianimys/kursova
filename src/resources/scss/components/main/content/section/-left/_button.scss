@@ -41,6 +41,7 @@
     }
 
     @include mobile {
+      width: clamp(280px, 47.135vw, 325px);
       height: 72px;
     }
   }
@@ -53,6 +54,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:focus {
+    }
   }
 
   span {

@@ -1,47 +1,90 @@
 .footer {
-  height: 556px;
   background: #1E1C17;
-  position: relative;
+
 
   .back-form {
-
-
-    .back {
-      position: absolute;
-      left: 385px;
-      z-index: 10;
-      top: -182px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .form {
       position: absolute;
-      top: -110px;
-      left: 700px;
+      background-image: url("../images/footer/footer.png");
+      background-repeat: no-repeat; /* Вимикає повторення */
+      background-position: center; /* Центрує фон всередині блоку */
       z-index: 50;
+
+      padding: 70px 168px 70px 216px;
+
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-direction: row;
+      gap: 64px;
+
+      @include small-laptop {
+        padding: 70px 0;
+        gap: 5vw;
+
+        width: 100%;
+        max-width: calc(100% + 4.761vw);
+
+      }
+
+      @include tablet {
+        padding: 70px 0;
+        gap: 5vw;
+
+        width: 100%;
+        max-width: calc(100% + 4.761vw);
+      }
+
+      @include mobile {
+        position: absolute; // Змінюємо позиціонування на абсолютне
+        left: 0; // Вирівнюємо по лівому краю екрана
+        right: 0; // Вирівнюємо по правому краю екрана
+        background: #FFFFFF;
+        width: 100vw; // Встановлюємо ширину в 100% видимої області екрана
+        margin-top: -580px;
+        padding: 40px 24px;
+        overflow-x: hidden; // Забороняємо горизонтальний скрол для цього елемента
+      }
+
+    }
+
+    .contact-form{
+      flex-direction: column;
+    }
+
+    .frm {
+      padding-top: 32px;
+      display: flex;
     }
 
     .list {
-      //position: absolute;
-      top: -114px;
-      z-index: 20;
-      left: 335px;
-
+      @include small-laptop {
+        margin-left: auto;
+      }
+      @include tablet {
+        margin-left: auto;
+      }
     }
 
     .text {
-      //position: absolute;
-      z-index: 20;
-      top: -151px;
-      left: 751px;
+      @include small-laptop {
+        margin-right: auto;
+      }
+      @include tablet {
+        margin-right: auto;
+      }
 
       h2 {
-        width: 344px;
+        width: 341px;
         color: #12100C;
         font-family: $Angel-font;
         font-size: 64px;
+        font-weight: 400;
+        height: 128px;
+        letter-spacing: -1.28px;
+        line-height: 1;
       }
 
       .inputform {
@@ -56,10 +99,19 @@
         padding: 20px 32px;
         background: #F2E4DA;
         border-radius: 12px;
+
+        @include laptop {
+          width: clamp(325px, 23.958vw, 345px);
+        }
+        @include small-laptop {
+          width: clamp(325px, 23.958vw, 345px);
+        }
+        @include tablet {
+          width: clamp(300px, 31.738vw, 325px);
+        }
       }
 
       button {
-
         width: 179px;
         height: 64px;
         display: flex;
@@ -68,10 +120,32 @@
         padding: 20px 32px;
         background: #DB9F6A;
         border-radius: 12px;
-        left: -58px;
+        left: -48px;
         position: relative;
-      }
+        border: none;
 
+        @include laptop {
+          width: clamp(168px, 12.431vw, 179px);
+        }
+        @include small-laptop {
+          width: clamp(168px, 12.431vw, 179px);
+        }
+        @include tablet {
+          width: clamp(155px, 16.406vw, 168px);
+          left:0;
+          margin-left: -48px;
+
+        }
+
+        color: #483524;
+        font-family: $Satoshi-font;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 1.89px;
+        text-transform: uppercase;
+      }
     }
   }
 
@@ -81,9 +155,57 @@
     display: flex;
     align-items: center;
 
+    @include tablet {
 
-    svg {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px 50px;
+      grid-auto-flow: row;
+      grid-template-areas:
+    "svg links links"
+    "social-links links links";
+      justify-items: center;
+
+      .svg {
+        grid-area: svg;
+      }
+
+      .social-links {
+        grid-area: social-links;
+      }
+
+      .links {
+        grid-area: links;
+      }
+
+    }
+
+    @include mobile{
+      align-items: normal;
+      flex-direction: column;
+      gap: 40px;
+      padding-top: 32px;
+    }
+
+    .svg {
       margin-right: 300px;
+
+      @include small-desktop {
+        margin-right: clamp(260px, 17.857vw, 300px);
+      }
+      @include laptop {
+        margin-right: clamp(220px, 17.857vw, 300px);
+      }
+      @include small-laptop {
+        margin-right: clamp(180px, 17.857vw, 300px);
+      }
+      @include tablet {
+        margin-right: 0;
+      }
+      @include mobile{
+        margin-right: 0;
+      }
     }
   }
 
@@ -94,9 +216,20 @@
     font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
-    margin-right: 471px;
     display: flex;
-    gap: 130px;
+    gap: 170px;
+
+    @include small-laptop {
+      gap: 13.281vw;
+    }
+    @include tablet {
+      gap: 13.281vw;
+    }
+    @include mobile{
+      flex-direction: column;
+      gap: 40px;
+    }
+
 
     li {
       padding-bottom: 34px;
@@ -119,20 +252,27 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 1px;
-    height: 100%;
-    background-color: rgba(255, 244, 235, 0.8); /* або інший колір */
+    width: 3px;
+    height: 140px;
+    background: #DB9F6A;
   }
 
 
   .social-links {
     display: flex;
     gap: 32px;
+    margin-left: auto;
 
-    img {
+    a {
       width: 32px;
       height: 32px;
     }
+
+@include tablet{
+  margin-left: 0;
+}
+    @include mobile{
+      margin-left: 0;}
   }
 
   .info {
@@ -140,32 +280,52 @@
     justify-content: space-between;
     padding-top: 96px;
     position: relative; // Додаємо позиціонування
+    padding-bottom: 52px;
+    flex-direction: column;
+    @include tablet{
+      padding-bottom: clamp(26px, 5.078vw, 52px);
+    }
 
     ul {
-      color: rgba(255, 244, 235, 0.8);
-      font-family: "Satoshi Variable";
-      font-weight: 700;
+      color: rgba(255, 244, 235, 0.80);
+      font-family: $Satoshi-font;
       font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 1.44px;
       text-transform: uppercase;
       display: flex;
+      gap: 52px;
+
+      @include tablet{
+        gap: clamp(32px, 5.078vw, 52px);
+      }
     }
 
     p {
       color: rgba(255, 244, 235, 0.4);
-      font-family: "Satoshi Variable";
+      font-family: $Satoshi-font;
       font-weight: 700;
       font-size: 18px;
       text-transform: uppercase;
+
+      @include tablet{
+        padding-top: 32px;
+        justify-content: end;
+        display: flex;
+      }
     }
 
     &::before { // Використовуємо & для звернення до батьківського елемента
       content: ""; /* Псевдоелемент без тексту */
       position: absolute; /* Абсолютне позиціонування */
-      top: 64px; /* Встановлюємо на верх */
+      top: 60px; /* Встановлюємо на верх */
       left: 0; /* Встановлюємо зліва */
       right: 0; /* Розтягуємо на всю ширину */
-      height: 2px; /* Висота полоски */
-      background-color: #FFF; /* Колір полоски (чорний) */
+      height: 1px;
+      background: rgba(219, 159, 106, 0.20);
     }
   }
+
 }

@@ -325,6 +325,11 @@
     @include tablet {
       right: 1.106vw;
     }
+
+    @include mobile {
+      right: 21px;
+      bottom: 21px;
+    }
   }
 }
 
@@ -417,6 +422,11 @@
 
     @include tablet {
       right: 3.906vw;
+    }
+
+    @include mobile {
+      bottom: 21px;
+      right: 21px;
     }
   }
 }
@@ -520,6 +530,10 @@
         padding-top: clamp(20px, 1.429vw, 24px);
         margin-top: 0;
       }
+
+      @include mobile {
+        font-size: clamp(17.8px, 2.344vw, 18px);
+      }
     }
 
     button {
@@ -548,6 +562,12 @@
       font-weight: 700;
       letter-spacing: 0.1em;
 
+      transition: 0.3s ease-in-out;
+
+      &:hover, &:focus {
+        background: #b57b48;
+      }
+
       @include desktop-fhd {
         margin-top: 1.25vw;
         padding: 1.042vw 1.667vw;
@@ -567,7 +587,14 @@
       }
 
       @include mobile {
-        margin-top: 18px;
+        margin-top: 24px;
+
+        width: clamp(206px, 33.203vw, 255px);
+        height: clamp(59px, 8.333vw, 64px);
+
+        font-size: clamp(14px, 2.344vw, 18px);
+
+        letter-spacing: 0.06em;
       }
     }
   }
