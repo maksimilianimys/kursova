@@ -1,6 +1,6 @@
 .main {
   background: url("../images/background-page.png");
-  //background-size: cover;
+  background-size: cover;
   overflow: hidden;
 
   .container {
@@ -181,11 +181,9 @@
 
     @include mobile {
       padding-top: clamp(80px, 9.524vw, 100px);
-       margin-bottom: 663px;
+      margin-bottom: 663px;
     }
 
     @import "content/section-accordion/accordion";
-
   }
-
 }

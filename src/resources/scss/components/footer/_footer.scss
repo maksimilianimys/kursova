@@ -1,23 +1,22 @@
 .footer {
-  background: #1E1C17;
+  background: $background-color-element-main;
 
-
-  .back-form {
+  .footer-feedback {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    .form {
+    &-container {
       position: absolute;
+      z-index: 1;
+
       background-image: url("../images/footer/footer.png");
-      background-repeat: no-repeat; /* Вимикає повторення */
-      background-position: center; /* Центрує фон всередині блоку */
-      z-index: 50;
+      background-repeat: no-repeat;
+      background-position: center;
 
       padding: 70px 168px 70px 216px;
 
       display: flex;
-      flex-direction: row;
       gap: 64px;
 
       @include small-laptop {
@@ -38,37 +37,38 @@
       }
 
       @include mobile {
-        position: absolute; // Змінюємо позиціонування на абсолютне
-        left: 0; // Вирівнюємо по лівому краю екрана
-        right: 0; // Вирівнюємо по правому краю екрана
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        flex-direction: column;
+
         background: #FFFFFF;
-        width: 100vw; // Встановлюємо ширину в 100% видимої області екрана
+
+        width: 100vw;
+
         margin-top: -580px;
         padding: 40px 24px;
-        overflow-x: hidden; // Забороняємо горизонтальний скрол для цього елемента
+
+        overflow-x: hidden;
       }
-
     }
 
-    .contact-form{
-      flex-direction: column;
-    }
-
-    .frm {
-      padding-top: 32px;
-      display: flex;
-    }
-
-    .list {
+    &-list {
       @include small-laptop {
         margin-left: auto;
       }
       @include tablet {
         margin-left: auto;
       }
+
+      @include mobile {
+        width: max-content;
+      }
     }
 
-    .text {
+
+    &-form {
       @include small-laptop {
         margin-right: auto;
       }
@@ -87,7 +87,8 @@
         line-height: 1;
       }
 
-      .inputform {
+      &-email {
+        padding-top: 32px;
         display: flex;
       }
 
@@ -132,7 +133,7 @@
         }
         @include tablet {
           width: clamp(155px, 16.406vw, 168px);
-          left:0;
+          left: 0;
           margin-left: -48px;
 
         }
@@ -146,49 +147,67 @@
         letter-spacing: 1.89px;
         text-transform: uppercase;
       }
+
+      //p{
+      //
+      //}
+
+      //.overlay {
+      //  position: fixed;
+      //  top: 50%;
+      //  left: 50%;
+      //
+      //  padding: 20px;
+      //
+      //  transform: translate(-50%, -50%);
+      //
+      //  background-color: rgba(0, 0, 0, 0.8);
+      //  color: $white;
+      //  border-radius: 5px;
+      //  text-align: center;
+      //  font-size: 18px;
+      //}
     }
   }
 
-
-  .elements {
+  &-elements {
     padding-top: 244px;
     display: flex;
     align-items: center;
 
     @include tablet {
-
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       gap: 10px 50px;
       grid-auto-flow: row;
       grid-template-areas:
-    "svg links links"
-    "social-links links links";
+    "footer-elements-logo footer-elements-link footer-elements-link"
+    "footer-elements-social-links footer-elements-link footer-elements-link";
       justify-items: center;
 
-      .svg {
-        grid-area: svg;
+      .footer-elements-logo {
+        grid-area: footer-elements-logo;
       }
 
-      .social-links {
-        grid-area: social-links;
+      .footer-elements-social-links {
+        grid-area: footer-elements-social-links;
       }
 
-      .links {
-        grid-area: links;
+      .footer-elements-link {
+        grid-area: footer-elements-link;
       }
 
     }
 
-    @include mobile{
+    @include mobile {
       align-items: normal;
       flex-direction: column;
       gap: 40px;
       padding-top: 32px;
     }
 
-    .svg {
+    &-logo {
       margin-right: 300px;
 
       @include small-desktop {
@@ -203,86 +222,86 @@
       @include tablet {
         margin-right: 0;
       }
-      @include mobile{
+      @include mobile {
         margin-right: 0;
+      }
+    }
+
+    &-link {
+      color: rgba(255, 244, 235, 0.8);
+      font-family: "Satoshi Variable";
+      font-weight: 700;
+      font-size: 18px;
+      text-transform: uppercase;
+      display: flex;
+      gap: 170px;
+
+      @include small-laptop {
+        gap: 13.281vw;
+      }
+      @include tablet {
+        gap: 13.281vw;
+      }
+      @include mobile {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+
+      li {
+        padding-bottom: 34px;
+      }
+
+      li:last-child {
+        padding-bottom: 0;
+      }
+    }
+
+    .links-1,
+    .links-2 {
+      position: relative;
+      padding-left: 52px;
+    }
+
+    .links-1::before,
+    .links-2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 140px;
+      background: #DB9F6A;
+    }
+
+    &-social-links {
+      display: flex;
+      gap: 32px;
+      margin-left: auto;
+
+      a {
+        width: 32px;
+        height: 32px;
+      }
+
+      @include tablet {
+        margin-left: 0;
+      }
+      @include mobile {
+        margin-left: 0;
       }
     }
   }
 
 
-  .links {
-    color: rgba(255, 244, 235, 0.8);
-    font-family: "Satoshi Variable";
-    font-weight: 700;
-    font-size: 18px;
-    text-transform: uppercase;
-    display: flex;
-    gap: 170px;
-
-    @include small-laptop {
-      gap: 13.281vw;
-    }
-    @include tablet {
-      gap: 13.281vw;
-    }
-    @include mobile{
-      flex-direction: column;
-      gap: 40px;
-    }
-
-
-    li {
-      padding-bottom: 34px;
-    }
-
-    li:last-child {
-      padding-bottom: 0;
-    }
-  }
-
-  .links-1,
-  .links-2 {
-    position: relative;
-    padding-left: 52px;
-  }
-
-  .links-1::before,
-  .links-2::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 3px;
-    height: 140px;
-    background: #DB9F6A;
-  }
-
-
-  .social-links {
-    display: flex;
-    gap: 32px;
-    margin-left: auto;
-
-    a {
-      width: 32px;
-      height: 32px;
-    }
-
-@include tablet{
-  margin-left: 0;
-}
-    @include mobile{
-      margin-left: 0;}
-  }
-
-  .info {
+  &-info {
     display: flex;
     justify-content: space-between;
     padding-top: 96px;
-    position: relative; // Додаємо позиціонування
+    position: relative;
     padding-bottom: 52px;
     flex-direction: column;
-    @include tablet{
+    @include tablet {
       padding-bottom: clamp(26px, 5.078vw, 52px);
     }
 
@@ -298,7 +317,7 @@
       display: flex;
       gap: 52px;
 
-      @include tablet{
+      @include tablet {
         gap: clamp(32px, 5.078vw, 52px);
       }
     }
@@ -310,22 +329,21 @@
       font-size: 18px;
       text-transform: uppercase;
 
-      @include tablet{
+      @include tablet {
         padding-top: 32px;
         justify-content: end;
         display: flex;
       }
     }
 
-    &::before { // Використовуємо & для звернення до батьківського елемента
-      content: ""; /* Псевдоелемент без тексту */
-      position: absolute; /* Абсолютне позиціонування */
-      top: 60px; /* Встановлюємо на верх */
-      left: 0; /* Встановлюємо зліва */
-      right: 0; /* Розтягуємо на всю ширину */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
       height: 1px;
       background: rgba(219, 159, 106, 0.20);
     }
   }
-
 }

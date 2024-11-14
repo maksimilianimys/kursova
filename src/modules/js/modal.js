@@ -44,13 +44,10 @@ const weekendHours = [
 function updateHours() {
     const selectedDay = daySelect.value;
 
-    // Очищуємо години перед оновленням
     hourSelect.innerHTML = '<option value="" disabled selected>Виберіть годину</option>';
 
-    // Вибираємо потрібний список годин в залежності від дня
     const hours = (selectedDay === 'saturday' || selectedDay === 'sunday') ? weekendHours : weekdayHours;
 
-    // Додаємо години в випадаючий список
     hours.forEach(hour => {
         const option = document.createElement('option');
         option.value = hour.value;
@@ -59,5 +56,4 @@ function updateHours() {
     });
 }
 
-// Додаємо обробник події для оновлення годин при зміні дня
 daySelect.addEventListener('change', updateHours);

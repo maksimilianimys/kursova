@@ -1,47 +1,49 @@
 .container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  align-content: center;
 }
 
 .accordion {
-  color: white;
+  color: $white;
   padding: 0 259px;
 
-  @include small-desktop{
+  @include small-desktop {
     width: 1002px;
     padding: 0;
   }
-  @include laptop{
+  @include laptop {
     width: 1002px;
     padding: 0;
   }
-  @include small-laptop{
+  @include small-laptop {
     width: 78.281vw;
     padding: 0;
   }
-  @include tablet{
+  @include tablet {
     width: 78.281vw;
     padding: 0;
   }
-  @include mobile{
+  @include mobile {
     width: clamp(327px, 78.281vw, 1002px);
     padding: 0;
   }
 }
 
 h2 {
-  color: var(--Style, #FFF4EB);
-  text-align: center;
+  color: $background-white-color;
+
   font-family: $Angel-font;
   font-size: 64px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
-  letter-spacing: -1.28px;
-  padding-bottom: 28px; /* Відступ від заголовка до полоски */
+  letter-spacing: -0.02em;
+
+  text-align: center;
+
+  padding-bottom: 28px;
+
+  @include mobile {
+    font-size: clamp(40px, 8.333vw, 64px);
+  }
 }
 
 .accordion .container-accordion {
@@ -50,44 +52,58 @@ h2 {
 
 .accordion .label {
   position: relative;
-  color: #FFF;
-  font-family: "Satoshi Variable";
+
+  color: $white;
+
+  font-family: $Satoshi-font;
   font-size: 24px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
+
   text-transform: uppercase;
+
   cursor: pointer;
+
   padding: 32px 24px;
 
-  @include mobile{
-    padding: clamp(24px, 4.167vw, 32px) 0;
+  @include mobile {
     font-size: clamp(18px, 3.125vw, 24px);
+
+    padding: clamp(24px, 4.167vw, 32px) 0;
   }
 }
 
 .accordion .label::before {
   content: '+';
-  color: white;
+  color: $white;
   position: absolute;
-  top: 50%;
+  top: 46%;
   right: 24px;
   font-size: 32px;
   transform: translateY(-50%);
+
+  @include mobile {
+    font-size: clamp(24px, 4.167vw, 32px);
+  }
 }
 
 .accordion .content {
   position: relative;
+
   max-height: 0;
-  color: #FFF;
-  font-family: "Satoshi Variable";
+
+  color: $white;
+
+  font-family: $Satoshi-font;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: 150%;
-  letter-spacing: -0.4px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+
   text-align: justify;
+
   overflow: hidden;
+
   transition: max-height 0.5s ease-in-out;
 }
 
@@ -95,43 +111,34 @@ h2 {
   padding: 0 24px 32px;
 }
 
-/* Стилі для полоски */
 .accordion .container-accordion::after {
-  content: '';
-  display: block;
-  height: 4px; /* Висота полоски */
-  background-color: grey; /* Колір полоски */
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0; /* Залишається внизу контейнера */
-  transition: height 0.5s; /* Анімація висоти */
+  bottom: 0;
+
+  content: '';
+  display: block;
+
+  height: 4px;
+
+  background-color: $line;
+  transition: height 0.5s;
 }
 
 .accordion .container-accordion.active .content {
-  height: auto; /* Висота контенту, коли активний */
+  height: auto;
 }
 
-/* Анімація для полоски при активному стані */
 .accordion .container-accordion.active::after {
-  height: 4px; /* Можна змінити, якщо потрібно, під час активації */
+  height: 2px;
 }
 
-/* Зміна з плюса на мінус, коли активний */
 .accordion .container-accordion.active .label::before {
   content: '-';
-  font-size: 30px;
-}
+  font-size: 32px;
 
-.overlay {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 18px;
+  @include mobile {
+    font-size: clamp(24px, 4.167vw, 32px);
+  }
 }
