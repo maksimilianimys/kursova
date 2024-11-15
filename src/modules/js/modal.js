@@ -1,21 +1,73 @@
 (() => {
     const refs = {
-        openModalBtn: document.querySelector("[data-modal-open]"),
+        openModalBtns: document.querySelectorAll("[data-modal-open]"),
         closeModalBtn: document.querySelector("[data-modal-close]"),
         modal: document.querySelector("[data-modal]"),
+        focusableElements: 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
     };
 
-    refs.openModalBtn.addEventListener("click", toggleModal);
+    let firstFocusableElement;
+    let lastFocusableElement;
+
+    refs.openModalBtns.forEach(button => {
+        button.addEventListener("click", () => {
+            toggleModal();
+            setFocusableElements();
+            firstFocusableElement.focus();
+        });
+    });
+
     refs.closeModalBtn.addEventListener("click", toggleModal);
+
+    refs.modal.addEventListener("click", (event) => {
+        if (event.target === refs.modal) {
+            toggleModal();
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (refs.modal.classList.contains("is-hidden")) return;
+
+        if (event.key === "Escape") {
+            toggleModal();
+        } else if (event.key === "Tab") {
+            handleTabFocus(event);
+        }
+    });
 
     function toggleModal() {
         refs.modal.classList.toggle("is-hidden");
         document.body.classList.toggle("no-scroll");
+
+        if (refs.modal.classList.contains("is-hidden")) {
+            refs.openModalBtns[0].focus();
+        }
+    }
+
+    function setFocusableElements() {
+        const focusableContent = refs.modal.querySelectorAll(refs.focusableElements);
+        firstFocusableElement = focusableContent[0];
+        lastFocusableElement = focusableContent[focusableContent.length - 1];
+    }
+
+    function handleTabFocus(event) {
+        if (event.shiftKey) {
+            if (document.activeElement === firstFocusableElement) {
+                event.preventDefault();
+                lastFocusableElement.focus();
+            }
+        } else {
+            if (document.activeElement === lastFocusableElement) {
+                event.preventDefault();
+                firstFocusableElement.focus();
+            }
+        }
     }
 })();
 
-const daySelect = document.getElementById('day-select');
-const hourSelect = document.getElementById('hour-select');
+
+const daySelect = document.getElementById('day_select');
+const hourSelect = document.getElementById('hour_select');
 
 const weekdayHours = [
     {value: "11", text: "11:00"},
@@ -44,7 +96,7 @@ const weekendHours = [
 function updateHours() {
     const selectedDay = daySelect.value;
 
-    hourSelect.innerHTML = '<option value="" disabled selected>Виберіть годину</option>';
+    hourSelect.innerHTML = '<option value="" disabled selected>Select hour</option>';
 
     const hours = (selectedDay === 'saturday' || selectedDay === 'sunday') ? weekendHours : weekdayHours;
 

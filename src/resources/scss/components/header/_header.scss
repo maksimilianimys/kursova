@@ -124,8 +124,7 @@
         transition: fill 0.3s ease;
       }
 
-      &:hover .svg-path-center-button,
-      &:focus .svg-path-center-button {
+      &:hover .svg-path-center-button {
         fill: $dark-brown-color;
       }
 

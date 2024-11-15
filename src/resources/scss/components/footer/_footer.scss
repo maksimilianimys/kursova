@@ -10,14 +10,27 @@
       position: absolute;
       z-index: 1;
 
+      display: flex;
+      align-items: center;
+
+      padding: 70px 168px 70px 216px;
+
+      gap: 64px;
+
       background-image: url("../images/footer/footer.png");
       background-repeat: no-repeat;
       background-position: center;
 
-      padding: 70px 168px 70px 216px;
+      @include desktop-fhd {
+        display: flex;
+        justify-content: center;
 
-      display: flex;
-      gap: 64px;
+        gap: 3.333vw;
+        padding: 0;
+        background-size: cover;
+        width: 59.896vw;
+        height: 18.958vw;
+      }
 
       @include small-laptop {
         padding: 70px 0;
@@ -25,7 +38,6 @@
 
         width: 100%;
         max-width: calc(100% + 4.761vw);
-
       }
 
       @include tablet {
@@ -42,10 +54,12 @@
         right: 0;
 
         flex-direction: column;
-
+        display: flex;
+        align-items: center;
         background: #FFFFFF;
 
         width: 100vw;
+        gap: 40px;
 
         margin-top: -580px;
         padding: 40px 24px;
@@ -55,6 +69,11 @@
     }
 
     &-list {
+      @include desktop-fhd {
+        width: 14.427vw;
+        height: 11.667vw;
+      }
+
       @include small-laptop {
         margin-left: auto;
       }
@@ -63,7 +82,8 @@
       }
 
       @include mobile {
-        width: max-content;
+        width: 261.5px;
+        height: 211.5px;
       }
     }
 
@@ -75,6 +95,9 @@
       @include tablet {
         margin-right: auto;
       }
+      @include mobile {
+        width: 327px;
+      }
 
       h2 {
         width: 341px;
@@ -85,11 +108,32 @@
         height: 128px;
         letter-spacing: -1.28px;
         line-height: 1;
+
+        @include desktop-fhd {
+          width: 17.76vw;
+          height: auto;
+          font-size: 3.333vw;
+        }
+
+        @include mobile {
+          font-size: 40px;
+          height: 80px;
+          width: 327px;
+        }
       }
 
       &-email {
         padding-top: 32px;
         display: flex;
+
+        @include desktop-fhd {
+          padding-top: 1.667vw;
+        }
+
+        @include mobile {
+          display: flex;
+          flex-direction: column;
+        }
       }
 
       input {
@@ -100,7 +144,21 @@
         padding: 20px 32px;
         background: #F2E4DA;
         border-radius: 12px;
+        border: none;
 
+        color: #483524;
+        font-family: $Satoshi-font;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        @include desktop-fhd {
+          font-size: 0.938vw;
+          width: 17.969vw;
+          height: 3.333vw;
+          border-radius: 0.625vw;
+        }
         @include laptop {
           width: clamp(325px, 23.958vw, 345px);
         }
@@ -109,6 +167,9 @@
         }
         @include tablet {
           width: clamp(300px, 31.738vw, 325px);
+        }
+        @include mobile {
+          width: 327px;
         }
       }
 
@@ -124,7 +185,12 @@
         left: -48px;
         position: relative;
         border: none;
-
+        @include desktop-fhd {
+          font-size: 0.938vw;
+          width: 9.323vw;
+          height: 3.333vw;
+          border-radius: 0.625vw;
+        }
         @include laptop {
           width: clamp(168px, 12.431vw, 179px);
         }
@@ -136,6 +202,12 @@
           left: 0;
           margin-left: -48px;
 
+        }
+
+        @include mobile {
+          margin-top: 12px;
+          left: 0;
+          width: 100%;
         }
 
         color: #483524;
@@ -171,9 +243,14 @@
   }
 
   &-elements {
-    padding-top: 244px;
     display: flex;
     align-items: center;
+
+    padding-top: 244px;
+
+    @include desktop-fhd {
+      padding-top: 12.708vw;
+    }
 
     @include tablet {
       display: grid;
@@ -197,7 +274,6 @@
       .footer-elements-link {
         grid-area: footer-elements-link;
       }
-
     }
 
     @include mobile {
@@ -209,6 +285,19 @@
 
     &-logo {
       margin-right: 300px;
+
+
+      @include desktop-fhd {
+        svg {
+          width: 3.646vw;
+          height: 3.646vw;
+        }
+      }
+
+
+      @include desktop-fhd {
+        margin-right: 15.625vw;
+      }
 
       @include small-desktop {
         margin-right: clamp(260px, 17.857vw, 300px);
@@ -232,9 +321,16 @@
       font-family: "Satoshi Variable";
       font-weight: 700;
       font-size: 18px;
+      letter-spacing: 0.08em;
+      line-height: 1.33;
       text-transform: uppercase;
       display: flex;
-      gap: 170px;
+      gap: 162px;
+
+      @include desktop-fhd {
+        font-size: 0.938vw;
+        gap: 8.438vw;
+      }
 
       @include small-laptop {
         gap: 13.281vw;
@@ -250,6 +346,10 @@
 
       li {
         padding-bottom: 34px;
+
+        @include desktop-fhd {
+          padding-bottom: 1.771vw;
+        }
       }
 
       li:last-child {
@@ -261,6 +361,10 @@
     .links-2 {
       position: relative;
       padding-left: 52px;
+
+      @include desktop-fhd {
+        padding-left: 2.708vw;
+      }
     }
 
     .links-1::before,
@@ -272,6 +376,10 @@
       width: 3px;
       height: 140px;
       background: #DB9F6A;
+
+      @include desktop-fhd {
+        height: 7.292vw;
+      }
     }
 
     &-social-links {
@@ -283,6 +391,22 @@
         width: 32px;
         height: 32px;
       }
+
+      @include desktop-fhd {
+
+        gap: 1.667vw;
+
+        svg {
+          width: 1.667vw;
+          height: 1.667vw;
+        }
+
+        a {
+          width: 1.667vw;
+          height: 1.667vw;
+        }
+      }
+
 
       @include tablet {
         margin-left: 0;
@@ -300,8 +424,23 @@
     padding-top: 96px;
     position: relative;
     padding-bottom: 52px;
-    flex-direction: column;
+
+    @include desktop-fhd{
+      padding-top: 5vw;
+      padding-bottom: 2.708vw;
+    }
+
+    @include small-laptop {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      flex-direction: column;
+
+    }
+
     @include tablet {
+      flex-direction: column;
       padding-bottom: clamp(26px, 5.078vw, 52px);
     }
 
@@ -317,6 +456,11 @@
       display: flex;
       gap: 52px;
 
+      @include desktop-fhd{
+        font-size: 0.938vw;
+        gap: 2.708vw;
+      }
+
       @include tablet {
         gap: clamp(32px, 5.078vw, 52px);
       }
@@ -328,6 +472,17 @@
       font-weight: 700;
       font-size: 18px;
       text-transform: uppercase;
+      letter-spacing: 1.44px;
+
+      @include desktop-fhd{
+        font-size: 0.938vw;
+      }
+
+      @include small-laptop {
+        display: flex;
+        justify-content: end;
+        padding-top: 32px;
+      }
 
       @include tablet {
         padding-top: 32px;
@@ -339,11 +494,15 @@
     &::before {
       content: "";
       position: absolute;
-      top: 60px;
+      top: 64px;
       left: 0;
       right: 0;
       height: 1px;
       background: rgba(219, 159, 106, 0.20);
+
+      @include desktop-fhd{
+        top: 3.333vw;
+      }
     }
   }
 }

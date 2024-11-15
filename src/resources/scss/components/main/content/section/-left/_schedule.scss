@@ -71,19 +71,19 @@
       font-weight: 500;
       letter-spacing: -0.02em;
 
-      padding-right: 12px;
+      margin-right: 12px;
 
       p:not(:last-child) {
-        padding-bottom: 12px;
+        margin-bottom: 12px;
 
         @include desktop-fhd {
-          padding-bottom: 0.625vw;
+          margin-bottom: 0.625vw;
         }
       }
 
       @include desktop-fhd {
         font-size: 0.938vw;
-        padding-right: 0.625vw;
+        margin-right: 0.625vw;
       }
     }
 
@@ -100,10 +100,10 @@
       }
 
       p:not(:last-child) {
-        padding-bottom: 12px;
+        margin-bottom: 12px;
 
         @include desktop-fhd {
-          padding-bottom: 0.625vw;
+          margin-bottom: 0.625vw;
         }
       }
     }

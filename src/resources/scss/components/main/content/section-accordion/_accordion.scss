@@ -5,6 +5,7 @@
 
 .accordion {
   color: $white;
+
   padding: 0 259px;
 
   @include small-desktop {
@@ -39,7 +40,9 @@ h2 {
 
   text-align: center;
 
-  padding-bottom: 28px;
+  @include desktop-fhd {
+    font-size: 3.333vw;
+  }
 
   @include mobile {
     font-size: clamp(40px, 8.333vw, 64px);
@@ -65,24 +68,55 @@ h2 {
 
   padding: 32px 24px;
 
+  @include desktop-fhd {
+    font-size: 1.25vw;
+
+    padding: 1.667vw 1.25vw;
+  }
+
   @include mobile {
     font-size: clamp(18px, 3.125vw, 24px);
 
     padding: clamp(24px, 4.167vw, 32px) 0;
   }
+
+  &:hover::before,
+  &:focus::before {
+  }
+}
+
+.accordion .first-label {
+  margin-top: 28px;
+
+  @include desktop-fhd {
+    margin-top: 1.458vw;
+  }
+
+  @include mobile {
+    margin-top: clamp(8px, 2.734vw, 28px);
+  }
 }
 
 .accordion .label::before {
-  content: '+';
-  color: $white;
   position: absolute;
-  top: 46%;
-  right: 24px;
+  top: 47.5%;
+  right: 40px;
+
+  color: $white;
+  content: '+';
   font-size: 32px;
+
   transform: translateY(-50%);
+
+  @include desktop-fhd {
+    font-size: 1.667vw;
+  }
 
   @include mobile {
     font-size: clamp(24px, 4.167vw, 32px);
+
+    top: 45%;
+    right: 1vw;
   }
 }
 
@@ -105,10 +139,22 @@ h2 {
   overflow: hidden;
 
   transition: max-height 0.5s ease-in-out;
+
+  @include desktop-fhd {
+    font-size: 1.042vw;
+  }
 }
 
 .accordion .content p {
   padding: 0 24px 32px;
+
+  @include desktop-fhd {
+    padding: 0 1.25vw 1.667vw;
+  }
+
+  @include mobile {
+    padding: 0 0 32px;
+  }
 }
 
 .accordion .container-accordion::after {
@@ -120,23 +166,22 @@ h2 {
   content: '';
   display: block;
 
-  height: 4px;
+  height: 2px;
 
   background-color: $line;
-  transition: height 0.5s;
 }
 
 .accordion .container-accordion.active .content {
   height: auto;
 }
 
-.accordion .container-accordion.active::after {
-  height: 2px;
-}
-
 .accordion .container-accordion.active .label::before {
   content: '-';
   font-size: 32px;
+
+  @include desktop-fhd {
+    font-size: 1.667vw;
+  }
 
   @include mobile {
     font-size: clamp(24px, 4.167vw, 32px);

@@ -301,6 +301,10 @@
   p {
     .dollar {
       font-size: 24px;
+
+      @include desktop-fhd {
+        font-size: 1.25vw;
+      }
     }
 
     position: absolute;
@@ -399,6 +403,10 @@
   p {
     .dollar {
       font-size: 24px;
+
+      @include desktop-fhd {
+        font-size: 1.25vw;
+      }
     }
 
     position: absolute;
@@ -440,6 +448,10 @@
 
   border-radius: 32px;
   background-color: $background-color-element-main;
+
+  @include desktop-fhd {
+    border-radius: 1.667vw;
+  }
 
   &-image {
     position: relative;
@@ -511,7 +523,7 @@
 
     p {
       position: relative;
-      margin-top: 24px;
+      padding-top: 24px;
 
       color: $font-p-description-text;
 
@@ -528,7 +540,6 @@
 
       @include small-desktop {
         padding-top: clamp(20px, 1.429vw, 24px);
-        margin-top: 0;
       }
 
       @include mobile {

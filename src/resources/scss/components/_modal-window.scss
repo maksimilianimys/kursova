@@ -1,0 +1,262 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 3;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  z-index: 3;
+
+  transform: translate(-50%, -50%);
+
+  padding: 40px;
+
+  min-width: 500px;
+
+  background-color: rgba(42, 39, 34, 0.98);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+  0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  opacity: 1;
+
+  border-radius: 24px;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include desktop-fhd {
+    min-width: 26.042vw;
+  }
+
+  @include mobile {
+    min-width: clamp(327px, 65.104vw, 500px);
+    padding: clamp(25px, 5.208vw, 40px);
+  }
+
+  &-close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: $background-white-color;
+
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    cursor: pointer;
+
+    .svg-path {
+      fill: $red-color;
+
+      transition: 300ms ease-in-out;
+    }
+
+    &:hover, &:focus {
+      .svg-path {
+        fill: $brown-color;
+      }
+    }
+  }
+
+  &-title {
+    color: $background-white-color;
+
+    font-family: $Satoshi-font;
+    font-size: 24px;
+    font-weight: 700;
+
+    text-align: center;
+
+    @include desktop-fhd {
+      font-size: 1.25vw;
+    }
+  }
+
+  &-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .form-label {
+      position: relative;
+
+      padding-top: 12px;
+
+      color: grey;
+
+      font-family: $Satoshi-font;
+      font-size: 12px;
+      font-weight: 600;
+
+      @include desktop-fhd {
+        padding-top: 0.625vw;
+        font-size: 0.625vw;
+      }
+
+      &-text {
+        display: block;
+
+        padding-bottom: 5px;
+        padding-left: 8px;
+      }
+
+      &-input {
+        width: 100%;
+        height: auto;
+
+        padding: 12px 0px 12px 38px;
+
+        border-radius: 16px;
+        border: 1px $background-color-element-main solid;
+
+        transition: outline-color 300ms ease-in-out;
+
+        &:focus,
+        &:hover {
+          outline: 2px $brown-color solid;
+        }
+
+        &-icon {
+          position: absolute;
+          bottom: 12px;
+          left: 12px;
+
+          color: $span-dark;
+
+          @media (min-width: 2561px) {
+            bottom: 18px;
+          }
+        }
+      }
+
+      &-textarea {
+        height: 120px;
+        width: 100%;
+
+        border-radius: 16px;
+        border: 1px $background-color-element-main solid;
+
+        padding: 12px 12px;
+
+        resize: none;
+        transition: outline-color 300ms ease-in-out;
+
+        font-family: $Satoshi-font;
+        font-size: 12px;
+        font-weight: 400;
+
+        @include desktop-fhd {
+          font-size: 0.625vw;
+        }
+
+        &:hover,
+        &:focus {
+          outline: 2px $brown-color solid;
+        }
+      }
+    }
+
+    &-select {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .form-select {
+        font-family: $Satoshi-font;
+        font-size: 16px;
+
+        width: 100%;
+
+        padding: 10px 14px;
+
+        border-radius: 16px;
+        border: 1px solid #ccc;
+
+        box-sizing: border-box;
+
+        transition: outline-color 300ms ease-in-out;
+
+        &:focus,
+        &:hover {
+          outline: 2px $brown-color solid;
+        }
+      }
+    }
+
+    &-button {
+      display: inline-block;
+      text-align: center;
+
+      padding-top: 18px;
+
+      @include desktop-fhd {
+        padding-top: 1.25vw;
+      }
+
+      button {
+        background: $dark-brown-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 16px;
+
+        border: none;
+        cursor: pointer;
+
+        padding: 10px 48px;
+
+        color: $font-white;
+
+        font-family: $Satoshi-font;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.875;
+        letter-spacing: 0.06em;
+
+        transition: background-color 300ms ease-in-out;
+
+        @include desktop-fhd {
+          font-size: 0.833vw;
+        }
+
+        &:hover,
+        &:focus {
+          background: $brown-color;
+        }
+      }
+    }
+  }
+
+  &-overlay{
+    color: $background-white-color;
+
+    font-family: $Angel-font;
+    font-size: 64px;
+    font-weight: 400;
+  }
+}

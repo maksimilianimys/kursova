@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="css/modern-normalize.css">
     <link rel="stylesheet" href="css/main.min.css">
 
+    <link rel="icon" href="images/icon.ico" type="image/x-icon">
+
     <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
-    <!--    <link href="https://fonts.cdnfonts.com/css/angel-rhapsody" rel="stylesheet">-->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
@@ -227,7 +229,7 @@
                 </div>
 
                 <div class="main-content-section-tattoo-club-center">
-                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="550" height="145"
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="550" height="145"
                          viewBox="0 0 550 109">
                         <path d="M.1 54c0 42.2.2 48.9 1.3 45.3 2.9-9.1 8.8-15.7 18.1-20l6-2.8h249c242.6 0 249.1 0 254.5 1.9 7.1 2.5 16.9 12 19.3 18.6 1.4 4.2 1.5 1.5 1.5-43.5 0-26.4-.3-46.9-.7-45.5-2.7 8.9-9 16.3-17.4 20.8l-5.2 2.7h-502L19 28.9C10.2 24.7 4.4 18 1.4 8.5.3 5.2.1 12.6.1 54z"/>
                     </svg>
@@ -248,11 +250,10 @@
                         <p>Don’t hesitate. No one has ever regreted the their tatoos! Contact us now, and
                             we’ll
                             help you!</p>
-                        <button>
-                            <a href="#home-page">CONTACT US NOW</a>
-                        </button>
+                        <button data-modal-open>CONTACT US NOW</button>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -261,14 +262,15 @@
 
     <section class="main-content-section-reviews" id="About_Us">
         <div class="container">
+
             <h2>What Clients say?!</h2>
 
             <div class="images">
-                <img src="images/swiper/Slide1.png" class="slide-image" alt="Slide 1">
-                <img src="images/swiper/Slide2.png" class="slide-image" alt="Slide 2">
-                <img src="images/swiper/Slide3.png" class="slide-image" alt="Slide 3">
-                <img src="images/swiper/Slide4.png" class="slide-image" alt="Slide 4">
-                <img src="images/swiper/Slide5.png" class="slide-image" alt="Slide 5">
+                <img src="images/swiper/Slide1.png" class="slide-image" alt="Slide 1" tabindex="0">
+                <img src="images/swiper/Slide2.png" class="slide-image" alt="Slide 2" tabindex="0">
+                <img src="images/swiper/Slide3.png" class="slide-image" alt="Slide 3" tabindex="0">
+                <img src="images/swiper/Slide4.png" class="slide-image" alt="Slide 4" tabindex="0">
+                <img src="images/swiper/Slide5.png" class="slide-image" alt="Slide 5" tabindex="0">
             </div>
 
             <div class="swiper mySwiper">
@@ -323,14 +325,15 @@
 
     <!--    /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/-->
 
-    <section class="main-content-section-tattoo-club-accordion" id="Inquiries">
+    <section class="main-content-section-accordion" id="Inquiries">
         <div class="container">
             <div class="accordion">
 
                 <h2>F.A.Q.</h2>
 
                 <div class="container-accordion">
-                    <div class="label"><p>What is the process?</p></div>
+                    <div class="label first-label" tabindex="0" aria-expanded="false" role="button"><p>What is the
+                        process?</p></div>
                     <div class="content">
                         <p>Size: Tattoo prices are often based on the size of the tattoo. Larger tattoos
                             generally cost more than smaller ones. Some salons may charge per square inch or have set
@@ -345,7 +348,8 @@
                 </div>
 
                 <div class="container-accordion">
-                    <div class="label"><p>How you determine price?</p></div>
+                    <div class="label" tabindex="0" aria-expanded="false" role="button"><p>How you determine price?</p>
+                    </div>
                     <div class="content">
                         <p>Size: Tattoo prices are often based on the size of the tattoo. Larger tattoos
                             generally cost more than smaller ones. Some salons may charge per square inch or have set
@@ -360,7 +364,8 @@
                 </div>
 
                 <div class="container-accordion">
-                    <div class="label"><p>Can you draw any tattoos?</p></div>
+                    <div class="label" tabindex="0" aria-expanded="false" role="button"><p>Can you draw any tattoos?</p>
+                    </div>
                     <div class="content">
                         <p>Size: Tattoo prices are often based on the size of the tattoo. Larger tattoos
                             generally cost more than smaller ones. Some salons may charge per square inch or have set
@@ -375,7 +380,8 @@
                 </div>
 
                 <div class="container-accordion">
-                    <div class="label"><p>What is your Location?</p></div>
+                    <div class="label" tabindex="0" aria-expanded="false" role="button"><p>What is your Location?</p>
+                    </div>
                     <div class="content">
                         <p>Size: Tattoo prices are often based on the size of the tattoo. Larger tattoos
                             generally cost more than smaller ones. Some salons may charge per square inch or have set
@@ -406,7 +412,7 @@
                     <form id="contact-form" class="footer-feedback-form-email" onsubmit="sendEmail(event)">
                         <input type="email" id="email" name="email" placeholder="Enter your email" required>
                         <button type="submit">Subscribe</button>
-                        <p id="error-message" style="color: red; display: none;">Введіть правильну пошту</p>
+                        <p id="error-message" style="color: red; display: none;">Invalid email</p>
                     </form>
 
                     <div id="overlay" style="display: none;">
@@ -429,14 +435,14 @@
 
             <div class="footer-elements-link">
                 <ul class="links-1">
-                    <li><a href="#">HOME PAGE</a></li>
-                    <li><a href="#">PORTFOLIO</a></li>
-                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#Home-page">HOME PAGE</a></li>
+                    <li><a href="#Portfolio">PORTFOLIO</a></li>
+                    <li><a href="#About_Us">ABOUT US</a></li>
                 </ul>
 
                 <ul class="links-2">
-                    <li><a href="#">INQUIRIES</a></li>
-                    <li><a href="#">PRICINGS</a></li>
+                    <li><a href="#Inquiries">INQUIRIES</a></li>
+                    <li><a href="#Pricings">PRICINGS</a></li>
                     <li><a href="#">CHALLENGES</a></li>
                 </ul>
             </div>
@@ -487,7 +493,7 @@
             </ul>
 
             <p>
-                © 2023 fIGHTING STAR. All rights reserved.
+                © 2024 fIGHTING STAR. All rights reserved.
             </p>
         </div>
     </div>
@@ -495,76 +501,91 @@
 
 <div class="backdrop is-hidden" data-modal>
     <div class="modal-window">
-        <button type="button" class="close-modal-button" data-modal-close>
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path class="svg-path" fill-rule="evenodd" clip-rule="evenodd"
-                      d="M16.0001 8.33334C16.5524 8.33334 17.0001 8.78106 17.0001 9.33334L17.0001 22.6667C17.0001 23.219 16.5524 23.6667 16.0001 23.6667C15.4478 23.6667 15.0001 23.219 15.0001 22.6667L15.0001 9.33334C15.0001 8.78106 15.4478 8.33334 16.0001 8.33334ZM21.3334 12.3333C21.8857 12.3333 22.3334 12.7811 22.3334 13.3333V18.6667C22.3334 19.219 21.8857 19.6667 21.3334 19.6667C20.7811 19.6667 20.3334 19.219 20.3334 18.6667V13.3333C20.3334 12.7811 20.7811 12.3333 21.3334 12.3333ZM11.6667 13.3333C11.6667 12.7811 11.219 12.3333 10.6667 12.3333C10.1145 12.3333 9.66675 12.7811 9.66675 13.3333L9.66675 18.6667C9.66675 19.219 10.1145 19.6667 10.6667 19.6667C11.219 19.6667 11.6667 19.219 11.6667 18.6667L11.6667 13.3333Z"
-                      fill="#FFF4EB"/>
-            </svg>
-        </button>
-        <h2 class="form_title">Вкажіть дані для запису</h2>
-        <form class="form">
-            <label class="form-label">
-                <span class="label-text">Ім'я</span>
-                <input type="text" class="form-input" required>
-                <svg class="form-icon" width="18" height="18" viewBox="0 0 18 18" fill="currentColor"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_3_14078)">
-                        <path d="M9 9C10.6575 9 12 7.6575 12 6C12 4.3425 10.6575 3 9 3C7.3425 3 6 4.3425 6 6C6 7.6575 7.3425 9 9 9ZM9 10.5C6.9975 10.5 3 11.505 3 13.5V14.25C3 14.6625 3.3375 15 3.75 15H14.25C14.6625 15 15 14.6625 15 14.25V13.5C15 11.505 11.0025 10.5 9 10.5Z"
-                              fill="#212121"/>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_3_14078">
-                            <rect width="18" height="18" fill="white"/>
-                        </clipPath>
-                    </defs>
-                </svg>
-            </label>
-            <label class="form-label">
-                <span class="label-text">Робочі дні</span>
-                <select class="form-select" id="day-select" required>
-                    <option value="" disabled selected>Виберіть день</option>
-                    <option value="monday">Понеділок</option>
-                    <option value="tuesday">Вівторок</option>
-                    <option value="wednesday">Середа</option>
-                    <option value="thursday">Четвер</option>
-                    <option value="friday">П'ятниця</option>
-                    <option value="saturday">Субота</option>
-                    <option value="sunday">Неділя</option>
-                </select>
-            </label>
-            <label class="form-label">
-                <span class="label-text">Робочі години</span>
-                <select class="form-select" id="hour-select" required>
-                    <option value="" disabled selected>Виберіть годину</option>
-                </select>
-            </label>
-            <label class="form-label">
-                <span class="label-text">Пошта</span>
-                <input type="email" class="form-input" required>
-                <svg class="form-icon" width="18" height="18" viewBox="0 0 18 18" fill="currentColor"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_3_14090)">
-                        <path d="M15 3H3C2.175 3 1.5075 3.675 1.5075 4.5L1.5 13.5C1.5 14.325 2.175 15 3 15H15C15.825 15 16.5 14.325 16.5 13.5V4.5C16.5 3.675 15.825 3 15 3ZM14.7 6.1875L9.3975 9.5025C9.1575 9.6525 8.8425 9.6525 8.6025 9.5025L3.3 6.1875C3.1125 6.0675 3 5.865 3 5.6475C3 5.145 3.5475 4.845 3.975 5.1075L9 8.25L14.025 5.1075C14.4525 4.845 15 5.145 15 5.6475C15 5.865 14.8875 6.0675 14.7 6.1875Z"
-                              fill="#212121"/>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_3_14090">
-                            <rect width="18" height="18" fill="white"/>
-                        </clipPath>
-                    </defs>
-                </svg>
 
-            </label>
-            <label class="form-label">
-                <span class="label-text">Коментар</span>
-                <textarea name="" id="" class="form_textarea" cols="30" rows="10" required
-                          placeholder="Введіть текст"></textarea>
-            </label>
-            <div class="button-form-div">
-                <button type="submit" class="form-button">Записатися</button>
-            </div>
-        </form>
+        <div id="modal-window-form">
+            <button type="button" class="modal-window-close-button" data-modal-close>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path class="svg-path" fill-rule="evenodd" clip-rule="evenodd"
+                          d="M16.0001 8.33334C16.5524 8.33334 17.0001 8.78106 17.0001 9.33334L17.0001 22.6667C17.0001 23.219 16.5524 23.6667 16.0001 23.6667C15.4478 23.6667 15.0001 23.219 15.0001 22.6667L15.0001 9.33334C15.0001 8.78106 15.4478 8.33334 16.0001 8.33334ZM21.3334 12.3333C21.8857 12.3333 22.3334 12.7811 22.3334 13.3333V18.6667C22.3334 19.219 21.8857 19.6667 21.3334 19.6667C20.7811 19.6667 20.3334 19.219 20.3334 18.6667V13.3333C20.3334 12.7811 20.7811 12.3333 21.3334 12.3333ZM11.6667 13.3333C11.6667 12.7811 11.219 12.3333 10.6667 12.3333C10.1145 12.3333 9.66675 12.7811 9.66675 13.3333L9.66675 18.6667C9.66675 19.219 10.1145 19.6667 10.6667 19.6667C11.219 19.6667 11.6667 19.219 11.6667 18.6667L11.6667 13.3333Z"
+                          fill="#FFF4EB"/>
+                </svg>
+            </button>
+
+            <h2 class="modal-window-title">Tattoo registration</h2>
+
+            <form class="modal-window-form" onsubmit="sendModalEmail(event)">
+                <label class="form-label">
+                    <span class="form-label-text">Your name</span>
+                    <input type="text" class="form-label-input" id="modal_name" required>
+                    <svg class="form-label-input-icon" width="18" height="18" viewBox="0 0 18 18" fill="currentColor"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_3_14078)">
+                            <path d="M9 9C10.6575 9 12 7.6575 12 6C12 4.3425 10.6575 3 9 3C7.3425 3 6 4.3425 6 6C6 7.6575 7.3425 9 9 9ZM9 10.5C6.9975 10.5 3 11.505 3 13.5V14.25C3 14.6625 3.3375 15 3.75 15H14.25C14.6625 15 15 14.6625 15 14.25V13.5C15 11.505 11.0025 10.5 9 10.5Z"
+                                  fill="#212121"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3_14078">
+                                <rect width="18" height="18" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </label>
+
+                <div class="modal-window-form-select">
+                    <label class="form-label">
+                        <span class="form-label-text">Days</span>
+                        <select class="form-select" id="day_select" required>
+                            <option value="" disabled selected>Select day</option>
+                            <option value="monday">Monday</option>
+                            <option value="tuesday">Tuesday</option>
+                            <option value="wednesday">Wednesday</option>
+                            <option value="thursday">Thursday</option>
+                            <option value="friday">Friday</option>
+                            <option value="saturday">Saturday</option>
+                            <option value="sunday">Sunday</option>
+                        </select>
+                    </label>
+                    <label class="form-label">
+                        <span class="form-label-text">Work hours</span>
+                        <select class="form-select" id="hour_select" required>
+                            <option value="" disabled selected>Select hour</option>
+                        </select>
+                    </label>
+                </div>
+
+                <label class="form-label">
+                    <span class="form-label-text">Email</span>
+                    <input type="email" class="form-label-input" id="modal_email" required>
+                    <svg class="form-label-input-icon" width="18" height="18" viewBox="0 0 18 18" fill="currentColor"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_3_14090)">
+                            <path d="M15 3H3C2.175 3 1.5075 3.675 1.5075 4.5L1.5 13.5C1.5 14.325 2.175 15 3 15H15C15.825 15 16.5 14.325 16.5 13.5V4.5C16.5 3.675 15.825 3 15 3ZM14.7 6.1875L9.3975 9.5025C9.1575 9.6525 8.8425 9.6525 8.6025 9.5025L3.3 6.1875C3.1125 6.0675 3 5.865 3 5.6475C3 5.145 3.5475 4.845 3.975 5.1075L9 8.25L14.025 5.1075C14.4525 4.845 15 5.145 15 5.6475C15 5.865 14.8875 6.0675 14.7 6.1875Z"
+                                  fill="#212121"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3_14090">
+                                <rect width="18" height="18" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </label>
+
+                <label class="form-label">
+                    <span class="form-label-text">Comment</span>
+                    <textarea class="form-label-textarea" id="modal_comment" cols="30" rows="10"
+                              placeholder="Write comment"></textarea>
+                </label>
+
+                <div class="modal-window-form-button">
+                    <button type="submit" id="submit-button">Registration</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal-window-overlay" id="modal-window-overlay" style="display: none;" onclick="closeModal()">
+            <p>Subscribe successful</p>
+        </div>
+
     </div>
 </div>
 

@@ -17,7 +17,12 @@ function sendEmail(event) {
 
     if (!emailRegex.test(email)) {
         errorMessage.style.display = 'block';
-        errorMessage.innerText = 'Введіть правильну пошту';
+        errorMessage.innerText = 'Invalid email';
+
+        setTimeout(() => {
+            errorMessage.style.display = 'none';
+        }, 3000);
+
         return;
     }
 
@@ -36,3 +41,64 @@ function sendEmail(event) {
             console.log("Помилка при відправленні:", error);
         });
 }
+
+function closeModal() {
+    document.querySelector('.backdrop').classList.add('is-hidden');
+}
+
+function sendModalEmail(event) {
+    event.preventDefault();
+    const modal_name = document.getElementById('modal_name').value;
+    const day_select = document.getElementById('day_select').value;
+    const hour_select = document.getElementById('hour_select').value;
+    const modal_email = document.getElementById('modal_email').value;
+    const modal_comment = document.getElementById('modal_comment').value;
+    const submitButton = document.getElementById('submit-button');
+
+    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+    if (!emailRegex.test(modal_email)) {
+        submitButton.innerText = 'Invalid email, try again';
+        submitButton.style.color = 'red';
+        submitButton.style.backgroundColor = 'lightgray';
+
+        setTimeout(() => {
+            submitButton.innerText = 'Registration';
+            submitButton.style.color = '';
+            submitButton.style.backgroundColor = '';
+        }, 3000);
+
+        return;
+    }
+
+    submitButton.innerText = 'Registration';
+    submitButton.style.color = '';
+    submitButton.style.backgroundColor = '';
+
+    let params = {
+        modal_name: modal_name,
+        day_select: day_select,
+        hour_select: hour_select,
+        modal_email: modal_email,
+        modal_comment: modal_comment
+    };
+
+    emailjs.send("service_b7n53x9", "template_6a31d3w", params)
+        .then(function (response) {
+            document.getElementById('modal-window-form').style.display = 'none';
+            document.getElementById('modal-window-overlay').style.display = 'block';
+
+            setTimeout(() => {
+                closeModal();
+            }, 8000);
+        })
+        .catch(function (error) {
+            console.log("Помилка при відправленні:", error);
+        });
+}
+
+document.querySelector('.backdrop').addEventListener('click', function (event) {
+    if (event.target === this) {
+        closeModal();
+    }
+});

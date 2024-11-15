@@ -44,13 +44,21 @@ function centerActiveImage(activeImage) {
 document.querySelectorAll('.slide-image').forEach((img, index) => {
     img.addEventListener('click', () => {
         swiper.slideToLoop(index, 300);
+        setActiveImage(img);
+    });
 
-        document.querySelectorAll('.slide-image').forEach((img) => {
-            img.classList.remove('active');
-        });
-
-        img.classList.add('active');
-
-        centerActiveImage(img);
+    img.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            swiper.slideToLoop(index, 300);
+            setActiveImage(img);
+        }
     });
 });
+
+function setActiveImage(activeImage) {
+    document.querySelectorAll('.slide-image').forEach((img) => {
+        img.classList.remove('active');
+    });
+
+    activeImage.classList.add('active');
+}
