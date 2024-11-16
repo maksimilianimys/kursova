@@ -70,6 +70,10 @@ h2 {
     width: calc(100% + 12.8vw);
     height: 120px;
 
+    @media (min-width: 500px) and (max-width: 767px) {
+      justify-content: center;
+    }
+
     justify-content: flex-start;
 
     overflow-x: auto;
@@ -235,6 +239,7 @@ h2 {
 
     @include desktop-fhd {
       padding-top: 1.667vw;
+
       font-size: 1.042vw;
     }
 
@@ -254,8 +259,6 @@ h2 {
       padding-top: clamp(20px, 4.167vw, 32px);
 
       font-size: clamp(16px, 1.563vw, 20px);
-      line-height: 1.5;
-      letter-spacing: -0.02em;
     }
   }
 }

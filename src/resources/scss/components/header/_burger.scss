@@ -19,7 +19,7 @@
   visibility: hidden;
 
   transform: translateX(100%);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s 0.3s;
 
   button {
     position: absolute;
@@ -33,7 +33,7 @@
   visibility: visible;
 
   transform: translateX(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .header-navigation-bar-mobile-menu {
@@ -46,7 +46,7 @@
   font-weight: 200;
 
   a {
-    transition: color 0.3s ease;
+    transition: color 0.3s ease-in-out;
   }
 
   a:hover, a:focus {
@@ -74,18 +74,18 @@
   border: none;
   cursor: pointer;
 
-  height: 40px;
-  width: 40px;
+  height: 36px;
+  width: 36px;
 
   svg {
-    height: 40px;
-    width: 40px;
+    height: 36px;
+    width: 36px;
   }
 
   &:hover, &:focus {
     .svg-path {
       fill: $brown-color;
-      transition: fill 0.3s ease;
+      transition: fill 0.3s ease-in-out;
     }
   }
 }

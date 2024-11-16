@@ -11,22 +11,27 @@ emailJSScript.onload = function () {
 function sendEmail(event) {
     event.preventDefault();
     const email = document.getElementById('email').value;
-    const errorMessage = document.getElementById('error-message');
+    const subscribeButton = document.getElementById('subscribe-button');
 
     const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
     if (!emailRegex.test(email)) {
-        errorMessage.style.display = 'block';
-        errorMessage.innerText = 'Invalid email';
+        subscribeButton.innerText = 'Invalid email';
+        subscribeButton.style.color = 'red';
+        subscribeButton.style.backgroundColor = 'lightgray';
 
         setTimeout(() => {
-            errorMessage.style.display = 'none';
+            subscribeButton.innerText = 'SUBSCRIBE';
+            subscribeButton.style.color = '';
+            subscribeButton.style.backgroundColor = '';
         }, 3000);
 
         return;
     }
 
-    errorMessage.style.display = 'none';
+    subscribeButton.innerText = 'Registration';
+    subscribeButton.style.color = '';
+    subscribeButton.style.backgroundColor = '';
 
     let params = {
         email: email
@@ -42,9 +47,7 @@ function sendEmail(event) {
         });
 }
 
-function closeModal() {
-    document.querySelector('.backdrop').classList.add('is-hidden');
-}
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
 
 function sendModalEmail(event) {
     event.preventDefault();
@@ -63,7 +66,7 @@ function sendModalEmail(event) {
         submitButton.style.backgroundColor = 'lightgray';
 
         setTimeout(() => {
-            submitButton.innerText = 'Registration';
+            submitButton.innerText = 'REGISTRATION';
             submitButton.style.color = '';
             submitButton.style.backgroundColor = '';
         }, 3000);
@@ -90,15 +93,9 @@ function sendModalEmail(event) {
 
             setTimeout(() => {
                 closeModal();
-            }, 8000);
+            }, 5000);
         })
         .catch(function (error) {
             console.log("Помилка при відправленні:", error);
         });
 }
-
-document.querySelector('.backdrop').addEventListener('click', function (event) {
-    if (event.target === this) {
-        closeModal();
-    }
-});

@@ -9,10 +9,12 @@
     let firstFocusableElement;
     let lastFocusableElement;
 
+    setFocusableElements(false);
+
     refs.openModalBtns.forEach(button => {
         button.addEventListener("click", () => {
             toggleModal();
-            setFocusableElements();
+            setFocusableElements(true);
             firstFocusableElement.focus();
         });
     });
@@ -40,14 +42,26 @@
         document.body.classList.toggle("no-scroll");
 
         if (refs.modal.classList.contains("is-hidden")) {
-            refs.openModalBtns[0].focus();
+            setFocusableElements(false);
+        } else {
+            firstFocusableElement.focus();
         }
     }
 
-    function setFocusableElements() {
+    function setFocusableElements(enable) {
         const focusableContent = refs.modal.querySelectorAll(refs.focusableElements);
         firstFocusableElement = focusableContent[0];
         lastFocusableElement = focusableContent[focusableContent.length - 1];
+
+        if (enable) {
+            focusableContent.forEach(element => {
+                element.removeAttribute('tabindex');
+            });
+        } else {
+            focusableContent.forEach(element => {
+                element.setAttribute('tabindex', '-1');
+            });
+        }
     }
 
     function handleTabFocus(event) {
@@ -65,6 +79,7 @@
     }
 })();
 
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
 
 const daySelect = document.getElementById('day_select');
 const hourSelect = document.getElementById('hour_select');
@@ -109,3 +124,15 @@ function updateHours() {
 }
 
 daySelect.addEventListener('change', updateHours);
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+function closeModal() {
+    document.querySelector('.backdrop').classList.add('is-hidden');
+}
+
+document.querySelector('.backdrop').addEventListener('click', function (event) {
+    if (event.target === this) {
+        closeModal();
+    }
+});

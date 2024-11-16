@@ -20,6 +20,14 @@
   background: $red-color;
 }
 
+:focus {
+  outline: 2.5px solid $brown-color /* Задаємо товщину та колір рамки */
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
 
 html {
@@ -34,10 +42,6 @@ body {
   padding: 0;
 
   background-color: $background-color;
-}
-
-.no-scroll {
-  overflow: hidden;
 }
 
 ul,

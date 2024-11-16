@@ -21,8 +21,8 @@
       @import "content/section/-left/schedule";
 
       @include desktop-fhd {
-        margin-top: 15.313vw;
         max-width: 25.052vw;
+        margin-top: 15.313vw;
       }
 
       @include small-desktop {

@@ -1,13 +1,14 @@
 .main-content-section-right {
   position: relative;
 
-  height: 100%;
   width: auto;
+  height: 100%;
 
   padding-top: 212px;
 
   @include desktop-fhd {
     flex: 1;
+
     padding-top: 11.042vw;
   }
 
@@ -280,16 +281,15 @@
 
         &-title {
           color: $font-light-dark;
+
           font-family: $Satoshi-font;
           font-weight: 700;
           font-size: 18px;
-
           letter-spacing: 0.06em;
 
           padding-bottom: 16px;
 
           text-transform: uppercase;
-          //text-align: left;
 
           @include desktop-fhd {
             font-size: 0.938vw;
@@ -318,11 +318,11 @@
 
         &-text {
           color: $span-dark;
+
           font-family: $Angel-font;
           font-weight: 400;
           font-size: 32px;
           letter-spacing: 0.06em;
-          //text-align: left;
 
           @include desktop-fhd {
             font-size: 1.667vw;

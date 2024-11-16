@@ -1,8 +1,8 @@
 &-schedule {
-  margin-top: 64px;
-
   display: flex;
   align-items: center;
+
+  margin-top: 64px;
 
   @include desktop-fhd {
     margin-top: 3.333vw;
@@ -50,6 +50,7 @@
     @include desktop-fhd {
       width: 2.708vw;
       height: 2.708vw;
+
       border-radius: 0.417vw;
     }
   }

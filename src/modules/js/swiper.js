@@ -1,4 +1,4 @@
-const initialSlideIndex = window.innerWidth <= 768 ? 0 : 2;
+const initialSlideIndex = window.innerWidth <= 499 ? 0 : 2;
 
 const swiper = new Swiper('.swiper', {
     loop: true,

@@ -1,13 +1,13 @@
 .main-content-marquee {
-  height: 140px;
-
-  background: $background-color-element;
-  backdrop-filter: blur(5px);
-
   display: flex;
   align-items: center;
 
   overflow: hidden;
+
+  height: 140px;
+
+  background: $background-color-element;
+  backdrop-filter: blur(5px);
 
   @include desktop-fhd {
     height: 7.292vw;
@@ -131,6 +131,6 @@
   @include mobile {
     width: 50%;
 
-    transition: width 0.3s ease;
+    transition: width 0.3s ease-in-out;
   }
 }

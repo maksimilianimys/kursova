@@ -27,7 +27,9 @@
 
         gap: 3.333vw;
         padding: 0;
+
         background-size: cover;
+
         width: 59.896vw;
         height: 18.958vw;
       }
@@ -53,18 +55,50 @@
         left: 0;
         right: 0;
 
-        flex-direction: column;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        background: #FFFFFF;
+
+        background: $background-white-color;
 
         width: 100vw;
-        gap: 40px;
 
         margin-top: -580px;
         padding: 40px 24px;
+        gap: 40px;
 
         overflow-x: hidden;
+      }
+
+      .subscribe-overlay {
+        color: $light-dark-brown-color;
+
+        font-family: $Angel-font;
+        font-size: 64px;
+        font-weight: 400;
+
+        @include desktop-fhd {
+          font-size: 3.333vw;
+        }
+
+        @include small-laptop {
+          margin-right: auto;
+        }
+
+        @include tablet {
+          margin-right: auto;
+
+          .word {
+            display: block;
+          }
+        }
+
+        @include mobile {
+          height: 252px;
+          padding: 60px 50px;
+
+          text-align: center;
+        }
       }
     }
 
@@ -82,49 +116,61 @@
       }
 
       @include mobile {
-        width: 261.5px;
-        height: 211.5px;
+        width: 261px;
+        height: 211px;
       }
     }
-
 
     &-form {
       @include small-laptop {
         margin-right: auto;
       }
+
       @include tablet {
         margin-right: auto;
       }
-      @include mobile {
-        width: 327px;
-      }
 
       h2 {
+        color: $span-dark;
+
         width: 341px;
-        color: #12100C;
+        height: 128px;
+
         font-family: $Angel-font;
         font-size: 64px;
         font-weight: 400;
-        height: 128px;
-        letter-spacing: -1.28px;
+        letter-spacing: -0.02em;
         line-height: 1;
 
         @include desktop-fhd {
+          font-size: 3.333vw;
+
           width: 17.76vw;
           height: auto;
-          font-size: 3.333vw;
         }
 
         @include mobile {
-          font-size: 40px;
+          font-size: clamp(40px, 8.333vw, 64px);
+
+          width: 100%;
           height: 80px;
-          width: 327px;
+
+          .newsletter {
+            display: inline;
+          }
+
+          @media (min-width: 410px) and (max-width: 480px) {
+            .newsletter {
+              display: block;
+            }
+          }
         }
       }
 
       &-email {
-        padding-top: 32px;
         display: flex;
+
+        padding-top: 32px;
 
         @include desktop-fhd {
           padding-top: 1.667vw;
@@ -137,108 +183,115 @@
       }
 
       input {
-        width: 345px;
-        height: 64px;
         display: flex;
         align-items: center;
+
+        width: 345px;
+        height: 64px;
+
         padding: 20px 32px;
+
         background: #F2E4DA;
         border-radius: 12px;
         border: none;
 
-        color: #483524;
         font-family: $Satoshi-font;
         font-size: 18px;
-        font-style: normal;
         font-weight: 500;
-        line-height: normal;
 
         @include desktop-fhd {
           font-size: 0.938vw;
+
           width: 17.969vw;
           height: 3.333vw;
+
           border-radius: 0.625vw;
         }
+
         @include laptop {
           width: clamp(325px, 23.958vw, 345px);
         }
+
         @include small-laptop {
           width: clamp(325px, 23.958vw, 345px);
         }
+
         @include tablet {
           width: clamp(300px, 31.738vw, 325px);
         }
+
         @include mobile {
-          width: 327px;
+          width: auto;
         }
       }
 
+      input::placeholder {
+        color: $font-brown;
+      }
+
       button {
-        width: 179px;
-        height: 64px;
+        position: relative;
+        left: -48px;
+
         display: flex;
         justify-content: center;
         align-items: center;
+
+        width: 179px;
+        height: 64px;
+
         padding: 20px 32px;
-        background: #DB9F6A;
+
+        background: $brown-color;
         border-radius: 12px;
-        left: -48px;
-        position: relative;
         border: none;
+
+        color: $font-brown;
+
+        font-family: $Satoshi-font;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+
+        text-transform: uppercase;
+
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover, &:focus {
+          background-color: $light-dark-brown-color;
+        }
+
         @include desktop-fhd {
           font-size: 0.938vw;
+
           width: 9.323vw;
           height: 3.333vw;
+
           border-radius: 0.625vw;
         }
+
         @include laptop {
           width: clamp(168px, 12.431vw, 179px);
         }
+
         @include small-laptop {
           width: clamp(168px, 12.431vw, 179px);
         }
+
         @include tablet {
           width: clamp(155px, 16.406vw, 168px);
-          left: 0;
-          margin-left: -48px;
 
+          margin-left: -48px;
+          left: 0;
         }
 
         @include mobile {
           margin-top: 12px;
           left: 0;
+
           width: 100%;
         }
-
-        color: #483524;
-        font-family: $Satoshi-font;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        letter-spacing: 1.89px;
-        text-transform: uppercase;
       }
-
-      //p{
-      //
-      //}
-
-      //.overlay {
-      //  position: fixed;
-      //  top: 50%;
-      //  left: 50%;
-      //
-      //  padding: 20px;
-      //
-      //  transform: translate(-50%, -50%);
-      //
-      //  background-color: rgba(0, 0, 0, 0.8);
-      //  color: $white;
-      //  border-radius: 5px;
-      //  text-align: center;
-      //  font-size: 18px;
-      //}
     }
   }
 
@@ -277,15 +330,25 @@
     }
 
     @include mobile {
-      align-items: normal;
       flex-direction: column;
-      gap: 40px;
+      align-items: normal;
+
       padding-top: 32px;
+      gap: 40px;
     }
 
     &-logo {
       margin-right: 300px;
 
+      .svg-path {
+        transition: fill 0.3s ease-in-out;
+      }
+
+      &:hover, &:focus {
+        .svg-path {
+          fill: $light-dark-brown-color;
+        }
+      }
 
       @include desktop-fhd {
         svg {
@@ -294,7 +357,6 @@
         }
       }
 
-
       @include desktop-fhd {
         margin-right: 15.625vw;
       }
@@ -302,33 +364,47 @@
       @include small-desktop {
         margin-right: clamp(260px, 17.857vw, 300px);
       }
+
       @include laptop {
         margin-right: clamp(220px, 17.857vw, 300px);
       }
+
       @include small-laptop {
         margin-right: clamp(180px, 17.857vw, 300px);
       }
+
       @include tablet {
         margin-right: 0;
       }
+
       @include mobile {
         margin-right: 0;
+
+        svg {
+          width: clamp(40px, 9.115vw, 70px);
+          height: clamp(40px, 9.115vw, 70px);
+        }
       }
     }
 
     &-link {
-      color: rgba(255, 244, 235, 0.8);
-      font-family: "Satoshi Variable";
+      display: flex;
+
+      gap: 162px;
+
+      color: $font-white;
+
+      font-family: $Satoshi-font;
       font-weight: 700;
       font-size: 18px;
       letter-spacing: 0.08em;
       line-height: 1.33;
+
       text-transform: uppercase;
-      display: flex;
-      gap: 162px;
 
       @include desktop-fhd {
         font-size: 0.938vw;
+
         gap: 8.438vw;
       }
 
@@ -336,13 +412,40 @@
         gap: 13.281vw;
       }
       @include tablet {
+        font-size: clamp(16px, 1.758vw, 18px);
+
         gap: 13.281vw;
       }
       @include mobile {
         flex-direction: column;
+
         gap: 40px;
       }
 
+      &-list-one,
+      &-list-two {
+        position: relative;
+        padding-left: 52px;
+
+        @include desktop-fhd {
+          padding-left: 2.708vw;
+        }
+      }
+
+      &-list-one::before,
+      &-list-two::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3px;
+        height: 140px;
+        background: #DB9F6A;
+
+        @include desktop-fhd {
+          height: 7.292vw;
+        }
+      }
 
       li {
         padding-bottom: 34px;
@@ -355,45 +458,35 @@
       li:last-child {
         padding-bottom: 0;
       }
-    }
 
-    .links-1,
-    .links-2 {
-      position: relative;
-      padding-left: 52px;
-
-      @include desktop-fhd {
-        padding-left: 2.708vw;
+      a {
+        transition: color 0.3s ease-in-out;
       }
-    }
 
-    .links-1::before,
-    .links-2::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 3px;
-      height: 140px;
-      background: #DB9F6A;
-
-      @include desktop-fhd {
-        height: 7.292vw;
+      a:hover, a:focus {
+        color: $brown-color;
       }
     }
 
     &-social-links {
       display: flex;
-      gap: 32px;
+
       margin-left: auto;
+      gap: 32px;
 
       a {
         width: 32px;
         height: 32px;
       }
 
-      @include desktop-fhd {
+      a:hover svg path,
+      a:focus svg path {
+        fill: $light-dark-brown-color;
 
+        transition: fill 0.3s ease-in-out;
+      }
+
+      @include desktop-fhd {
         gap: 1.667vw;
 
         svg {
@@ -407,7 +500,6 @@
         }
       }
 
-
       @include tablet {
         margin-left: 0;
       }
@@ -417,21 +509,23 @@
     }
   }
 
-
   &-info {
     display: flex;
     justify-content: space-between;
-    padding-top: 96px;
     position: relative;
+
+    padding-top: 96px;
     padding-bottom: 52px;
 
-    @include desktop-fhd{
+    @include desktop-fhd {
       padding-top: 5vw;
       padding-bottom: 2.708vw;
     }
 
     @include small-laptop {
       flex-direction: column;
+
+      padding-bottom: 32px;
     }
 
     @include mobile {
@@ -441,67 +535,107 @@
 
     @include tablet {
       flex-direction: column;
-      padding-bottom: clamp(26px, 5.078vw, 52px);
+
+      padding-bottom: clamp(24px, 3.125vw, 32px);
+    }
+
+    @include mobile {
+      padding-top: clamp(72px, 12.5vw, 96px);
+      padding-bottom: clamp(40px, 6.771vw, 52px);
     }
 
     ul {
-      color: rgba(255, 244, 235, 0.80);
-      font-family: $Satoshi-font;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      letter-spacing: 1.44px;
-      text-transform: uppercase;
       display: flex;
+
       gap: 52px;
 
-      @include desktop-fhd{
+      color: $font-white;
+
+      font-family: $Satoshi-font;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
+
+      @include desktop-fhd {
         font-size: 0.938vw;
+
         gap: 2.708vw;
       }
 
       @include tablet {
         gap: clamp(32px, 5.078vw, 52px);
       }
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+
+        gap: clamp(32px, 6.771vw, 52px);
+      }
+
+      li {
+        transition: color 0.3s ease-in-out;
+      }
+
+      li:hover {
+        color: $light-dark-brown-color;
+      }
     }
 
     p {
       color: rgba(255, 244, 235, 0.4);
+
       font-family: $Satoshi-font;
       font-weight: 700;
       font-size: 18px;
-      text-transform: uppercase;
-      letter-spacing: 1.44px;
+      letter-spacing: 0.08em;
 
-      @include desktop-fhd{
+      text-transform: uppercase;
+
+      @include desktop-fhd {
         font-size: 0.938vw;
       }
 
       @include small-laptop {
         display: flex;
         justify-content: end;
-        padding-top: 32px;
+
+        padding-top: 16px;
       }
 
       @include tablet {
-        padding-top: 32px;
-        justify-content: end;
         display: flex;
+        justify-content: end;
+
+        padding-top: 16px;
+      }
+
+      @include mobile {
+        padding-top: 40px;
+
+        text-align: end;
       }
     }
 
     &::before {
-      content: "";
       position: absolute;
+      content: "";
       top: 64px;
       left: 0;
       right: 0;
+
       height: 1px;
+
       background: rgba(219, 159, 106, 0.20);
 
-      @include desktop-fhd{
+      @include desktop-fhd {
         top: 3.333vw;
+      }
+
+      @include mobile {
+        top: clamp(32px, 8.333vw, 64px);
       }
     }
   }

@@ -47,6 +47,10 @@
 
   @include desktop-fhd {
     min-width: 26.042vw;
+
+    padding: 2.083vw;
+
+    border-radius: 1.25vw;
   }
 
   @include mobile {
@@ -59,8 +63,8 @@
     top: 12px;
     right: 12px;
 
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
 
     display: flex;
     align-items: center;
@@ -75,12 +79,25 @@
     .svg-path {
       fill: $red-color;
 
-      transition: 300ms ease-in-out;
+      transition: fill 0.3s ease-in-out;
     }
 
     &:hover, &:focus {
       .svg-path {
         fill: $brown-color;
+      }
+    }
+
+    @include desktop-fhd {
+      width: 1.667vw;
+      height: 1.667vw;
+
+      top: 0.625vw;
+      right: 0.625vw;
+
+      svg {
+        width: 1.667vw;
+        height: 1.667vw;
       }
     }
   }
@@ -117,6 +134,7 @@
 
       @include desktop-fhd {
         padding-top: 0.625vw;
+
         font-size: 0.625vw;
       }
 
@@ -136,7 +154,7 @@
         border-radius: 16px;
         border: 1px $background-color-element-main solid;
 
-        transition: outline-color 300ms ease-in-out;
+        transition: outline-color 0.3s ease-in-out;
 
         &:focus,
         &:hover {
@@ -166,7 +184,7 @@
         padding: 12px 12px;
 
         resize: none;
-        transition: outline-color 300ms ease-in-out;
+        transition: outline-color 0.3s ease-in-out;
 
         font-family: $Satoshi-font;
         font-size: 12px;
@@ -201,7 +219,7 @@
 
         box-sizing: border-box;
 
-        transition: outline-color 300ms ease-in-out;
+        transition: outline-color 0.3s ease-in-out;
 
         &:focus,
         &:hover {
@@ -238,10 +256,12 @@
         line-height: 1.875;
         letter-spacing: 0.06em;
 
-        transition: background-color 300ms ease-in-out;
+        transition: background-color 0.3s ease-in-out;
 
         @include desktop-fhd {
           font-size: 0.833vw;
+
+          border-radius: 0.833vw;
         }
 
         &:hover,
@@ -252,11 +272,18 @@
     }
   }
 
-  &-overlay{
+  &-overlay {
     color: $background-white-color;
 
     font-family: $Angel-font;
     font-size: 64px;
     font-weight: 400;
+    line-height: 1;
+
+    text-align: center;
+
+    @include desktop-fhd {
+      font-size: 3.333vw;
+    }
   }
 }

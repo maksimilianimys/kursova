@@ -31,9 +31,11 @@
     white-space: nowrap;
 
     @include desktop-fhd {
-      gap: 6.25vw;
-      padding: 0 8.75vw;
       height: 5.417vw;
+
+      padding: 0 8.75vw;
+      gap: 6.25vw;
+
       border-radius: 1.667vw;
     }
 
@@ -53,8 +55,10 @@
     }
 
     @include mobile {
-      padding: 0 clamp(24px, 6.117vw, 85px);
       height: clamp(72px, 13.542vw, 104px);
+
+      padding: 0 clamp(24px, 6.117vw, 85px);
+
       border-radius: clamp(24px, 4.167vw, 32px);
       justify-content: space-between;
     }
@@ -72,10 +76,8 @@
       letter-spacing: 0.08em;
       text-align: left;
 
-      //text-transform: uppercase;
-
       a {
-        transition: color 0.3s ease;
+        transition: color 0.3s ease-in-out;
       }
 
       a:hover, a:focus {
@@ -84,21 +86,25 @@
 
       @include desktop-fhd {
         gap: 2.708vw;
+
         font-size: 0.938vw;
       }
 
       @include laptop {
         gap: 3.611vw;
+
         font-size: 1.25vw;
       }
 
       @include small-laptop {
         gap: 3.611vw;
+
         font-size: 1.25vw;
       }
 
       @include tablet {
         gap: 3.611vw;
+
         font-size: clamp(10px, 1.25vw, 15px);
       }
 
@@ -109,6 +115,7 @@
 
     &-center-button {
       background-color: transparent;
+
       border: none;
       outline: none;
       cursor: pointer;
@@ -121,11 +128,11 @@
       justify-content: center;
 
       .svg-path-center-button {
-        transition: fill 0.3s ease;
+        transition: fill 0.3s ease-in-out;
       }
 
       &:hover .svg-path-center-button {
-        fill: $dark-brown-color;
+        fill: $light-dark-brown-color;
       }
 
       @include desktop-fhd {
@@ -151,8 +158,8 @@
 
       @include mobile {
         svg {
-          height: clamp(40px, 5.469vw, 45px);
-          width: clamp(40px, 5.469vw, 45px);
+          height: clamp(40px, 5.469vw, 44px);
+          width: clamp(40px, 5.469vw, 44px);
         }
       }
     }
@@ -162,6 +169,7 @@
 
       @include mobile {
         background-color: transparent;
+
         border: none;
         outline: none;
         cursor: pointer;
@@ -176,13 +184,8 @@
         &:hover, &:focus {
           .svg-path {
             fill: $brown-color;
-            transition: fill 0.3s ease;
+            transition: fill 0.3s ease-in-out;
           }
-        }
-
-        &-svg {
-          height: clamp(32px, 5.469vw, 45px);
-          width: clamp(32px, 5.469vw, 45px);
         }
       }
     }
@@ -200,10 +203,8 @@
       letter-spacing: 0.08em;
       text-align: left;
 
-      //text-transform: uppercase;
-
       a {
-        transition: color 0.3s ease;
+        transition: color 0.3s ease-in-out;
       }
 
       a:hover, a:focus {
@@ -212,21 +213,25 @@
 
       @include desktop-fhd {
         gap: 2.708vw;
+
         font-size: 0.938vw;
       }
 
       @include laptop {
         gap: 3.611vw;
+
         font-size: 1.25vw;
       }
 
       @include small-laptop {
         gap: 3.611vw;
+
         font-size: 1.25vw;
       }
 
       @include tablet {
         gap: 3.611vw;
+
         font-size: clamp(10px, 1.25vw, 15px);
       }
 
