@@ -10,22 +10,31 @@
 
   @include small-desktop {
     width: 1002px;
+
     padding: 0;
   }
+
   @include laptop {
     width: 1002px;
+
     padding: 0;
   }
+
   @include small-laptop {
     width: 78.281vw;
+
     padding: 0;
   }
+
   @include tablet {
     width: 78.281vw;
+
     padding: 0;
   }
+
   @include mobile {
     width: clamp(327px, 78.281vw, 1002px);
+
     padding: 0;
   }
 }

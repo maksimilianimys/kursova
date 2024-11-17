@@ -95,6 +95,7 @@
 
         @include mobile {
           height: 252px;
+
           padding: 60px 50px;
 
           text-align: center;
@@ -287,6 +288,7 @@
 
         @include mobile {
           margin-top: 12px;
+
           left: 0;
 
           width: 100%;
@@ -309,7 +311,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      gap: 10px 50px;
+      gap: 12px 48px;
       grid-auto-flow: row;
       grid-template-areas:
     "footer-elements-logo footer-elements-link footer-elements-link"
@@ -411,11 +413,13 @@
       @include small-laptop {
         gap: 13.281vw;
       }
+
       @include tablet {
         font-size: clamp(16px, 1.758vw, 18px);
 
         gap: 13.281vw;
       }
+
       @include mobile {
         flex-direction: column;
 
@@ -425,6 +429,7 @@
       &-list-one,
       &-list-two {
         position: relative;
+
         padding-left: 52px;
 
         @include desktop-fhd {
@@ -434,13 +439,16 @@
 
       &-list-one::before,
       &-list-two::before {
-        content: '';
         position: absolute;
         left: 0;
         top: 0;
+
+        content: '';
+
         width: 3px;
         height: 140px;
-        background: #DB9F6A;
+
+        background: $brown-color;
 
         @include desktop-fhd {
           height: 7.292vw;
@@ -503,6 +511,7 @@
       @include tablet {
         margin-left: 0;
       }
+
       @include mobile {
         margin-left: 0;
       }
@@ -512,6 +521,7 @@
   &-info {
     display: flex;
     justify-content: space-between;
+
     position: relative;
 
     padding-top: 96px;

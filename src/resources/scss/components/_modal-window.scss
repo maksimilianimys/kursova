@@ -55,6 +55,7 @@
 
   @include mobile {
     min-width: clamp(327px, 65.104vw, 500px);
+
     padding: clamp(25px, 5.208vw, 40px);
   }
 

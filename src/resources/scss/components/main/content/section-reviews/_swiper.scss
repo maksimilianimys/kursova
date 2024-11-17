@@ -143,21 +143,25 @@ h2 {
 
   @include laptop {
     transform: scale(1.48);
+
     margin: 0 32px;
   }
 
   @include small-laptop {
     transform: scale(1.48);
+
     margin: 0 32px;
   }
 
   @include tablet {
     transform: scale(1.48);
+
     margin: 0 24px;
   }
 
   @include mobile {
     transform: scale(1.48);
+
     margin: 0 24px;
   }
 }

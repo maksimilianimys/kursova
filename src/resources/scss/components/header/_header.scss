@@ -15,6 +15,11 @@
   }
 
   &-navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+
     height: 104px;
 
     border-radius: 32px;
@@ -22,44 +27,40 @@
     background: $background-color-element;
     backdrop-filter: blur(5px);
 
-    gap: 120px;
     padding: 0 11.053%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
+    gap: 120px;
 
     @include desktop-fhd {
       height: 5.417vw;
 
+      border-radius: 1.667vw;
+
       padding: 0 8.75vw;
       gap: 6.25vw;
-
-      border-radius: 1.667vw;
     }
 
     @include laptop {
-      gap: 8.333vw;
       padding: 0 11.667vw;
+      gap: 8.333vw;
     }
 
     @include small-laptop {
-      gap: 8.333vw;
       padding: 0 11.667vw;
+      gap: 8.333vw;
     }
 
     @include tablet {
-      gap: 8.333vw;
       padding: 0 11.667vw;
+      gap: 8.333vw;
     }
 
     @include mobile {
       height: clamp(72px, 13.542vw, 104px);
 
+      border-radius: clamp(24px, 4.167vw, 32px);
+
       padding: 0 clamp(24px, 6.117vw, 85px);
 
-      border-radius: clamp(24px, 4.167vw, 32px);
       justify-content: space-between;
     }
 
