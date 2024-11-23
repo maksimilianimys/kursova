@@ -4,7 +4,7 @@ document.head.appendChild(emailJSScript);
 
 emailJSScript.onload = function () {
     emailjs.init({
-        publicKey: "jRJMh1CnjIQRXJPWu",
+        publicKey: "CYS4fZl9dGJyoih_3",
     });
 };
 
@@ -37,7 +37,7 @@ function sendEmail(event) {
         email: email
     };
 
-    emailjs.send("service_b7n53x9", "template_46avs6p", params)
+    emailjs.send("service_2b3g6ks","template_kfbjctl", params)
         .then(function (response) {
             document.getElementById('contact-form').style.display = 'none';
             document.getElementById('overlay').style.display = 'block';
@@ -86,7 +86,7 @@ function sendModalEmail(event) {
         modal_comment: modal_comment
     };
 
-    emailjs.send("service_b7n53x9", "template_6a31d3w", params)
+    emailjs.send("service_2b3g6ks","template_cuqp6k7", params)
         .then(function (response) {
             document.getElementById('modal-window-form').style.display = 'none';
             document.getElementById('modal-window-overlay').style.display = 'block';
