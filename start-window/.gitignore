@@ -1,0 +1,10 @@
+#.idea
+/node_modules/
+#src
+#.htmlhintrc
+#git.txt
+#gulpfile.js
+#package.json
+#package-lock.json
+#
+#.gitignore

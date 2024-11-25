@@ -37,7 +37,7 @@ function sendEmail(event) {
         email: email
     };
 
-    emailjs.send("service_2b3g6ks","template_kfbjctl", params)
+    emailjs.send("service_2b3g6ks", "template_kfbjctl", params)
         .then(function (response) {
             document.getElementById('contact-form').style.display = 'none';
             document.getElementById('overlay').style.display = 'block';
@@ -86,7 +86,7 @@ function sendModalEmail(event) {
         modal_comment: modal_comment
     };
 
-    emailjs.send("service_2b3g6ks","template_cuqp6k7", params)
+    emailjs.send("service_2b3g6ks", "template_cuqp6k7", params)
         .then(function (response) {
             document.getElementById('modal-window-form').style.display = 'none';
             document.getElementById('modal-window-overlay').style.display = 'block';

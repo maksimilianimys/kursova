@@ -1,0 +1,398 @@
+$Tattoo_color: #DB9F6A;
+$Positivus_color: #B9FF66;
+$WiSchool_color: #09B451;
+$Eduplay_color: #8B3DFF;
+$NekoInn_color: #C75E90;
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: darkgrey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: lightblue;
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+a {
+  list-style: none;
+  text-decoration: none;
+  font-style: normal;
+  color: inherit;
+}
+
+img {
+  user-select: none;
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+@mixin desktop-fhd {
+  @media screen and (min-width: 1920.1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1024px) and (max-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) and (max-width: 1023.9px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (min-width: 375px) and (max-width: 767.9px) {
+    @content;
+  }
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+@mixin center-with-border($color, $radius: 0, $border-width: 3px) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: $border-width solid $color;
+  border-radius: $radius;
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+html, body {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: antiquewhite;
+}
+
+@include tablet {
+  html {
+    overflow: auto;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  body {
+    min-height: 100vh;
+    height: 100%;
+  }
+}
+
+@include mobile {
+  html {
+    overflow: auto;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  body {
+    min-height: 100vh;
+    height: 100%;
+  }
+}
+
+.container {
+  img {
+    width: 50%;
+  }
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+@include tablet {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 180px;
+    gap: 32px 32px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Positivus WiSchool"
+    "NekoInn EduPlay"
+    "Tattoo_Salon .";
+
+    padding: 32px 24px;
+  }
+
+  .Positivus {
+    grid-area: Positivus;
+  }
+
+  .WiSchool {
+    grid-area: WiSchool;
+  }
+
+  .NekoInn {
+    grid-area: NekoInn;
+  }
+
+  .EduPlay {
+    grid-area: EduPlay;
+  }
+
+  .Tattoo_Salon {
+    grid-area: Tattoo_Salon;
+  }
+}
+
+@include mobile {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 111px;
+    grid-auto-columns: 1fr;
+    gap: 24px 0px;
+    padding: 32px 24px 32px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Positivus"
+    "WiSchool"
+    "Tattoo_Salon"
+    "NekoInn"
+    "EduPlay";
+  }
+
+  .Positivus {
+    grid-area: Positivus;
+  }
+
+  .WiSchool {
+    grid-area: WiSchool;
+  }
+
+  .NekoInn {
+    grid-area: NekoInn;
+  }
+
+  .Tattoo_Salon {
+    grid-area: Tattoo_Salon;
+  }
+
+  .EduPlay {
+    grid-area: EduPlay;
+  }
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+.Tattoo_Salon {
+  @include center-with-border($Tattoo_color, 32px);
+
+  img {
+    width: 66.6%
+  }
+
+  @include desktop-fhd {
+    width: 26.979vw;
+    height: 11.563vw;
+
+    position: absolute;
+    transform: translate(-50%);
+    top: 3.333vw;
+  }
+
+  @include desktop {
+    width: 26.979vw;
+    height: clamp(148px, 11.563vw, 222px);
+
+    position: absolute;
+    transform: translate(-50%);
+    top: 64px;
+  }
+
+  @include tablet {
+    transform: translate(50%);
+  }
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+.Positivus {
+  @include center-with-border($Positivus_color, 32px);
+
+  @include desktop-fhd {
+    width: 26.979vw;
+    height: 11.563vw;
+
+    position: absolute;
+    transform: translate(-50%);
+    top: 18.229vw;
+    left: 33%;
+  }
+
+  @include desktop {
+    width: 26.979vw;
+    height: clamp(148px, 11.563vw, 222px);
+
+    position: absolute;
+    transform: translate(-50%);
+    top: clamp(240px, 18.229vw, 350px);
+    left: 33%;
+  }
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+.WiSchool {
+  @include center-with-border($WiSchool_color, 32px);
+
+  @include desktop-fhd {
+    width: 26.979vw;
+    height: 11.563vw;
+
+    position: absolute;
+    transform: translate(50%);
+    top: 18.229vw;
+    right: 33%;
+  }
+
+  @include desktop {
+    width: 26.979vw;
+    height: clamp(148px, 11.563vw, 222px);
+
+    position: absolute;
+    transform: translate(50%);
+    top: clamp(240px, 18.229vw, 350px);
+    right: 33%;
+  }
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+.NekoInn {
+  @include center-with-border($NekoInn_color, 32px);
+
+  @include desktop-fhd {
+    width: 26.979vw;
+    height: 11.563vw;
+
+    position: absolute;
+    transform: translate(-50%);
+    top: 33.125vw;
+    left: 19%;
+  }
+
+  @include desktop {
+    width: 26.979vw;
+    height: clamp(148px, 11.563vw, 222px);
+
+    position: absolute;
+    transform: translate(-50%);
+    top: clamp(420px, 33.125vw, 636px);
+    left: 19%;
+  }
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+.EduPlay {
+  @include center-with-border($Eduplay_color, 32px);
+
+  @include desktop-fhd {
+    width: 26.979vw;
+    height: 11.563vw;
+
+    position: absolute;
+    transform: translate(50%);
+    top: 33.125vw;
+    right: 19%;
+  }
+
+  @include desktop {
+    width: 26.979vw;
+    height: clamp(148px, 11.563vw, 222px);
+
+    position: absolute;
+    transform: translate(50%);
+    top: clamp(420px, 33.125vw, 636px);
+    right: 19%;
+  }
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+.cat {
+  position: relative;
+  top: 5px;
+
+  @include desktop {
+    width: 32.969vw;
+    height: 20.625vw;
+  }
+
+  margin-top: auto;
+
+  pointer-events: none;
+
+  img {
+    width: auto;
+    height: 100%;
+  }
+
+  @include tablet {
+    top: 15px;
+  }
+
+  @include mobile {
+    width: 100%;
+    top: 10px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+.site_link {
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  img {
+    transition: width 0.3s;
+  }
+
+  &:hover {
+    background-color: #fff7;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.61);
+
+    img {
+      width: 60%;
+    }
+
+    &.Tattoo_Salon {
+      img {
+        width: 77%;
+      }
+    }
+  }
+}
